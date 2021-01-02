@@ -278,7 +278,6 @@ a .cheesecake{
 
 .cardContainer p{
     width: 800px;
-
     margin: 25px auto;
     padding-bottom: 20px;
 }
@@ -374,6 +373,16 @@ a:hover .cheesecake{
     .hide li h4{
         display: none;
     }
+.cardContainer h1{
+    margin: 20px auto; 
+    font: 40px "Dancing Script";
+}
+
+.cardContainer p{
+    width: 300px;
+    margin: 25px auto;
+    padding-bottom: 20px;
+}
 }
 
 @keyframes slide-toRight{
