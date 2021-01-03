@@ -16,20 +16,25 @@ body{
 }
 
 /*!!!!!!!HEADER NAVIGATIONS!!!!!!!!!!!*/
-header{
+
+.logo{
     display: flex;
     width: 100%;
-    height: 100px;
-    background-color: plum;
     align-items: center;
-    transition: all .5s ease;
-    color: white;
 }
-header img{
+
+
+.logo img{
    
     width: 110px;
     height: 110px;
     margin-left: 60px;
+}
+
+.logo h1{
+    color: white;
+    font-size: 50px;
+    font-family: "Dancing Script";
 }
 #navbar {
     position: relative;
@@ -38,35 +43,41 @@ header img{
     z-index: 100;
   }
 nav{
-    display: flex;
+    position: fixed;
+    top: 0;
     width: 100%;
-    justify-content: space-between;
+    display: flex;
+    justify-content: space-around;
     align-items: center;
+    min-height: 8vh;
+    background-color: #ff9b9b;
 }
 nav h1{
     font: 45px "Dancing Script";
     letter-spacing: 2px;
 }
-nav ul.hide{
+.nav-link{
+    
     display: flex;
-    margin-right:90px ;
-    justify-content: space-between;
+    width: 60%;
+    justify-content: space-around;
 }
-nav ul.hide li{
-    position: relative;
-    margin-right: 30px;
+.nav-link li{
     list-style: none;
 }
-nav ul.hide li h4{
-    font: bold 20px "Poppins";
-    display: block;
-    letter-spacing: 5px;
+.nav-link a{
+    color: white;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 18px;
+    width: 20%;
 }
 
-nav ul.hide li svg{
+.nav-link li svg{
     width: 32px;
     height: 32px;
-    margin: 0 -20px;
+    margin: 0 20px;
     fill: rgb(255, 255, 255);
     cursor: pointer;
     transition: all .5s ease;
@@ -80,9 +91,7 @@ nav ul.hide li svg{
     border-radius: 10px;
     background: #fff;
     color: #888;
-    animation-name: slide-toRight;
-    animation-duration: 500ms;
-    border: none;
+    transition: all .6s ease;
 }
 
 #s::placeholder{
@@ -90,6 +99,20 @@ nav ul.hide li svg{
     padding-left: 10px;
 }
 
+.burger{
+    display: none;
+    margin-right: 20px;
+}
+
+
+.burger div{
+    width: 30px;
+    height: 5px;
+    margin: 5px;
+    border-radius: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
 
 
 
@@ -111,15 +134,15 @@ img {
 .slideshow-container {
   max-width: 100%;
   position: relative;
-  margin:auto;
+  margin: 0 auto;
 }
 
 
 .choices{
     position: absolute;
     width: 100%;
-    bottom: 120px;
-    left: 50%;
+    bottom: 30px;
+    left: 48%;
     display: flex;
     margin: 0 auto;
 }
@@ -151,6 +174,8 @@ img {
 
 .container2{
     width: 100%;
+    height: 100%;
+    background-color: white;
     display: block;
     justify-content: center;
     align-items: center;
@@ -278,6 +303,7 @@ a .cheesecake{
 
 .cardContainer p{
     width: 800px;
+
     margin: 25px auto;
     padding-bottom: 20px;
 }
@@ -362,46 +388,6 @@ a:hover .cheesecake{
   to {opacity: 1}
 }
 
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {
-      font-size: 11px
-    }
-    .products{
-        display: block;
-    }
-    .hide li h4{
-        display: none;
-    }
-.cardContainer h1{
-    margin: 20px auto; 
-    font: 40px "Dancing Script";
-}
-
-.cardContainer p{
-    width: 300px;
-    margin: 25px auto;
-    padding-bottom: 20px;
-}
-}
-
-@keyframes slide-toRight{
-    from{
-        width: 0;
-    }
-    to{
-        width: 200px;
-    }
-}
-@keyframes slide-backs{
-    from{
-        width: 200px;
-    }
-    to{
-        width: 0;
-    }
-}
-
 @keyframes showMe {
     0% { 
 
@@ -422,4 +408,79 @@ a:hover .cheesecake{
         visibility: hidden; 
         z-index: 0; 
     }
+}
+
+
+/* On smaller screens, decrease text size */
+@media screen and (max-width: 768px){
+    .text{
+      font-size: 11px
+    }
+    .products{
+        display: flex;
+        align-items: center;
+    }
+    .nav-link{
+        position: fixed;
+        right: 0px;
+        height: 92vh;
+        top: 15vh;
+        background-color:plum;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-link li {
+        opacity: 0;
+    }
+    
+    .burger {
+        display: block;
+        
+        cursor: pointer;
+    }
+    .container3{
+        position: relative;
+        display: block;
+        height: 100vh;
+    }
+    .cardContainer{
+        display: block;
+        text-align: center;
+        margin: 0;
+        width: 768px;
+    }
+    .cardContainer p{
+        width: 608px;
+        margin: 0 auto;
+    }
+}
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+from {
+    opacity: 0;
+    transform: translateX(50px);
+}
+to {
+    opacity: 1;
+    transform: translateX(0);
+}
+}
+
+.toggle .line1 {
+transform: rotate(-45deg) translate(-7px, 6px);
+}
+
+.toggle .line2 {
+opacity: 0;
+}
+
+.toggle .line3 {
+transform: rotate(45deg) translate(-7px, -6px);
 }
