@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <link rel="stylesheet" href="./cart.css">
+    <link rel="icon" href="./logo/logo.png">
+    <link rel="stylesheet" href="./fontawesome/css/all.css">
+</head>
+<body>
+    <!-- navigations -->
+    <nav id="navbar">
+        <div class="logo">
+            <img src="./logo/logo.png" alt="">
+            <h1 id="text1">Chosen 1</h1>
+        </div>
+        <ul class="nav-link">
+            <li>
+                <a id="texts" href="./cakepage.html"><h4 >HOME</h4></a>
+            </li>
+            <li >
+                <a id="texts1" href=""><h4>ABOUT US</h4></a>
+            </li>
+            <li>
+                <div class="select">
+                    <button class="menu">
+                        <p>Menu</p>
+                        <div class="arrow">
+                            <div class="line1"></div>
+                            <div class="line2"></div>
+                        </div>
+                    </button>
+                    <div class="dropdown">
+                        <a href=""><p>what's new</p> </a>
+                        <a href=""><p>round cake</p> </a>
+                        <a href=""><p>roll cake</p> </a>
+                        <a href=""><p>dreamcake & cheesecake</p> </a>
+                        <a href=""><p>cupcake</p> </a>
+                        <a href=""><p>sweet bites</p> </a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Order Cart</h1>
+        <div class="card">
+            <div class="cake">
+                
+                <img src="./cake/Round Cake/Mango Bravo.jpg" alt="">
+                
+            </div>
+            <div class="order">
+                <h3 id="cakeType2"></h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Rem mollitia dolor iste voluptas quasi distinctio, fugiat 
+                </p>
+                <div class="orderForm">
+                    <input id="price" type="tel" disabled value="0" placeholder="35$">
+                    <i id="minus" class="fas fa-minus"></i><input type="text" id="num" disabled value="0"><i id="add" class="fas fa-plus"></i>
+                    <input type="button" value="Reserve Now">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        window.onload;
+
+        function dropDown(){
+            const menu = document.querySelector(".menu");
+            const dropdownList = document.querySelectorAll(".dropdown a");
+            let dropdown = document.querySelector(".dropdown");
+            let arrow = document.querySelector(".arrow");
+
+            menu.addEventListener("click", ()=>{
+            
+                dropdown.classList.toggle("active");
+                arrow.classList.toggle("toggle");
+            });  
+        }
+        dropDown();
+        function incrementValue(){
+            const add = document.getElementById("add");
+            const minus = document.getElementById("minus");
+
+            add.addEventListener("click", ()=>{
+                var price = parseInt(document.getElementById("price").value);
+                var value = parseInt(document.getElementById("num").value, 10);
+                var total;
+                value++;
+                total = 35 * value;
+                
+                document.getElementById("num").value = value;
+                document.getElementById("price").value = total + "$";
+            })
+            minus.addEventListener("click", ()=>{
+                var price = parseInt(document.getElementById("price").value);
+                var value = parseInt(document.getElementById("num").value, 10);
+                var total;
+                
+                total = (value*35)-35;
+                
+
+                if(value-- === 0){
+                    minus.removeEventListener("click");
+                }
+                    
+                document.getElementById("num").value = value;
+                document.getElementById("price").value = total + "$";
+            })
+
+            
+        }
+        incrementValue();   
+    
+    
+    
+    
+    
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins";
+    overflow-y: scroll;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+
+/*!!!!!!!HEADER NAVIGATIONS!!!!!!!!!!!*/
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+
+.logo img{
+    width: 110px;
+    height: 110px;
+    margin-left: 60px;
+}
+
+.logo h1{
+    width: 100%;
+    color: white;
+    font-size: 50px;
+    font-family: "Dancing Script";
+}
+#navbar {
+   
+    top: 0px;
+    transition: all 1s ease;
+    
+  }
+nav{
+    position: relative;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 8vh;
+    z-index: 1;
+    background-color: plum;
+}
+nav h1{
+    font: 4rem "Dancing Script";
+    letter-spacing: 2px;
+}
+.nav-link{
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+}
+.nav-link li{
+    list-style: none;
+    display: flex;
+    width: 20%;
+    align-items: center;
+}
+.nav-link li:last-child{
+    margin-right: 20px;
+}
+.nav-link a{
+    color: white;
+    text-decoration: none;
+    
+}
+
+.nav-link a h4{
+    width: 50vw;
+    font-size: 20px;
+    transition: all .5s ease
+}
+
+.nav-link li:hover h4{
+    color: purple;
+}
+
+
+.select{
+   
+    width: 400vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dropdown{
+    position: absolute;
+    top: 110px;
+    right: -180px;
+    margin: 0 auto;
+    z-index: -1;
+}
+
+.dropdown a p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 150px;
+    background-color: plum;
+    height: 9vh;
+    text-transform: uppercase;
+    transition: all .7s ease;
+}
+
+.dropdown a:hover p{
+    background-color: rgb(190, 131, 190);
+    transform: scale(1.1);
+    border-radius: 15px;
+}
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins";
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+    transition: all .5s ease;
+    border: none;
+    background-color: plum;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 18px;
+    width: 100px;
+    height: 40px;
+}
+
+.menu:hover{
+    color: purple;
+}
+
+.menu:hover .arrow div{
+    background-color: purple;
+}   
+
+button:focus{
+    outline: none;
+}
+
+.menu p{
+    margin-right: 5px;
+}
+.select{
+    width: 50vw;
+    height: 100%;
+    text-align: center;
+}
+.arrow{
+    display: block;
+    transition: all 0.7s ease;
+}
+
+.arrow div{
+    width: 15px;
+    height: 3px;
+    background-color: white;
+    transition: all .5s ease;
+}   
+
+.line1{
+    transform: rotate(-55deg) translate(3px,-3px);
+}
+ .line2{
+    transform: rotate(-135deg) translate(-2px, -2px);
+}
+
+
+
+.burger{
+    display: none;
+    margin-right: 20px;
+}
+
+
+.burger div{
+    width: 30px;
+    height: 5px;
+    margin: 5px;
+    border-radius: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+.active{
+
+    right: 0;
+    transition: all 1s ease;
+}
+
+.toggle{
+    transform: rotate(-90deg);
+}
+
+.container{
+    display: block;
+    width: 90%;
+    height: 100%;
+    margin: 20px auto;
+    border-radius: 20px;
+}
+
+.container h1{
+    text-align: center;
+    color: rgb(56, 56, 56);
+    font: 40px "Poppins";
+    margin-bottom: 20px;
+}
+.card{
+    display: flex;
+    background-color: rgb(201, 137, 201);
+    border-radius: 10px;
+}
+
+.cake{
+    display: block;
+    width: 50%;
+    height: 40%;
+    margin-left:50px;
+    text-align: center;
+    
+    
+    color: white;
+}
+
+.cake img{
+    margin: 20px 0;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.order{
+    position: relative;
+    display: block;
+    width: 50%;
+    height: 55vh;
+    margin: 20px;
+    text-justify:newspaper;
+    
+}
+.order h3{
+    text-align: center;
+    font-size: 40px;
+    
+}
+.order h3, .order p{
+    color: white;
+    margin: 20px auto;
+}
+
+
+.orderForm{
+    position: absolute;
+    bottom: 0vh;
+    left: 7vw;
+    display: block;
+    width: 70%;
+    justify-self: center;
+    align-items: center;
+    
+}
+.orderForm input{
+    transition: all .5s ease;
+}
+
+.orderForm input[type=text], input[type=tel]{
+    width: 100%;
+    margin: 10px 0;
+    height: 30px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: "Poppins";
+    font-size: 20px;
+    color: white;
+}
+
+
+
+
+
+.orderForm input:nth-last-of-type(2){
+    width: 80%;
+    margin: 0 auto;
+}
+
+.orderForm i{
+    margin: 0 10px;
+    font-size: 20px;
+    transition: all .5s ease;
+}
+
+.orderForm i:hover{
+    color: white;
+    transform: scale(1.3);
+}
+
+.orderForm input[type=button]{
+    margin: 20px 0;
+    width: 100%;
+    height: 45px;
+    border: none;
+    border-radius: 10px;
+    font-family: "Poppins";
+    font-size: 20px;
+    letter-spacing: 5px;
+    background-color: rgb(184, 116, 184);
+    cursor: pointer;
+    color: white;
+}
+
+.orderForm input:focus{
+    outline: none;
+    
+}
+
+.orderForm input:hover{
+    border-bottom: solid 2px rgb(184, 116, 184);
+    box-shadow: 2px 5px 5px rgb(184, 116, 184);
+}
