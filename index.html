@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chosen 1 Bakeshop</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="icon" href="./logo/logo.png">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+   
+       
+        <nav id="navbar">
+            <div class="logo">
+                <img src="./logo/logo.png" alt="">
+                <h1 id="text1">Chosen 1</h1>
+            </div>
+            <ul class="nav-link">
+                <li >
+                    <a id="texts" href="./cakepage.html"><h4 >HOME</h4></a>
+                </li>
+                <li >
+                    <a id="texts1" href=""><h4 >ABOUT US</h4></a>
+                </li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            
+        </nav>
+
+    <!-- CONTENT 1 -->
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <img src="./Others/cake.jpg" >
+        </div> 
+        <div class="mySlides fade">
+          <img src="./Others/cake2.jpg">
+        </div>  
+        <div class="mySlides fade">
+          <img src="./cake/Round.jpg">
+        </div>
+    </div>  
+    <div class="choices">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+    </div>
+
+    <!-- CONTENT 2 -->
+
+    <div class="container2">
+        <h1>Our Cakes</h1>
+        <div  class="products">
+            <div data-aos="fade-up" data-aos-duration="1000"  class="new">
+                <div class="header">
+                    <h4>What's New</h4>
+                </div>
+                <img src="./cake/Round Cake/Mango Bravo.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" class="new">
+                <div class="header">
+                    <h4>Round Cakes</h4>
+                </div>
+                <img src="./cake/Round Cake/Chocolate.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" class="new">
+                <div class="header">
+                    <h4>Roll Cakes</h4>
+                </div>
+                <img src="./cake/Roll Cakes/Brazo de Mercedez.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" class="new"">
+                <div class="header">
+                    <h4>Dream Cake and Cheesecakes</h4>
+                </div>
+                <a href="">
+                    <img src="./cake/Dream Cake/Mocha.JPG" alt="">
+                    <img src="./cake/Cheese Cake/New York CheeseCake.jpg" class="cheesecake" alt="">   
+                </a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" class="new">
+                <div class="header">
+                    <h4>Cupcakes</h4>
+                </div>
+                <img src="./cake/Cupcake/Coffee.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" class="new">
+                <div class="header">
+                    <h4>Sweet Bites
+                    </h4>
+                </div>
+                <a href="">
+                    <img src="./cake/Sweet Bites/Silvanas/Coffee.jpg" alt="">
+                    <img src="./cake/Sweet Bites/Doughnuts/Alcapone.jpg" class="cheesecake" alt="">
+                    <img src="./cake/Sweet Bites/Macaroons/Coconut.jpg" class="cheesecake"  alt="">
+                </a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- CONTENT 3 -->
+    <div class="container3">
+        <div class="bGround one"></div>
+        <div  class="cardContainer">
+            <h1 data-aos="fade-up" data-aos-duration="1000">About Chosen 1</h1>
+            <p data-aos="fade-up" data-aos-duration="1000">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Consequuntur incidunt facere repellat accusantium animi sunt consequatur suscipit dolores tenetur repudiandae! 
+                Sint, tempore, harum eius est impedit magnam corporis ipsum quod ullam eaque aperiam nostrum ipsa iste sit qui ipsam. 
+                Impedit deserunt culpa aliquid molestiae 
+                ipsam quibusdam nobis architecto ipsa sapiente!.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Consequuntur incidunt facere repellat accusantium animi sunt consequatur suscipit dolores tenetur repudiandae! 
+                    Sint, tempore, harum eius est impedit magnam corporis ipsum quod ullam eaque aperiam nostrum ipsa iste sit qui ipsam. 
+                    Impedit deserunt culpa aliquid molestiae 
+                    ipsam quibusdam nobis architecto ipsa sapiente!.</p>
+        </div>
+        <div class="bGround two"></div>
+        <footer>
+            <h1>Chosen 1s Bakeshop</h1>
+            <button>Our Cakes</button>
+            <button>Order Now</button>
+            <button>Contact Us</button>
+            <p>©Copyright <a href="./main.html"> <b>Chosen 1 Bakeshop.</b> </a>All Rights Reserved.</p>
+        </footer>
+    </div>
+
+
+    <script>
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        let contentOne = document.querySelector(".slideshow-container");
+        let contentTwo = document.querySelector(".container2");
+        const aRef = document.getElementById("texts");
+        const aRef2 = document.getElementById("texts1");
+        const navLinks = document.getElementById("text1");
+        let burger = document.querySelector(".line1");
+        let burger1 = document.querySelector(".line2");
+        let burger2 = document.querySelector(".line3");
+   
+        function scrollFunction() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100 ) {
+                document.getElementById("navbar").style.top = "0";
+                document.getElementById("navbar").style.position = "fixed";
+                document.getElementById("navbar").style.backgroundColor = "white";
+                
+                contentOne.style = "position: absolute; top: 100px; right: 0;display: block;";
+                contentTwo.style = "margin-top: 750px;"
+                navLinks.style.color = "plum";
+                aRef.style.color = "plum";
+                aRef2.style.color = "plum";
+
+                burger.style.backgroundColor = "plum";
+                burger1.style.backgroundColor = "plum";
+                burger2.style.backgroundColor = "plum";
+                //window.matchMedia
+            } else {
+
+                document.getElementById("navbar").style.top = "0px";
+                document.getElementById("navbar").style.backgroundColor = "plum";
+                
+                navLinks.style.color = "white";
+                aRef.style.color = "white";
+                aRef2.style.color = "white";
+                burger.style.backgroundColor = "white";
+                burger1.style.backgroundColor = "white";
+                burger2.style.backgroundColor = "white";
+            }
+        }
+
+    
+
+
+        var slideIndex = 0;
+        showSlides();
+            
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }    
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+              setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+
+
+
+
+
+            function navSlide() {
+                const burger = document.querySelector(".burger");
+                const nav = document.querySelector(".nav-link");
+                const navLinks = document.querySelectorAll(".nav-link li");
+                
+                burger.addEventListener("click", function(){
+                    //Toggle Nav
+                    nav.classList.toggle("nav-active");
+                    
+                    //Animate Links
+                    navLinks.forEach(function(link, index) {
+                        if (link.style.animation) {
+                            link.style.animation = ""
+                        } else {
+                            link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
+                        }
+                    });
+                    //Burger Animation
+                    burger.classList.toggle("toggle");
+                });
+                
+            }
+            navSlide();
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>    
+
+    
+</body>
+</html>
