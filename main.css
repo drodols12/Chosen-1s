@@ -1,0 +1,497 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins";
+    overflow-y: scroll;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+
+/*!!!!!!!HEADER NAVIGATIONS!!!!!!!!!!!*/
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+
+.logo img{
+    width: 110px;
+    height: 110px;
+    margin-left: 60px;
+}
+
+.logo h1{
+    width: 100%;
+    color: white;
+    font-size: 50px;
+    font-family: "Dancing Script";
+}
+#navbar {
+    position: relative;
+    top: 0px;
+    transition: all 1s ease;
+    z-index: 100;
+  }
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 8vh;
+    background-color: plum;
+}
+nav h1{
+    font: 4rem "Dancing Script";
+    letter-spacing: 2px;
+}
+.nav-link{
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+}
+.nav-link li{
+    list-style: none;
+}
+.nav-link a{
+    color: white;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 18px;
+    width: 20%;
+}
+
+
+.burger{
+    display: none;
+    margin-right: 20px;
+}
+
+
+.burger div{
+    width: 30px;
+    height: 5px;
+    margin: 5px;
+    border-radius: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+  
+/*!!!!!!!!!CONTENT!!!!!!!!!*/
+.mySlides {
+    margin:0 auto;
+    display: none;
+}
+img {
+    vertical-align:middle;
+    width: 100vw;
+    height: 95vh;
+    object-fit: cover;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: 0 auto;
+}
+
+
+.choices{
+    position: absolute;
+    width: 100%;
+    bottom: 3vh;
+    left: 48%;
+    display: flex;
+    margin: 0 auto;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #ff9b9b;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+/* CONTENT 2 */
+
+.container2{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.container2 h1{
+    font: 5rem "Dancing Script";
+    margin: 100px 0px;
+    text-align: center;
+}
+
+.products{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.new{
+    position: relative;
+    display: inline-block;
+    width: 300px;
+    height: 370px;
+    margin: 0 40px;
+    margin-bottom: 55px;
+    cursor: pointer;
+}
+.header{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    background-color: #ff9b9b;
+}
+.header h4{
+    display: block;
+    margin: 0 auto;
+}
+
+.new img, a img{
+    display: flex;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+a .cheesecake{
+    display: none;
+    position: absolute;
+    top: 37px;
+    left: 0;
+    animation: showMe 2s ease infinite 0.2s forwards;
+    animation-play-state: paused;
+    z-index: 99;
+}
+
+ .cheesecake:nth-child(1){
+    animation-delay: 0.3s;
+	z-index: 9;
+}
+ .cheesecake:nth-child(2){
+	animation-delay: .6s;
+	z-index: 8;
+}
+ .cheesecake:nth-child(3){
+	animation-delay: .9s;
+	z-index: 7;
+}
+
+
+
+.new p{
+    padding: 10px 10px;
+    text-align: center;
+    color: white;
+    background-color:#ff9b9b ;
+}
+
+/*!!!!!!!!!!!!! CONTENT 3 !!!!!!!!!!!!!!*/
+.container3{
+    position: relative;
+    display: block;
+    height: 100vh;
+}
+.bGround{
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+        color: #eeeeee;
+        text-align: center;
+}
+
+.one{
+    background-image: url(./logo/Cover.jpg);
+}
+
+.two{
+    position: relative;
+    background-image: url(./logo/logo.png);
+    background-size: contain;
+    background-color: #ffd1d1;
+    height: 100%;
+}
+.cardContainer{
+    width: 100%;
+    height: 350px;
+    position: absolute;
+    bottom: 0px;
+    display: block;
+    background-color: #ff9b9b;
+    text-align: center;
+}
+
+.cardContainer h1{
+    margin: 20px auto; 
+    font: 70px "Dancing Script";
+}
+
+.cardContainer p{
+    width: 800px;
+
+    margin: 25px auto;
+    padding-bottom: 20px;
+}
+
+
+/*!!!!!!!!!!!!! FOOTEEEERRR !!!!!!!!!!!!!!*/
+footer{
+    background-color: plum;
+    position: absolute;
+    bottom: -750px;
+    width: 100%;
+    height: 30vh;
+    display: block;
+    text-align: center;
+}
+
+footer h1{
+    font: 50px "Dancing Script";
+    color: white;
+    margin: 20px auto;
+}
+
+footer button{
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    border-style: none;
+    margin-left: 10px;
+    font: 14px "Poppins";
+    color: white;
+    background-color: rgb(255, 66, 170);
+    cursor: pointer;
+}
+
+footer p{
+    color: white;
+    margin-top: 30px;
+}
+
+
+footer p a{
+    color: white;
+    text-decoration: none;
+}
+
+
+
+
+
+/* ALL Hover EFFECTS */
+header nav ul li:hover h4{
+    color: #d45151;
+    cursor: pointer;
+    transition: all .6s ease;
+}
+header nav ul li:hover svg{
+fill:  #d45151;
+}
+
+.header:hover {
+    color: #ffdbf1;
+    background-color: rgb(255, 75, 135);
+    transition: all .6s ease;
+}
+
+a:hover .cheesecake{
+    opacity: 1;
+    display: block;
+    animation-play-state: running;
+}
+
+
+
+/* Animations, Keyframes and Responsiveness*/
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes showMe {
+    0% { 
+
+        visibility: visible; 
+        z-index: 100; 
+    }
+	12.5% { 
+      
+        visibility: visible; 
+        z-index: 100; 
+    }
+	25% {
+       
+         visibility: hidden; 
+         z-index: 0; }
+    100% {   
+           
+        visibility: hidden; 
+        z-index: 0; 
+    }
+}
+
+
+/* On smaller screens, decrease text size */
+@media screen and (max-width: 768px) and (orientation: portrait){
+    body{
+        position: relative;
+        width: 100%;
+    }
+    .slideshow-container{
+        display: block;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .mySlides {
+        margin:0 auto;
+        display: block;
+    }
+
+    .mySlides img{
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        vertical-align: top;
+    }
+
+    .text{
+      font-size: 1rem;
+    }
+    .products{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .products .new{
+        width: 50%;
+        height: 50%;
+    }
+
+    .new img{
+        width: 100%;
+        height: 100%;
+    }
+    .nav-link{
+        position: fixed;
+        right: 0px;
+        height: 92vh;
+        top: 15vh;
+        background-color:plum;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-link li {
+        opacity: 0;
+    }
+    
+    .burger {
+        display: block;
+        
+        cursor: pointer;
+    }
+    .container3{
+        position: relative;
+        display: block;
+        height: 100vh;
+    }
+    .cardContainer{
+        display: block;
+        text-align: center;
+        margin: 0;
+        width: 100%;
+        height: 70%;
+    }
+    .cardContainer p{
+        width: 100vw;
+        margin: 0 auto;
+    }
+
+}
+.nav-active {
+    background-color: plum;
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+from {
+    opacity: 0;
+    transform: translateX(50px);
+}
+to {
+    opacity: 1;
+    transform: translateX(0);
+}
+}
+
+.toggle .line1 {
+transform: rotate(-45deg) translate(-7px, 6px);
+}
+
+.toggle .line2 {
+opacity: 0;
+}
+
+.toggle .line3 {
+transform: rotate(45deg) translate(-7px, -6px);
+}
