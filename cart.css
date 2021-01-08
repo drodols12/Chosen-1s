@@ -485,6 +485,10 @@ transform: rotate(45deg) translate(-7px, -6px);
         align-items: center;
         z-index: 1;
     }
+    .orderForm input[type=text], input[type=tel]{
+        color: black;
+    }
+
     .orderForm i{
         margin: 0 5px;
         font-size: .5rem;
