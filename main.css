@@ -424,7 +424,6 @@ transform: rotate(45deg) translate(-7px, -6px);
     html, body{ 
         overflow-x: hidden;
     } 
-
     body{
         position: relative;
     }
@@ -441,7 +440,6 @@ transform: rotate(45deg) translate(-7px, -6px);
     .logo h1{
         font-size: 2rem;
     }
-
     .mySlides {
         margin:0 auto;
         display: none;
@@ -552,6 +550,9 @@ transform: rotate(45deg) translate(-7px, -6px);
     .new p{
         background-color:#ff9b9b ;
         font-size: .5rem;
+    }
+    .header{
+        font-size: .7rem;
     }
 
     a .cheesecake{
