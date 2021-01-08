@@ -25,8 +25,8 @@ body{
 
 
 .logo img{
-    width: 110px;
-    height: 110px;
+    width: 20vh;
+    height: 20vh;
     margin-left: 60px;
 }
 
@@ -58,7 +58,7 @@ nav h1{
 }
 .nav-link{
     display: flex;
-    width: 30%;
+    width: 20%;
     justify-content: space-around;
 }
 .nav-link li{
@@ -95,16 +95,16 @@ nav h1{
     margin:0 auto;
     display: none;
 }
-img {
-    vertical-align:middle;
-    width: 100vw;
-    height: 95vh;
+.mySlides img {
+    width: 100%;
+    height: 100vh;
     object-fit: cover;
 }
 
 /* Slideshow container */
 .slideshow-container {
   max-width: 100%;
+  height: 100vh;
   position: relative;
   margin: 0 auto;
 }
@@ -155,7 +155,8 @@ img {
 
 .container2 h1{
     font: 3rem "Dancing Script";
-    margin: 100px 0px;
+    padding-top: 20vh;
+    margin-bottom: 10vh;
     text-align: center;
 }
 
@@ -168,15 +169,7 @@ img {
     margin: 0 auto;
 }
 
-.new{
-    position: relative;
-    display: inline-block;
-    width: 300px;
-    height: 370px;
-    margin: 0 40px;
-    margin-bottom: 55px;
-    cursor: pointer;
-}
+
 .header{
     width: 100%;
     height: 10%;
@@ -190,12 +183,24 @@ img {
     display: block;
     margin: 0 auto;
 }
+.new{
+    position: relative;
+    display: inline-block;
+    width: 20%;
+    height: 40vh;
+    margin: 0 40px;
+    cursor: pointer;
+    margin-bottom: 15vh;
+}
 
 .new img, a img{
     display: flex;
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    height: 100%;
     margin: 0 auto;
+    object-fit: cover;
+   
+
 }
 
 a .cheesecake{
@@ -418,28 +423,45 @@ transform: rotate(45deg) translate(-7px, -6px);
     body{
         position: relative;
     }
+    .logo{
+        display: flex;
+        align-items: center;
+    }
+    .logo img{
+        width: 6vh;
+        height: 5vh;
+        margin-left: 5px;
+    }
+
+    .logo h1{
+        font-size: 2rem;
+    }
 
     .mySlides {
         margin:0 auto;
         display: none;
+      
     }
     .mySlides img {
-        vertical-align:middle;
+        position: absolute;
+        top: 0;
+        bottom: 0;
         width: 100%;
-        height: 50vh;
+        height: 70vh;
         object-fit: cover;
+        object-position: 80%;
     }
 
     .slideshow-container {
-        max-width: 100%;
+        width: 100%;
+        height: 50vh;
         position: relative;
         margin: 0 auto;
       }
       
-      
       .choices{
           position: absolute;
-          width: 80%;
+          width: 100%;
           bottom: 100vh;
           left: 48%;
           display: flex;
@@ -461,21 +483,6 @@ transform: rotate(45deg) translate(-7px, -6px);
         position: relative;
     }
 
-    .logo{
-        display: flex;
-        width: 100%;
-        height:16vh;
-        
-    }
-    .logo img{
-        width:50px;
-        height: 50px;
-        margin-left: 5px;
-    }
-
-    .logo h1{
-        font-size: 3rem;
-    }
 
     .burger{
         display: block;
@@ -485,16 +492,19 @@ transform: rotate(45deg) translate(-7px, -6px);
     .nav-link{
         display: flex;
         position: absolute;
-        right: -300px;
-        top: 15vh;
+        right: -400px;
+        top: 8vh;
         align-items: center;
-        width: 50%;
+        width: 100%;
         flex-direction: column;
-        height: 92vh;
-        
+        height: 40vh;
         background: plum;
         z-index: 99999999;
     }
+    .nav-link li{
+        height: 5vh;
+    }
+
     .active{
         transition: all 0.5s ease-in;
         right: 0;
@@ -506,7 +516,9 @@ transform: rotate(45deg) translate(-7px, -6px);
     .container2 h1{
         font-family: "Dancing Script";
         font-size: 2rem;
+        padding: 0;
         margin: 30px auto;
+        margin-top: 24vh;
         text-align: center;
     }
 
@@ -518,17 +530,17 @@ transform: rotate(45deg) translate(-7px, -6px);
     }
 
     .new{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        width: 50%;
-        height: 50vh;
-        text-align: center;
+        position: relative;
+        display: inline-block;
+        width: 80%;
+        height: 40vh;
+        margin: 0 40px;
+        cursor: pointer;
     }
 
     .new img, a img{
         display: flex;
-        width: 50vw;
+        width: 100%;
         height: 20vh;
     }
     a .cheesecake{
@@ -559,6 +571,7 @@ transform: rotate(45deg) translate(-7px, -6px);
 
     .cardContainer p{
         width: 90%;
+        font-size: .5rem;
         text-align: center;
     }
     footer{
