@@ -6,7 +6,6 @@
     <title>Chosen 1 Bakeshop</title>
     <link rel="stylesheet" href="./main.css">
     <link rel="icon" href="./logo/logo.png">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
    
@@ -57,28 +56,28 @@
     <div class="container2">
         <h1>Our Cakes</h1>
         <div  class="products">
-            <div data-aos="fade-up" data-aos-duration="400"  class="new">
+            <div class="new">
                 <div class="header">
                     <h4>What's New</h4>
                 </div>
                 <img src="./cake/Round Cake/Mango Bravo.jpg" alt="">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
             </div>
-            <div data-aos="fade-up" data-aos-duration="400" class="new">
+            <div class="new">
                 <div class="header">
                     <h4>Round Cakes</h4>
                 </div>
                 <img src="./cake/Round Cake/Chocolate.jpg" alt="">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
             </div>
-            <div data-aos="fade-up" data-aos-duration="400" class="new">
+            <div class="new">
                 <div class="header">
                     <h4>Roll Cakes</h4>
                 </div>
                 <img src="./cake/Roll Cakes/Brazo de Mercedez.jpg" alt="">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
             </div>
-            <div data-aos="fade-up" data-aos-duration="400" class="new"">
+            <div class="new"">
                 <div class="header">
                     <h4>Dream Cake and Cheesecakes</h4>
                 </div>
@@ -88,14 +87,14 @@
                 </a>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
             </div>
-            <div data-aos="fade-up" data-aos-duration="400" class="new">
+            <div class="new">
                 <div class="header">
                     <h4>Cupcakes</h4>
                 </div>
                 <img src="./cake/Cupcake/Coffee.jpg" alt="">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
             </div>
-            <div data-aos="fade-up" data-aos-duration="400" class="new">
+            <div  class="new">
                 <div class="header">
                     <h4>Sweet Bites
                     </h4>
@@ -115,8 +114,8 @@
     <div class="container3">
         <div class="bGround one"></div>
         <div  class="cardContainer">
-            <h1 data-aos="fade-up" data-aos-duration="1000">About Chosen 1</h1>
-            <p data-aos="fade-up" data-aos-duration="1000">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            <h1 >About Chosen 1</h1>
+            <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                 Consequuntur incidunt facere repellat accusantium animi sunt consequatur suscipit dolores tenetur repudiandae! 
                 Sint, tempore, harum eius est impedit magnam corporis ipsum quod ullam eaque aperiam nostrum ipsa iste sit qui ipsam. 
                 Impedit deserunt culpa aliquid molestiae 
@@ -135,78 +134,65 @@
             <p>©Copyright <a href="./main.html"> <b>Chosen 1 Bakeshop.</b> </a>All Rights Reserved.</p>
         </footer>
     </div>
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+   
     <script>
-     
-
-        let contentOne = document.querySelector(".slideshow-container");
-        let contentTwo = document.querySelector(".container2");
-        const aRef = document.getElementById("texts");
-        const aRef2 = document.getElementById("texts1");
-        const navLinks = document.getElementById("text1");
-        let burger = document.querySelector(".line1");
-        let burger1 = document.querySelector(".line2");
-        let burger2 = document.querySelector(".line3");
-       
-        
-
-        window.addEventListener('scroll', ()=>{
-            if(window.matchMedia("(max-width: 768px)").matches){
-                window.onscroll = function() {
-                  return;
-               };
-               AOS.init();
-            }else{
-                window.onscroll = function() {
-                  scrollFunction()
-               };
-               AOS.init();
-                function scrollFunction() {
-                    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100 ) {
-                        document.getElementById("navbar").style.top = "0";
-                        document.getElementById("navbar").style.position = "fixed";
-                        document.getElementById("navbar").style.backgroundColor = "white";
-                        
-                        contentOne.style = "position: absolute; top: 100px; right: 0;display: block; width: 100%";
-                        contentTwo.style = "margin-top: 750px;"
-                        navLinks.style.color = "plum";
-                        aRef.style.color = "plum";
-                        aRef2.style.color = "plum";
-
-                        burger.style.backgroundColor = "plum";
-                        burger1.style.backgroundColor = "plum";
-                        burger2.style.backgroundColor = "plum";
-                        //window.matchMedia
-                    } else {
-
-                        document.getElementById("navbar").style.top = "0px";
-                        document.getElementById("navbar").style.backgroundColor = "plum";
-                        
-                        navLinks.style.color = "white";
-                        aRef.style.color = "white";
-                        aRef2.style.color = "white";
-                        burger.style.backgroundColor = "white";
-                        burger1.style.backgroundColor = "white";
-                        burger2.style.backgroundColor = "white";
-                    }
-                 }
-            }
-        });
-
-
-  /*     
-
-        window.matchMedia.matches = function(){
+         let contentOne = document.querySelector(".slideshow-container");
+            let contentTwo = document.querySelector(".container2");
+            const aRef = document.getElementById("texts");
+            const aRef2 = document.getElementById("texts1");
+            const navLinks = document.getElementById("text1");
+            let burger = document.querySelector(".line1");
+            let burger1 = document.querySelector(".line2");
+            let burger2 = document.querySelector(".line3");
             
-        }*/
+
+
+            window.addEventListener('scroll', ()=>{
+                if(window.matchMedia("(max-width: 768px)").matches){
+                    window.onscroll = function() {
+                    return;
+                };
+
+
+                }else{
+                    window.onscroll = function() {
+                    scrollFunction()
+                };
+                    function scrollFunction() {
+                        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100 ) {
+                            document.getElementById("navbar").style.top = "0";
+                            document.getElementById("navbar").style.position = "fixed";
+                            document.getElementById("navbar").style.backgroundColor = "white";
+                            
+                            contentOne.style = "position: absolute; top: 100px; right: 0;display: block; width: 100%";
+                            contentTwo.style = "margin-top: 750px;"
+                            navLinks.style.color = "plum";
+                            aRef.style.color = "plum";
+                            aRef2.style.color = "plum";
+
+                            burger.style.backgroundColor = "plum";
+                            burger1.style.backgroundColor = "plum";
+                            burger2.style.backgroundColor = "plum";
+                            //window.matchMedia
+                        } else {
+
+                            document.getElementById("navbar").style.top = "0px";
+                            document.getElementById("navbar").style.backgroundColor = "plum";
+                            
+                            navLinks.style.color = "white";
+                            aRef.style.color = "white";
+                            aRef2.style.color = "white";
+                            burger.style.backgroundColor = "white";
+                            burger1.style.backgroundColor = "white";
+                            burger2.style.backgroundColor = "white";
+                        }
+                    }
+                }
+            });
+    
+        var slideIndex = 0;
 
     
-
-
-        var slideIndex = 0;
-        showSlides();
-            
         function showSlides() {
             var i;
             var slides = document.getElementsByClassName("mySlides");
@@ -221,21 +207,20 @@
             for (i = 0; i < dots.length; i++) {
                 dots[i].className = dots[i].className.replace(" active", "");
             }
-              slides[slideIndex-1].style.display = "block";  
-              dots[slideIndex-1].className += " active";
-              setTimeout(showSlides, 2000); // Change image every 2 seconds
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
             }
 
 
-
-
+            showSlides();
 
             function navSlide() {
-                const burger = document.querySelector(".burger");
+                const burger = document.querySelector('.burger');
                 const nav = document.querySelector(".nav-link");
                 const navLinks = document.querySelectorAll(".nav-link li");
                 
-                burger.addEventListener("click", function(){
+                burger.addEventListener('click', function(){
                     //Toggle Nav
                     nav.classList.toggle("active");
                     
@@ -254,7 +239,6 @@
             }
             navSlide();
     </script>
-   
    
 
     
