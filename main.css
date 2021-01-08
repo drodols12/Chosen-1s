@@ -10,6 +10,7 @@
 body{
     font-family: "Poppins";
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 ::-webkit-scrollbar{
     display: none;
@@ -382,96 +383,7 @@ a:hover .cheesecake{
 }
 
 
-/* On smaller screens, decrease text size */
-@media screen and (max-width: 768px) and (orientation: portrait){
-    body{
-        position: relative;
-        width: 100%;
-    }
-    .slideshow-container{
-        display: block;
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: 100%;
-    }
-    .mySlides {
-        margin:0 auto;
-        display: block;
-    }
 
-    .mySlides img{
-        display: block;
-        width: 100vw;
-        height: 100vh;
-        position: absolute;
-        top: 0;
-        left: 0;
-        vertical-align: top;
-    }
-
-    .text{
-      font-size: 1rem;
-    }
-    .products{
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-    }
-
-    .products .new{
-        width: 50%;
-        height: 50%;
-    }
-
-    .new img{
-        width: 100%;
-        height: 100%;
-    }
-    .nav-link{
-        position: fixed;
-        right: 0px;
-        height: 92vh;
-        top: 15vh;
-        background-color:plum;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 50%;
-        transform: translateX(100%);
-        transition: transform 0.5s ease-in;
-    }
-    .nav-link li {
-        opacity: 0;
-    }
-    
-    .burger {
-        display: block;
-        
-        cursor: pointer;
-    }
-    .container3{
-        position: relative;
-        display: block;
-        height: 100vh;
-    }
-    .cardContainer{
-        display: block;
-        text-align: center;
-        margin: 0;
-        width: 100%;
-        height: 70%;
-    }
-    .cardContainer p{
-        width: 100vw;
-        margin: 0 auto;
-    }
-
-}
-.nav-active {
-    background-color: plum;
-    transform: translateX(0%);
-}
 
 @keyframes navLinkFade {
 from {
@@ -494,4 +406,107 @@ opacity: 0;
 
 .toggle .line3 {
 transform: rotate(45deg) translate(-7px, -6px);
+}
+
+
+@media screen and (max-width: 768px)
+{
+    body{
+        overflow-x: hidden;
+    } 
+
+    nav{
+        position: relative;
+    }
+
+    .logo{
+        display: flex;
+        width: 100%;
+        height:16vh;
+        
+    }
+    .logo img{
+        width:50px;
+        height: 50px;
+        margin-left: 5px;
+    }
+
+    .logo h1{
+        font-size: 4rem;
+    }
+
+    .burger{
+        display: block;
+    }
+
+
+    .nav-link{
+        display: flex;
+        position: absolute;
+        right: -300px;
+        top: 15vh;
+        align-items: center;
+        width: 50%;
+        flex-direction: column;
+        height: 92vh;
+        
+        background: plum;
+        z-index: 99999999;
+    }
+    .active{
+        transition: all 0.5s ease-in;
+        right: 0;
+    }
+    .container2{
+        width: 100%;
+        display: block;
+    }
+    .products{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+    .new{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 30%;
+        height: 50vh;
+        text-align: center;
+    }
+
+    .new img, a img{
+        display: flex;
+        width: 20vw;
+        height: 20vh;
+    }
+    a .cheesecake{
+        display: none;
+        position: absolute;
+        top: 32px;
+        left: 25px;
+        animation: showMe 2s ease infinite 0.2s forwards;
+        animation-play-state: paused;
+        z-index: 99;
+    }
+    .container3{
+        width: 100%;
+    }
+
+    .cardContainer{
+        display: block;
+        width: 100%;
+        height: 70vh;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .cardContainer p{
+        width: 90%;
+        text-align: center;
+    }
+
+
+
+    
 }

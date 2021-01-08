@@ -57,28 +57,28 @@
     <div class="container2">
         <h1>Our Cakes</h1>
         <div  class="products">
-            <div data-aos="fade-up" data-aos-duration="1000"  class="new">
+            <div data-aos="fade-up" data-aos-duration="400"  class="new">
                 <div class="header">
                     <h4>What's New</h4>
                 </div>
                 <img src="./cake/Round Cake/Mango Bravo.jpg" alt="">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
             </div>
-            <div data-aos="fade-up" data-aos-duration="1000" class="new">
+            <div data-aos="fade-up" data-aos-duration="400" class="new">
                 <div class="header">
                     <h4>Round Cakes</h4>
                 </div>
                 <img src="./cake/Round Cake/Chocolate.jpg" alt="">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
             </div>
-            <div data-aos="fade-up" data-aos-duration="1000" class="new">
+            <div data-aos="fade-up" data-aos-duration="400" class="new">
                 <div class="header">
                     <h4>Roll Cakes</h4>
                 </div>
                 <img src="./cake/Roll Cakes/Brazo de Mercedez.jpg" alt="">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
             </div>
-            <div data-aos="fade-up" data-aos-duration="1000" class="new"">
+            <div data-aos="fade-up" data-aos-duration="400" class="new"">
                 <div class="header">
                     <h4>Dream Cake and Cheesecakes</h4>
                 </div>
@@ -88,14 +88,14 @@
                 </a>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
             </div>
-            <div data-aos="fade-up" data-aos-duration="1000" class="new">
+            <div data-aos="fade-up" data-aos-duration="400" class="new">
                 <div class="header">
                     <h4>Cupcakes</h4>
                 </div>
                 <img src="./cake/Cupcake/Coffee.jpg" alt="">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
             </div>
-            <div data-aos="fade-up" data-aos-duration="1000" class="new">
+            <div data-aos="fade-up" data-aos-duration="400" class="new">
                 <div class="header">
                     <h4>Sweet Bites
                     </h4>
@@ -138,9 +138,7 @@
 
 
     <script>
-        window.onscroll = function() {
-            scrollFunction()
-        };
+     
 
         let contentOne = document.querySelector(".slideshow-container");
         let contentTwo = document.querySelector(".container2");
@@ -150,36 +148,56 @@
         let burger = document.querySelector(".line1");
         let burger1 = document.querySelector(".line2");
         let burger2 = document.querySelector(".line3");
-   
-        function scrollFunction() {
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100 ) {
-                document.getElementById("navbar").style.top = "0";
-                document.getElementById("navbar").style.position = "fixed";
-                document.getElementById("navbar").style.backgroundColor = "white";
-                
-                contentOne.style = "position: absolute; top: 100px; right: 0;display: block;";
-                contentTwo.style = "margin-top: 750px;"
-                navLinks.style.color = "plum";
-                aRef.style.color = "plum";
-                aRef2.style.color = "plum";
+       
+        
 
-                burger.style.backgroundColor = "plum";
-                burger1.style.backgroundColor = "plum";
-                burger2.style.backgroundColor = "plum";
-                //window.matchMedia
-            } else {
+        window.addEventListener('scroll', ()=>{
+            if(window.matchMedia("(max-width: 768px)").matches){
+                window.onscroll = function() {
+                  return;
+               };
+            }else{
+                window.onscroll = function() {
+                  scrollFunction()
+               };
+                function scrollFunction() {
+                    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100 ) {
+                        document.getElementById("navbar").style.top = "0";
+                        document.getElementById("navbar").style.position = "fixed";
+                        document.getElementById("navbar").style.backgroundColor = "white";
+                        
+                        contentOne.style = "position: absolute; top: 100px; right: 0;display: block; width: 100%";
+                        contentTwo.style = "margin-top: 750px;"
+                        navLinks.style.color = "plum";
+                        aRef.style.color = "plum";
+                        aRef2.style.color = "plum";
 
-                document.getElementById("navbar").style.top = "0px";
-                document.getElementById("navbar").style.backgroundColor = "plum";
-                
-                navLinks.style.color = "white";
-                aRef.style.color = "white";
-                aRef2.style.color = "white";
-                burger.style.backgroundColor = "white";
-                burger1.style.backgroundColor = "white";
-                burger2.style.backgroundColor = "white";
+                        burger.style.backgroundColor = "plum";
+                        burger1.style.backgroundColor = "plum";
+                        burger2.style.backgroundColor = "plum";
+                        //window.matchMedia
+                    } else {
+
+                        document.getElementById("navbar").style.top = "0px";
+                        document.getElementById("navbar").style.backgroundColor = "plum";
+                        
+                        navLinks.style.color = "white";
+                        aRef.style.color = "white";
+                        aRef2.style.color = "white";
+                        burger.style.backgroundColor = "white";
+                        burger1.style.backgroundColor = "white";
+                        burger2.style.backgroundColor = "white";
+                    }
+                 }
             }
-        }
+        });
+
+
+  /*     
+
+        window.matchMedia.matches = function(){
+            
+        }*/
 
     
 
@@ -217,7 +235,7 @@
                 
                 burger.addEventListener("click", function(){
                     //Toggle Nav
-                    nav.classList.toggle("nav-active");
+                    nav.classList.toggle("active");
                     
                     //Animate Links
                     navLinks.forEach(function(link, index) {
