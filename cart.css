@@ -417,7 +417,11 @@ transform: rotate(45deg) translate(-7px, -6px);
         display: flex;
         width: 100vw;
         margin-bottom: 100vh;
-        font-size: .5rem;
+        
+    }
+
+    .menu p{
+        font-size: 1rem;
     }
     .arrow{
         display: none;
