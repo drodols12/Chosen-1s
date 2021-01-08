@@ -24,13 +24,13 @@ body{
 }
 .logo img{
    
-    width: 110px;
-    height: 110px;
+    width: 10vh;
+    height: 10vh;
     margin-left: 60px;
 }
 .logo h1{
     color: white;
-    font-size: 4rem;
+    font-size: 3rem;
     font-family: "Dancing Script";
 }
 #navbar {
@@ -50,7 +50,7 @@ nav{
     background-color: #ff9b9b;
 }
 nav h1{
-    font: 4rem "Dancing Script";
+    font: 3rem "Dancing Script";
     letter-spacing: 2px;
 }
 .nav-link{    
@@ -149,7 +149,7 @@ nav h1{
 .cake h3{
     width: 20vw;
     text-align: center;
-    font: 1.2rem lighter "Poppins";
+    font: 1.2rem "Poppins";
     letter-spacing: 1px;
     margin: 1vh auto;
 }
@@ -207,12 +207,20 @@ footer p a{
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        overflow-x: hidden;
     }
     
     body{
         font-family: "Poppins";
         position: relative;
         overflow-y: scroll;
+        
+    }
+    .logo h1{
+        font-size: 2rem;
+    }
+    .logo img{
+        margin-left: 20px;
     }
     .nav-link{
         display: none;
@@ -221,8 +229,7 @@ footer p a{
     .burger{
         position: absolute;
         display: block;
-        right: 0;
-      
+        right: 15px;
         z-index: 999999;
     }
 
@@ -232,27 +239,29 @@ footer p a{
     .navlinks{
         position: absolute;
         right: 0px;
-        height: 20%;
-        top: 15vh;
+        height: 70%;
+        top: 10vh;
         background-color: #ff9b9b;
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 30%;
+        width: 50%;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
     }
+
+    
     .cakes ul.navlinks li{
         opacity: 0;
         background-color: #cc7373;
-        width: 30vw;
+        width: 55vw;
         height: 10vh;
         transition: all .5s ease;
         border-radius: 10px;
     }
     .cakes h3{
         width: 100%;
-        font-size: 0.1rem;
+        font-size: 1rem;
         transition: all .3s ease;
     
     }
@@ -283,7 +292,7 @@ footer p a{
     }
 
     .active a h3{
-        margin-left: 20px;
+        
         text-align: center;
         font-size: 1.5rem;
         letter-spacing: 3px;
@@ -298,55 +307,76 @@ footer p a{
         display: flex;
         flex-wrap: wrap;
         width: 100%;
+        height: 100%;
         justify-content: center;
         align-items: center;
         margin: 0 auto;
     }
     .cake{
         display: block;
-        width: 35vw;
+        width: 40%;
+        height: 40%;
         margin: 2vh 10px;
         background-color: #ff9b9b;
         color: white;
     }
     .cake img{
-        width:35vw;
+        width:100%; 
         height: 20vh;
         object-fit:  cover;
     }
     
     .cake h3{
-        width: 20vw;
+        width: 100%;
         text-align: center;
-        font: .5rem lighter "Poppins";
+        font: .5rem "Poppins";
         letter-spacing: 1px;
         margin: 1vh auto;
     }
     
     .cake p{
         margin: 1vh auto;
-        width: 30vw;
+        width: 100%;
+        font-size: .1rem;
         text-align: center;
+    }
+    .cake:nth-last-of-type(1){
+        margin-right: 50%;
     }
     
     footer{
         background-color: plum;
         width: 100%;
-        height: 50vh;
+        height: 30vh;
         display: block;
         text-align: center;
     }
     
     footer button{
-        width: 20vw;
-        height: 7vh;
+        width: 25vw;
+        height: 5vh;
         border-radius: 10px;
         border-style: none;
-        margin: 0 5px;
-        font: 1rem "Poppins";
+        margin: 30px 5px;
+      
+        
+        font: .5rem "Poppins";
         color: white;
         background-color: rgb(255, 66, 170);
         cursor: pointer;
+    }
+    footer h1{
+        font: 2.5rem "Dancing Script";
+        color: white;
+        margin: 2vh auto;
+        margin-top: 5vh;
+        padding: 40px auto;
+    }
+    footer p{
+        color: white;
+        font-size: 10px;
+        margin: 15px auto;
+        width: 100vw;
     }
     
 
