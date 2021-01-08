@@ -43,9 +43,9 @@
             </li>
         </ul>
         <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
             <div class="line3"></div>
+            <div class="line4"></div>
+            <div class="line5"></div>
         </div>
     </nav>
 
@@ -73,21 +73,39 @@
 
 
     <script>
-        window.onload;
-
-        function dropDown(){
-            const menu = document.querySelector(".menu");
+             const menu = document.querySelector(".menu");
             const dropdownList = document.querySelectorAll(".dropdown a");
             let dropdown = document.querySelector(".dropdown");
             let arrow = document.querySelector(".arrow");
 
-            menu.addEventListener("click", ()=>{
-            
-                dropdown.classList.toggle("active");
-                arrow.classList.toggle("toggle");
-            });  
-        }
-        dropDown();
+        window.addEventListener('load', ()=>{
+            if(window.matchMedia("(max-width: 768px)").matches){
+                function dropDown2(){
+                    menu.addEventListener("click", ()=>{
+                        var navs = document.querySelector(".nav-link");
+                        navs.classList.toggle("load");
+                        menu.classList.toggle("loads");
+                        dropdown.classList.toggle("active");
+                         arrow.classList.toggle("toggle");
+                    })
+                }
+                dropDown2();
+            }else{
+             function dropDown(){
+                menu.addEventListener("click", ()=>{
+                    
+                    dropdown.classList.toggle("active");
+                    arrow.classList.toggle("toggle");
+                });  
+            }
+            dropDown();
+            }
+        })
+
+
+
+
+
         function incrementValue(){
             const add = document.getElementById("add");
             const minus = document.getElementById("minus");
@@ -121,7 +139,32 @@
             
         }
         incrementValue();   
-    
+        function navSlide() {
+            const burger = document.querySelector(".burger");
+            const nav = document.querySelector(".nav-link");
+            const navLinks = document.querySelectorAll(".nav-link li");
+            
+            burger.addEventListener("click", function(){
+                //Toggle Nav
+                nav.classList.toggle("nav-active");
+                
+                //Animate Links
+                navLinks.forEach(function(link, index) {
+                    if (link.style.animation) {
+                        link.style.animation = ""
+                    } else {
+                        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
+                    }
+                });
+                //Burger Animation
+                burger.classList.toggle("toggles");
+            });
+            
+        }
+        navSlide();
+
+
+
     
     
     

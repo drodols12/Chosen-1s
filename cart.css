@@ -10,6 +10,7 @@
 body{
     font-family: "Poppins";
     overflow-y: scroll;
+    
 }
 ::-webkit-scrollbar{
     display: none;
@@ -24,25 +25,23 @@ body{
 
 
 .logo img{
-    width: 110px;
-    height: 110px;
+    width: 10vh;
+    height: 10vh;
     margin-left: 60px;
 }
 
 .logo h1{
     width: 100%;
     color: white;
-    font-size: 50px;
+    font-size: 5rem;
     font-family: "Dancing Script";
 }
 #navbar {
-   
     top: 0px;
     transition: all 1s ease;
     
   }
 nav{
-    position: relative;
     top: 0;
     width: 100%;
     display: flex;
@@ -60,6 +59,8 @@ nav h1{
     display: flex;
     width: 30%;
     justify-content: space-around;
+    
+    transition:all .5s ease-in;
 }
 .nav-link li{
     list-style: none;
@@ -78,7 +79,7 @@ nav h1{
 
 .nav-link a h4{
     width: 50vw;
-    font-size: 20px;
+    font-size: 1.3rem;
     transition: all .5s ease
 }
 
@@ -87,19 +88,13 @@ nav h1{
 }
 
 
-.select{
-   
-    width: 400vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 .dropdown{
     position: absolute;
-    top: 110px;
-    right: -180px;
+    top: 10vh;
+    right: -400px;
     margin: 0 auto;
-    z-index: -1;
+    z-index: 99999;
 }
 
 .dropdown a p{
@@ -107,7 +102,7 @@ nav h1{
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 150px;
+    width: 30vh;
     background-color: plum;
     height: 9vh;
     text-transform: uppercase;
@@ -132,9 +127,9 @@ nav h1{
     background-color: plum;
     letter-spacing: 3px;
     font-weight: bold;
-    font-size: 18px;
-    width: 100px;
-    height: 40px;
+    font-size: 1.2rem;
+    width: 50%;
+    height: 5vh;
 }
 
 .menu:hover{
@@ -158,6 +153,7 @@ button:focus{
     text-align: center;
 }
 .arrow{
+    
     display: block;
     transition: all 0.7s ease;
 }
@@ -193,7 +189,6 @@ button:focus{
     transition: all 0.3s ease;
 }
 .active{
-
     right: 0;
     transition: all 1s ease;
 }
@@ -225,11 +220,9 @@ button:focus{
 .cake{
     display: block;
     width: 50%;
-    height: 40%;
+    height: 65vh;
     margin-left:50px;
     text-align: center;
-    
-    
     color: white;
 }
 
@@ -245,12 +238,11 @@ button:focus{
     width: 50%;
     height: 55vh;
     margin: 20px;
-    text-justify:newspaper;
     
 }
 .order h3{
     text-align: center;
-    font-size: 40px;
+    font-size: 3rem;
     
 }
 .order h3, .order p{
@@ -260,14 +252,10 @@ button:focus{
 
 
 .orderForm{
-    position: absolute;
-    bottom: 0vh;
-    left: 7vw;
+    margin: 0 auto;
+    margin-top: 13vh;
     display: block;
     width: 70%;
-    justify-self: center;
-    align-items: center;
-    
 }
 .orderForm input{
     transition: all .5s ease;
@@ -276,7 +264,7 @@ button:focus{
 .orderForm input[type=text], input[type=tel]{
     width: 100%;
     margin: 10px 0;
-    height: 30px;
+    height: 5vh;
     text-align: center;
     border: none;
     cursor: pointer;
@@ -328,4 +316,183 @@ button:focus{
 .orderForm input:hover{
     border-bottom: solid 2px rgb(184, 116, 184);
     box-shadow: 2px 5px 5px rgb(184, 116, 184);
+}
+
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.toggles .line3 {
+transform: rotate(-45deg) translate(-7px, 6px);
+}
+
+.toggles .line4 {
+opacity: 0;
+}
+
+.toggles .line5 {
+transform: rotate(45deg) translate(-7px, -6px);
+}
+
+
+
+@media screen and (max-width: 768px){
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+       
+    }
+    body{
+        position: relative;
+    }
+    .logo img{
+        width: 6vh;
+        height: 5vh;
+        margin-left: 10px;
+    }
+    .logo h1{
+        width: 100%;
+        font-size: 1.5rem;
+    }
+    .burger{
+        display: block;
+    }
+    nav{
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 8vh;
+        z-index: 1;
+        background-color: plum;
+    }
+    .nav-link{
+       
+        position: absolute;
+        display: block;
+        top: 60px;
+        width: 100%;
+        height: 26vh;
+        background-color: plum;
+        z-index: 1;
+        transform: translateX(100%);
+    }
+    .nav-link li{
+        display: flex;
+        width: 100%;
+        margin: 40px auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav-link a{
+        text-align: center;
+        color:white;
+    }
+    .nav-link a h4{
+        width: 50vw;
+        font-size: .5rem;
+        transition: all .5s ease
+    }
+    .nav-active {
+        background-color:  plum;
+        transform: translateX(0%);
+        overflow-y: scroll;
+    }
+    .select{
+        width: 100%;
+    }
+
+    .menu{
+        display: flex;
+        width: 100vw;
+        margin-bottom: 100vh;
+        font-size: .5rem;
+    }
+    .arrow{
+        display: none;
+    }
+    .dropdown{
+        position: absolute;
+        display: block;
+        margin: 0 auto;
+        top: 10vh;   
+        width: 100%;
+        z-index: 99;
+    }
+
+    .dropdown a{
+        width: 100%;
+    }
+
+    .dropdown a p{
+        display: block;
+        margin: 0 auto;
+        width: 20vh;
+      
+    }
+    .active{
+        width: 100%;
+        right: 0;
+        background-color: plum;
+        transition: all 1s ease;
+    }
+
+    .card{
+        display: block;
+    }
+
+    .cake{
+        width: 100%;
+        height: 30vh;
+        margin: 0 auto;
+    }
+    .cake img{
+        width:90%;
+        margin: 20px auto;
+    }
+    .order{
+        position: relative;
+        display: block;
+        width: 90%;
+        height: 70vh;
+        margin: 0 auto;
+    }
+    .order h3{
+        font-size: 1.2rem;
+    }
+
+    .order h3, .order p{
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    .orderForm{
+        display: block;
+        width: 70%;
+        margin-top: 5vh;
+        justify-self: center;
+        align-items: center;
+        z-index: 1;
+    }
+    .orderForm i{
+        margin: 0 5px;
+        font-size: .5rem;
+    }
+    .load{
+        height: 70vh;
+    }
+    .loads{
+        margin-bottom: 50vh;
+    }
 }
