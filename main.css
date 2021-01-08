@@ -584,7 +584,7 @@ transform: rotate(45deg) translate(-7px, -6px);
 
     .cardContainer p{
         width: 90%;
-        font-size: .6rem;
+        font-size: .5rem;
         text-align: center;
     }
     footer{
