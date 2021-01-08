@@ -154,7 +154,7 @@ img {
 }
 
 .container2 h1{
-    font: 5rem "Dancing Script";
+    font: 3rem "Dancing Script";
     margin: 100px 0px;
     text-align: center;
 }
@@ -260,7 +260,7 @@ a .cheesecake{
 }
 .cardContainer{
     width: 100%;
-    height: 350px;
+    height: 40vh;
     position: absolute;
     bottom: 0px;
     display: block;
@@ -270,12 +270,12 @@ a .cheesecake{
 
 .cardContainer h1{
     margin: 20px auto; 
-    font: 70px "Dancing Script";
+    font: 3rem "Dancing Script";
 }
 
 .cardContainer p{
     width: 800px;
-
+    font-size: .5rem;
     margin: 25px auto;
     padding-bottom: 20px;
 }
@@ -411,9 +411,51 @@ transform: rotate(45deg) translate(-7px, -6px);
 
 @media screen and (max-width: 768px)
 {
-    body{
+    html, body{ 
         overflow-x: hidden;
     } 
+
+    body{
+        position: relative;
+    }
+
+    .mySlides {
+        margin:0 auto;
+        display: none;
+    }
+    .mySlides img {
+        vertical-align:middle;
+        width: 100%;
+        height: 50vh;
+        object-fit: cover;
+    }
+
+    .slideshow-container {
+        max-width: 100%;
+        position: relative;
+        margin: 0 auto;
+      }
+      
+      
+      .choices{
+          position: absolute;
+          width: 80%;
+          bottom: 100vh;
+          left: 48%;
+          display: flex;
+          margin: 0 auto;
+      }
+      
+      /* The dots/bullets/indicators */
+      .dot {
+        height: 15px;
+        width: 15px;
+        margin: 0 5px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
 
     nav{
         position: relative;
@@ -461,31 +503,40 @@ transform: rotate(45deg) translate(-7px, -6px);
         width: 100%;
         display: block;
     }
+    .container2 h1{
+        font-family: "Dancing Script";
+        font-size: 2rem;
+        margin: 30px auto;
+        text-align: center;
+    }
+
     .products{
         width: 100%;
         display: flex;
         flex-wrap: wrap;
         margin: 0 auto;
     }
+
     .new{
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
-        width: 30%;
+        width: 50%;
         height: 50vh;
         text-align: center;
     }
 
     .new img, a img{
         display: flex;
-        width: 20vw;
+        width: 50vw;
         height: 20vh;
     }
     a .cheesecake{
         display: none;
         position: absolute;
-        top: 32px;
-        left: 25px;
+        top: 40px;
+        left: 0px;
+        
         animation: showMe 2s ease infinite 0.2s forwards;
         animation-play-state: paused;
         z-index: 99;
@@ -497,13 +548,57 @@ transform: rotate(45deg) translate(-7px, -6px);
     .cardContainer{
         display: block;
         width: 100%;
-        height: 70vh;
+        height: 50vh;
         text-align: center;
         margin: 0 auto;
     }
+    .cardContainer h1{
+        margin: 20px auto; 
+        font: 2.5rem "Dancing Script";
+    }
+
     .cardContainer p{
         width: 90%;
         text-align: center;
+    }
+    footer{
+        background-color: plum;
+        position: absolute;
+        bottom: -880px;
+        width: 100%;
+        height: 40vh;
+        display: block;
+        text-align: center;
+    }
+    
+    footer h1{
+        font: 3rem "Dancing Script";
+        color: white;
+        margin: 20px auto;
+    }
+    
+    footer button{
+        width: 25vw;
+        height: 5vh;
+        border-radius: 10px;
+        border-style: none;
+        margin-left: 10px;
+        font: 14px "Poppins";
+        color: white;
+        background-color: rgb(255, 66, 170);
+        cursor: pointer;
+    }
+    
+    footer p{
+        font-size: .5rem;
+        color: white;
+        margin-top: 30px;
+    }
+    
+    
+    footer p a{
+        color: white;
+        text-decoration: none;
     }
 
 

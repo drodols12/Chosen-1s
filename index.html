@@ -136,7 +136,7 @@
         </footer>
     </div>
 
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
      
 
@@ -156,10 +156,12 @@
                 window.onscroll = function() {
                   return;
                };
+               AOS.init();
             }else{
                 window.onscroll = function() {
                   scrollFunction()
                };
+               AOS.init();
                 function scrollFunction() {
                     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100 ) {
                         document.getElementById("navbar").style.top = "0";
@@ -252,10 +254,8 @@
             }
             navSlide();
     </script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>    
+   
+   
 
     
 </body>
