@@ -552,6 +552,7 @@ transform: rotate(45deg) translate(-7px, -6px);
         font-size: .5rem;
     }
     .header {
+        text-align: center;
         font-size: .7rem;
     }
 
@@ -578,12 +579,12 @@ transform: rotate(45deg) translate(-7px, -6px);
     }
     .cardContainer h1{
         margin: 20px auto; 
-        font: 3rem "Dancing Script";
+        font: 2.5rem "Dancing Script";
     }
 
     .cardContainer p{
         width: 90%;
-        font-size: 1.3rem;
+        font-size: 17px;
         text-align: center;
     }
     footer{
