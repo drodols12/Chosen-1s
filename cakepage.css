@@ -239,7 +239,7 @@ footer p a{
     .navlinks{
         position: absolute;
         right: 0px;
-        height: 70%;
+        height: 20%;
         top: 10vh;
         background-color: #ff9b9b;
         display: flex;
