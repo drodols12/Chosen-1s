@@ -53,12 +53,10 @@
         <h1>Order Cart</h1>
         <div class="card">
             <div class="cake">
-                
-                <img src="./cake/Round Cake/Mango Bravo.jpg" alt="">
-                
+                <img id="cakeImg"  alt="">
             </div>
             <div class="order">
-                <h3 id="cakeType2">Mango Bravo</h3>
+                <h3 id="cakeType2"></h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Rem mollitia dolor iste voluptas quasi distinctio, fugiat 
                 </p>
@@ -163,11 +161,18 @@
         }
         navSlide();
 
+        const cakeImg = document.getElementById("cakeImg");
+        const ckNM = document.getElementById("cakeType2");
+       
+       
+       
+        window.addEventListener('load', ()=>{
 
 
-    
-    
-    
+           ckNM.textContent = localStorage.getItem('cakeNm');
+           cakeImg.setAttribute("src", localStorage.getItem('cake1'))
+        })
+        
     
     
     </script>
