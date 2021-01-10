@@ -198,7 +198,7 @@ function whatsNew(){
             cakeName = document.getElementById("cakeType16");
             localStorage.setItem("cakeNm", cakeName.textContent);
 
-            let val = "soon"
+            let val = 24
             localStorage.setItem("val",val);
             window.location.href = "./cart.html";
         })
@@ -206,7 +206,7 @@ function whatsNew(){
             localStorage.setItem("cake1", imgSrc17.src);
             cakeName = document.getElementById("cakeType17");
             localStorage.setItem("cakeNm", cakeName.textContent);
-            let val = "soon"
+            let val = 24
             localStorage.setItem("val",val);
             window.location.href = "./cart.html";
         })
@@ -214,7 +214,7 @@ function whatsNew(){
             localStorage.setItem("cake1", imgSrc18.src);
             cakeName = document.getElementById("cakeType18");
             localStorage.setItem("cakeNm", cakeName.textContent);
-            let val = "soon"
+            let val = 24
             localStorage.setItem("val",val);
             window.location.href = "./cart.html";
         })
