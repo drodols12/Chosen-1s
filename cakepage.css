@@ -287,7 +287,6 @@ footer{
     background-color: plum;
     width: 100%;
     height: 30vh;
-
     text-align: center;
 
 }
@@ -313,7 +312,7 @@ footer button{
 
 footer p{
     color: white;
-    margin-top: 30px;
+    margin-top: 25px;
 }
 
 
@@ -360,13 +359,14 @@ footer p a{
     .navlinks{
         position: absolute;
         right: 0px;
-        height: 20%;
+        height: 40%;
         top: 10vh;
-        background-color: #ff9b9b73;
+        /* background-color: #ff9b9b4d; */
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 50%;
+        margin-bottom: 10px;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
         z-index: 2;
@@ -375,9 +375,9 @@ footer p a{
     
     .cakes ul.navlinks li{
         opacity: 0;
-        background-color: #cc7373;
+        background-color: #ffffff00;
         width: 55vw;
-        height: 10vh;
+
         transition: all .5s ease;
         border-radius: 10px;
     }
@@ -385,45 +385,47 @@ footer p a{
         width: 100%;
         font-size: 1rem;
         transition: all .3s ease;
-    
     }
     
     .cakes ul li.active{
-        background-color:#ff9b9b;
+        /* background-color: #ff9b9b73; */
+        border-radius: 0;
         width: 100%;
         display: flex;
         text-align: center;
         align-items: center;
         justify-content: space-around;
+        /* pointer-events: none; */
+    }
+    .cakes ul li:hover h3{
+        color: white;
     }
 
-    .cakes ul li:hover{
-        background-color:#ffc2c2;
-        border-radius: 30px;
-    }
 
-    .typeofCakes:hover{
+    .typeofCakes{
         color:#ff7171;
+        margin-bottom: 10px;
     }
- 
+    .typeofCakes:active{
+        transform: scale(.9);
+    }
     .active a{
         text-align: center;
         color: white;
         text-decoration: none;
-        
     }
 
     .active a h3{
-        
         text-align: center;
         font-size: 1.5rem;
         letter-spacing: 3px;
         transition: all .5s ease;
     }
 
-     li.active a:hover h3{
-        color: #be5959;
+     li.active a h3{
+        color: white;
     }
+
 
     .whatsNew{
         display: flex;
@@ -495,7 +497,7 @@ footer p a{
     .cake h3{
         width: 100%;
         text-align: center;
-        font: .5rem "Poppins";
+        font: .6rem "Poppins";
         letter-spacing: 1px;
         margin: 1vh auto;
     }
@@ -503,7 +505,7 @@ footer p a{
     .cake p{
         margin: 1vh auto;
         width: 100%;
-        font-size: .1rem;
+        font-size: .5rem;
         text-align: center;
     }
     .whatsNew .cake:nth-last-of-type(1){
@@ -516,6 +518,7 @@ footer p a{
         height: 30vh;
         display: block;
         text-align: center;
+        overflow-y: hidden;
     }
     
     footer button{
@@ -541,7 +544,7 @@ footer p a{
     footer p{
         color: white;
         font-size: 10px;
-        margin: 15px auto;
+        margin: 0;
         width: 100vw;
     }
     
@@ -560,9 +563,10 @@ footer p a{
 }
 
 .nav-active {
-    background-color: #ff9b9bb9;
+    background-color: #ff9b9be8;
     transform: translateX(0%);
     overflow-y: scroll;
+    color: white;
 }
 
 @keyframes navLinkFade {

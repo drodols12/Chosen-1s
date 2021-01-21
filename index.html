@@ -39,10 +39,10 @@
             </div>
             <ul class="nav-link">
                 <li >
-                    <a id="texts" href="cakepage.html"><h4 >HOME</h4></a>
+                    <a id="texts" href="cakepage.html"><h4>OUR CAKES</h4></a>
                 </li>
                 <li >
-                    <a id="texts1" href="#cont3"><h4 >ABOUT US</h4></a>
+                    <div id="texts1"><h4 >ABOUT US</h4></div>
                 </li>
             </ul>
             <div class="burger">
@@ -241,8 +241,6 @@
             })
     
         var slideIndex = 0;
-
-    
         function showSlides() {
             var i;
             var slides = document.getElementsByClassName("mySlides");
@@ -262,8 +260,7 @@
             setTimeout(showSlides, 2000); // Change image every 2 seconds
             }
 
-
-            showSlides();
+        showSlides();
 
             function navSlide() {
                 const burger = document.querySelector('.burger');
@@ -273,6 +270,7 @@
                 burger.addEventListener('click', function(){
                     //Toggle Nav
                     nav.classList.toggle("active");
+                    nav.classList.remove("active1");
                     
                     //Animate Links
                     navLinks.forEach(function(link, index) {
@@ -308,6 +306,35 @@
 
 
             contactUS();
+
+            function SmoothVerticalScrolling(e, time, where) {
+                var eTop = e.getBoundingClientRect().top;
+                var eAmt = eTop / 100;
+                var curTime = 0;
+                while (curTime <= time) {
+                    window.setTimeout(SVS_B, curTime, eAmt, where);
+                    curTime += time / 100;
+                }
+            }
+
+            function SVS_B(eAmt, where) {
+                if(where == "center" || where == "")
+                    window.scrollBy(0, eAmt / 2);
+                if (where == "top")
+                    window.scrollBy(0, eAmt);
+            }
+
+            var gotoAbout = document.getElementById("texts1");
+            gotoAbout.addEventListener('click', ()=>{
+            var about = window.location.href = "index.html#cont3";
+            var navv = document.querySelector(".nav-link");
+                SmoothVerticalScrolling(about, 2700, "center");
+
+                
+                navv.classList.remove("active");
+                navv.classList.add("active1");
+                return;
+            });
 
 
 
