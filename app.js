@@ -198,7 +198,7 @@ function whatsNew(){
             cakeName = document.getElementById("cakeType16");
             localStorage.setItem("cakeNm", cakeName.textContent);
 
-            let val = 24
+            let val = "soon"
             localStorage.setItem("val",val);
             window.location.href = "./cart.html";
         })
@@ -206,7 +206,7 @@ function whatsNew(){
             localStorage.setItem("cake1", imgSrc17.src);
             cakeName = document.getElementById("cakeType17");
             localStorage.setItem("cakeNm", cakeName.textContent);
-            let val = 24
+            let val = "soon"
             localStorage.setItem("val",val);
             window.location.href = "./cart.html";
         })
@@ -214,7 +214,7 @@ function whatsNew(){
             localStorage.setItem("cake1", imgSrc18.src);
             cakeName = document.getElementById("cakeType18");
             localStorage.setItem("cakeNm", cakeName.textContent);
-            let val = 24
+            let val = "soon"
             localStorage.setItem("val",val);
             window.location.href = "./cart.html";
         })
@@ -268,9 +268,77 @@ function whatsNew(){
 
 whatsNew();
 
+function cakeSlide(){
+    const whatsNew = document.getElementById("whatsNew");
+    const roundCakes = document.getElementById("roundCakes");
+    const rollCakes = document.getElementById("rollCakes");
+    const dreamCakes = document.getElementById("dreamCakes");
+    const cupCakes = document.getElementById("cupCakes");
+    const sweetBites = document.getElementById("sweetBites");
+    var watsnew = document.getElementById("watsNew");
+    var roundcake = document.getElementById("roundCake");
+    var rollcake = document.getElementById("rollCake");
+    var dreamcake = document.getElementById("dcCake");
+    var cupcake = document.getElementById("cupCake");
+    var sweetbites = document.getElementById("sweetBts");
+
+
+    whatsNew.addEventListener('click', ()=>{
+        watsnew.classList.remove("wActive2");
+        roundcake.classList.remove("rActive");
+        rollcake.classList.remove("rcActive");
+        dreamcake.classList.remove("dcActive");
+        cupcake.classList.remove("cActive");
+        sweetbites.classList.remove("sActive");
+    })
+    roundCakes.addEventListener('click', ()=>{
+        watsnew.classList.add("wActive2");
+        roundcake.classList.add("rActive");
+        rollcake.classList.remove("rcActive");
+        dreamcake.classList.remove("dcActive");
+        cupcake.classList.remove("cActive");
+        sweetbites.classList.remove("sActive");
+    })
+    rollCakes.addEventListener('click', ()=>{
+        watsnew.classList.add("wActive2");
+        roundcake.classList.remove("rActive");
+        rollcake.classList.add("rcActive");
+        dreamcake.classList.remove("dcActive");
+        cupcake.classList.remove("cActive");
+        sweetbites.classList.remove("sActive");
+    })
+    dreamCakes.addEventListener('click', ()=>{
+        watsnew.classList.add("wActive2");
+        rollcake.classList.remove("rcActive");
+        roundcake.classList.remove("rActive");
+        dreamcake.classList.add("dcActive");
+        cupcake.classList.remove("cActive");
+        sweetbites.classList.remove("sActive");
+    })
+    cupCakes.addEventListener('click', ()=>{
+        watsnew.classList.add("wActive2");
+        rollcake.classList.remove("rcActive");
+        roundcake.classList.remove("rActive");
+        dreamcake.classList.remove("dcActive");
+        cupcake.classList.add("cActive");
+        sweetbites.classList.remove("sActive");
+            
+    })
+    sweetBites.addEventListener('click', ()=>{
+        watsnew.classList.add("wActive2");
+        rollcake.classList.remove("rcActive");
+        roundcake.classList.remove("rActive");
+        dreamcake.classList.remove("dcActive");
+        cupcake.classList.remove("cActive");
+        sweetbites.classList.add("sActive");
+    })
 
 
 
+}
+
+
+cakeSlide();
 
 
 

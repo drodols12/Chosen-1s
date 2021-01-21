@@ -37,7 +37,7 @@ body{
     position: relative;
     top: 0px;
     transition: all 1s ease;
-    z-index: 100;
+    z-index: 3;
 }
 nav{
     position: fixed;
@@ -124,12 +124,16 @@ nav h1{
 }
 
 
-.cakeGallery{
+.whatsNew{
+    position: absolute;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    transform: scale(1);
+    transition: all .3s ease-in;
+    z-index: 1;
 }
 
 .cake{
@@ -144,6 +148,7 @@ nav h1{
     width: 20vw;
     height: 20vh;
     object-fit:  cover;
+    cursor: pointer;
 }
 
 .cake h3{
@@ -159,16 +164,132 @@ nav h1{
     width: 20vw;
     text-align: center;
 }
+/* whats new */
+.whatsNew1{
+    width: 100%;
+    height: 100vh;
+    margin: 10px;
+    display: block;
+    position: relative;
+    overflow-y: scroll;
+    
+}
+/* .wActive{
+    transform: translateX(0);
+    transition: all .5s ease-in;
+} */
+.wActive2{
+    transform: scale(0);
+    transition: all .3s ease-in;
+}
+/* Round cakes */
+.roundCakes{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    transform: scale(0);
+    transition: all .3s ease-in;
+    z-index: 1;
+}
+
+.rActive{
+    transform: scale(1);
+    transition: all .3s ease-in;
+}
+/* .rActive2{
+    transform: translateX(-100%);
+    transition: all .5s ease-in;
+} */
+/* Roll Cakes */
+.rollCakes{
+    position: absolute;
+    top: 20vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    transform: scale(0);
+    transition: all .3s ease-in;
+    z-index: 1;
+}
+.rcActive{
+    transform: scale(1);
+    transition: all .3s ease-in;
+}
+/* .rcActive2{
+    transform: translateX(-100%);
+    transition: all .5s ease-in;
+} */
+
+/* Dreamcake and Cheesecake */
+.dreamCake{
+    position: absolute;
+    top: 20vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    transform: scale(0);
+    transition: all .3s ease-in;
+    z-index: 1;
+}
+.dcActive{
+    transform: scale(1);
+    transition: all .3s ease-in;
+}
+/* cupcakes */
+.cupCake{
+    position: absolute;
+    top: 20vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    transform: scale(0);
+    transition: all .3s ease-in;
+    z-index: 1;
+}
+.cActive{
+    transform: scale(1);
+    transition: all .3s ease-in;
+}
+/* sweet bites */
+.sweetBites{
+    position: absolute;
+    top: 20vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    transform: scale(0);
+    transition: all .3s ease-in;
+    z-index: 1;
+}
+.sActive{
+    transform: scale(1);
+    transition: all .3s ease-in;
+}
 
 
 /* FOOTER */
 
 footer{
+    display: block;
+    /* position: absolute;
+    bottom:-40vh; */
     background-color: plum;
     width: 100%;
     height: 30vh;
-    display: block;
+
     text-align: center;
+
 }
 
 footer h1{
@@ -241,13 +362,14 @@ footer p a{
         right: 0px;
         height: 20%;
         top: 10vh;
-        background-color: #ff9b9b;
+        background-color: #ff9b9b73;
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 50%;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
+        z-index: 2;
     }
 
     
@@ -303,11 +425,55 @@ footer p a{
         color: #be5959;
     }
 
-    .cakeGallery{
+    .whatsNew{
         display: flex;
         flex-wrap: wrap;
         width: 100%;
         height: 100%;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .roundCake1{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .rollCakes{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+       
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .dreamCake{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+       
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .cupCake{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+       
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .sweetBites{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        
         justify-content: center;
         align-items: center;
         margin: 0 auto;
@@ -340,7 +506,7 @@ footer p a{
         font-size: .1rem;
         text-align: center;
     }
-    .cake:nth-last-of-type(1){
+    .whatsNew .cake:nth-last-of-type(1){
         margin-right: 50%;
     }
     
@@ -382,8 +548,19 @@ footer p a{
 
 }
 
+.ftActive{
+    display: block;
+    position: absolute;
+    top: 100vh;
+    background-color: plum;
+    width: 100%;
+    height: 30vh;
+    display: block;
+    text-align: center;
+}
+
 .nav-active {
-    background-color:  #ff9b9b;
+    background-color: #ff9b9bb9;
     transform: translateX(0%);
     overflow-y: scroll;
 }

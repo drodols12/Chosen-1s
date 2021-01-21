@@ -1,27 +1,48 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chosen 1 Bakeshop</title>
-    <link rel="stylesheet" href="./main.css">
-    <link rel="icon" href="./logo/logo.png">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" href="./fontawesome/css/all.css">
+    <link rel="icon" href="logo/logo.png">
     
 </head>
 <body>
    
-       
+   
+    <div class="contactus">
+        <div class="card">
+            <i class="far fa-times fa-3x" id="closeBtn"></i>
+            <h1> CONTACT US </h1>
+            <p>Please fill up the form.</p>
+            
+        </div>
+        <form action="">
+            <h3>Full Name</h3>
+            <input type="text">
+            <h3>Email</h3>
+            <input type="email" name="" id="">
+            <h3>Message</h3>
+            <textarea rows="4" cols="100" name="comment"></textarea>
+            <input type="button" value="Submit">
+        </form>
+    </div>
         <nav id="navbar">
+           
             <div class="logo">
-                <img src="./logo/logo.png" alt="">
+                <img src="logo/logo.png" alt="">
                 <h1 id="text1">Chosen 1</h1>
             </div>
             <ul class="nav-link">
                 <li >
-                    <a id="texts" href="./cakepage.html"><h4 >HOME</h4></a>
+                    <a id="texts" href="cakepage.html"><h4 >HOME</h4></a>
                 </li>
                 <li >
-                    <a id="texts1" href=""><h4 >ABOUT US</h4></a>
+                    <a id="texts1" href="#cont3"><h4 >ABOUT US</h4></a>
                 </li>
             </ul>
             <div class="burger">
@@ -50,6 +71,9 @@
         <span class="dot"></span> 
         <span class="dot"></span> 
         <span class="dot"></span> 
+    </div>
+    <div class="scrollup" id="scrollUp">
+        <i class="fas fa-chevron-circle-up "></i>
     </div>
 
     <!-- CONTENT 2 -->
@@ -112,9 +136,9 @@
     </div>
 
     <!-- CONTENT 3 -->
-    <div class="container3">
-        <div class="bGround one"></div>
-        <div  class="cardContainer">
+    <div class="container3" >
+        <div class="bGround one" id="cont3"></div>
+        <div  class="cardContainer" >
             <h1 >About Chosen 1</h1>
             <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                 Consequuntur incidunt facere repellat accusantium animi sunt consequatur suscipit dolores tenetur repudiandae! 
@@ -127,17 +151,20 @@
                     ipsam quibusdam nobis architecto ipsa sapiente!.</p>
         </div>
         <div class="bGround two"></div>
+       
         <footer>
+            
             <h1>Chosen 1s Bakeshop</h1>
             <button>Our Cakes</button>
             <button>Order Now</button>
-            <button>Contact Us</button>
+            <button id="contact">Contact Us</button>
             <p>©Copyright <a href="./main.html"> <b>Chosen 1 Bakeshop.</b> </a>All Rights Reserved.</p>
+    
         </footer>
     </div>
-   
+
     <script>
-         let contentOne = document.querySelector(".slideshow-container");
+            let contentOne = document.querySelector(".slideshow-container");
             let contentTwo = document.querySelector(".container2");
             const aRef = document.getElementById("texts");
             const aRef2 = document.getElementById("texts1");
@@ -145,41 +172,56 @@
             let burger = document.querySelector(".line1");
             let burger1 = document.querySelector(".line2");
             let burger2 = document.querySelector(".line3");
+            const scrollup = document.getElementById("scrollUp");
             
 
-
+            
             window.addEventListener('scroll', ()=>{
                 if(window.matchMedia("(max-width: 768px)").matches){
-                    window.onscroll = function() {
-                    return;
-                };
+                    function scrollBtn(){
+                        if(document.body.scrollTop > 600 || document.documentElement.scrollTop > 600){
+                            scrollup.style.position = "fixed";
+                            scrollup.style.bottom = "30vh";
+                            scrollup.style.opacity = "1";
+                        }else{
+                            scrollup.style.opacity = "0";
+                            scrollup.style.position = "absolute";
+                            scrollup.style.bottom = "0";
+                        }
+                    }
 
+                    scrollBtn();
 
                 }else{
                     window.onscroll = function() {
                     scrollFunction()
                 };
                     function scrollFunction() {
-                        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100 ) {
+                        if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000 ) {
                             document.getElementById("navbar").style.top = "0";
                             document.getElementById("navbar").style.position = "fixed";
                             document.getElementById("navbar").style.backgroundColor = "white";
-                            
+                            scrollup.style.position = "fixed";
+                            scrollup.style.bottom = "30vh";
+                            scrollup.style.opacity = "1";
                             contentOne.style = "position: absolute; top: 100px; right: 0;display: block; width: 100%";
                             contentTwo.style = "margin-top: 750px;"
                             navLinks.style.color = "plum";
                             aRef.style.color = "plum";
                             aRef2.style.color = "plum";
-
+                          
                             burger.style.backgroundColor = "plum";
                             burger1.style.backgroundColor = "plum";
                             burger2.style.backgroundColor = "plum";
-                            //window.matchMedia
-                        } else {
 
+                           
+
+                        }else {
+                            scrollup.style.opacity = "0";
+                            scrollup.style.position = "absolute";
+                        scrollup.style.bottom = "0";
                             document.getElementById("navbar").style.top = "0px";
                             document.getElementById("navbar").style.backgroundColor = "plum";
-                            
                             navLinks.style.color = "white";
                             aRef.style.color = "white";
                             aRef2.style.color = "white";
@@ -190,6 +232,13 @@
                     }
                 }
             });
+            scrollup.addEventListener('click', ()=>{
+                window.scroll({
+                    top: 0, 
+                    left: 0, 
+                    behavior: 'smooth' 
+                });
+            })
     
         var slideIndex = 0;
 
@@ -230,7 +279,7 @@
                         if (link.style.animation) {
                             link.style.animation = ""
                         } else {
-                            link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
+                            link.style.animation = `navLinkFade 0.5s ease forwards ${index / 3 + 0.3}s`;
                         }
                     });
                     //Burger Animation
@@ -239,9 +288,30 @@
                 
             }
             navSlide();
-    </script>
-   
 
-    
+
+            const contact = document.getElementById("contact");
+            const contactForm = document.querySelector(".contactus");
+            const closeBtn = document.getElementById("closeBtn");
+
+            function contactUS(){
+                contact.addEventListener('click', ()=>{
+                    
+                    contactForm.classList.add("contactactive")
+                    contactForm.classList.remove("contactactive1")
+                })
+                closeBtn.addEventListener('click', ()=>{
+                    contactForm.classList.add("contactactive1")
+                    contactForm.classList.remove("contactactive")
+                })
+            }
+
+
+            contactUS();
+
+
+
+    </script>
+
 </body>
 </html>
