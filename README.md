@@ -7,9 +7,8 @@ This website is not yet finish it only shows the front end and not the actual we
 update:
 
 Clickables:
-|===================================================================================================================================================================|
-|#Important notice: other browser are not supported in terms of animations and some part of the pages are having visual bugs from diffrent viewports it is still on | |progress and i will find a way on how will I fix it.##                                                                                                             |
-|===================================================================================================================================================================|
+
+#Important notice: other browser are not supported in terms of animations and some part of the pages are having visual bugs from diffrent viewports it is still on progress and i will find a way on how will I fix it.##                                                                                                             
   for pc/laptop browser:
   -"Home"
   -"About Us"
