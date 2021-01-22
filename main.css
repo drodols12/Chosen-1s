@@ -353,20 +353,39 @@ footer p a{
 }
 
 .scrollup{
-    position: absolute;
+    position: fixed;
     right: 2vw;
-    bottom: 0vh;
+    bottom: 0;
     font-size: 60px;
     color: plum;
-    z-index: 1;
-    opacity: 0;
-    transition: all .5s ease;
+    z-index: 2;
+    opacity: 1;
     cursor: pointer;
 }
 .scrollup:active{
     transform: scale(.9);
 }
-
+.scrollAct{
+    position: absolute;
+    bottom: -365vh;
+    right: 2vw;
+    font-size: 60px;
+    color: plum;
+    z-index: 2;
+    opacity: 1;
+   
+    cursor: pointer;
+}
+.scrollAct2{
+    position: fixed;
+    right: 2vw;
+    bottom: 0;
+    font-size: 60px;
+    color: plum;
+    z-index: 2;
+    opacity: 1;
+    cursor: pointer;
+}
 
 /* ALL Hover EFFECTS */
 header nav ul li:hover h4{
@@ -765,8 +784,34 @@ transform: rotate(45deg) translate(-7px, -6px);
         text-decoration: none;
     }
     .scrollup{
+        position: fixed;
+        right: 2vw;
+        bottom: 0;
+        font-size: 3rem;
+        color: plum;
+        z-index: 2;
+        opacity: 1;
+        cursor: pointer;
+    }
+    .scrollAct{
         position: absolute;
-        bottom: -70vh;
-        opacity: 0;
-    } 
+        bottom: -98vh;
+        right: 2vw;
+        font-size: 3rem;
+        color: plum;
+        z-index: 2;
+        opacity: 1;
+       
+        cursor: pointer;
+    }
+    .scrollAct2{
+        position: fixed;
+        right: 2vw;
+        bottom: 0;
+        font-size: 3rem;
+        color: plum;
+        z-index: 2;
+        opacity: 1;
+        cursor: pointer;
+    }
 }
