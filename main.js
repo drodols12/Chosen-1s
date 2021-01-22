@@ -64,11 +64,7 @@ window.addEventListener('scroll', ()=>{
 });
 
 scrollup.addEventListener('click', ()=>{
-    window.scroll({
-        top: 0, 
-        left: 0, 
-        behavior: 'smooth' 
-    });
+    window.location.href = "#contact";
 })
 
 var slideIndex = 0;
