@@ -64,7 +64,7 @@ window.addEventListener('scroll', ()=>{
 });
 
 scrollup.addEventListener('click', ()=>{
-    window.location.href = "#contact";
+    window.location.href = "#scrtop";
 })
 
 var slideIndex = 0;
