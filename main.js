@@ -115,11 +115,12 @@ function navSlide() {
 navSlide();
 
 
-const contact = document.getElementById("contact");
-const contactForm = document.querySelector(".contactus");
-const closeBtn = document.getElementById("closeBtn");
+
 
 function contactUS(){
+    const contact = document.getElementById("contact");
+    const contactForm = document.querySelector(".contactus");
+    const closeBtn = document.getElementById("closeBtn");
     contact.addEventListener('click', ()=>{
         
         contactForm.classList.add("contactactive")
