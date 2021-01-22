@@ -167,7 +167,7 @@ var scrollUp = document.getElementById("scrollUp");
 var y = window.pageYOffset;
 function scrollFunc(){
     window.addEventListener('scroll', ()=>{
-        if(document.body.scrollTop > 2700 || document.documentElement.scrollTop > 2700){
+        if(document.body.scrollTop > 2750 || document.documentElement.scrollTop > 2750){
             scrollUp.classList.add("scrollAct");
             scrollUp.classList.remove("scrollAct2");
             console.log(y);
