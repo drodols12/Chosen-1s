@@ -17,7 +17,7 @@
         </div>
         <ul class="nav-link">
             <li>
-                <a id="texts" href="cakepage.html"><h4 >HOME</h4></a>
+                <a id="texts" href="index.html"><h4 >HOME</h4></a>
             </li>
             <li id="about">
                 <a id="texts1" href="index.html#cont3"><h4>ABOUT US</h4></a>
@@ -25,20 +25,8 @@
             <li>
                 <div class="select">
                     <button class="menu">
-                        <p>Menu</p>
-                        <div class="arrow">
-                            <div class="line1"></div>
-                            <div class="line2"></div>
-                        </div>
+                        <h3>Menu</h3>
                     </button>
-                    <div class="dropdown">
-                        <a href=""><p>what's new</p> </a>
-                        <a href=""><p>round cake</p> </a>
-                        <a href=""><p>roll cake</p> </a>
-                        <a href=""><p>dreamcake & cheesecake</p> </a>
-                        <a href=""><p>cupcake</p> </a>
-                        <a href=""><p>sweet bites</p> </a>
-                    </div>
                 </div>
             </li>
         </ul>
@@ -69,131 +57,9 @@
         </div>
     </div>
 
-    <script>
-        const cakeImg = document.getElementById("cakeImg");
-        const ckNM = document.getElementById("cakeType2");
-       
-       
-        window.addEventListener('load', ()=>{
-           ckNM.textContent = localStorage.getItem('cakeNm');
-           cakeImg.setAttribute("src", localStorage.getItem('cake1'));
 
-        })
-
-
-
-
-            const menu = document.querySelector(".menu");
-            const dropdownList = document.querySelectorAll(".dropdown a");
-            let dropdown = document.querySelector(".dropdown");
-            let arrow = document.querySelector(".arrow");
-
-        window.addEventListener('load', ()=>{
-            if(window.matchMedia("(max-width: 768px)").matches){
-                function dropDown2(){
-                    menu.addEventListener("click", ()=>{
-                        var navs = document.querySelector(".nav-link");
-                        navs.classList.toggle("load");
-                        menu.classList.toggle("loads");
-                        dropdown.classList.toggle("active");
-                         arrow.classList.toggle("toggle");
-                    })
-                }
-                dropDown2();
-            }else{
-             function dropDown(){
-                menu.addEventListener("click", ()=>{
-                    
-                    dropdown.classList.toggle("active");
-                    arrow.classList.toggle("toggle");
-                });  
-            }
-            dropDown();
-            }
-        })
-
-
-
-
-
-        function incrementValue(){
-            const add = document.getElementById("add");
-            const minus = document.getElementById("minus");
-            const prc = localStorage.getItem('val')
-            
-
-
-            add.addEventListener("click", ()=>{
-                // var value;
-                var price = parseInt(document.getElementById("price").value = prc);
-                var value = parseInt(document.getElementById("num").value, 10);
-                var total;
-                var x;
-
-
-
-                    value++;
-                    total = (value)*price;
-                        
-                    document.getElementById("num").value = value;
-                    document.getElementById("price").value = total + "$";
-                
-
-            })
-              
-            minus.addEventListener("click", ()=>{
-                var price = parseInt(document.getElementById("price").value = prc);
-                var value = parseInt(document.getElementById("num").value, 10);
-                
-                var total;
-
-                    total = (value*price)-price;
-
-                    if(price == "0$"){
-                        minus.removeEventListener("click");
-                    }
-                    
-                    if(value-- === 0){
-                        minus.removeEventListener("click");
-                    }
-                   
-
-                    document.getElementById("num").value = value;
-                    document.getElementById("price").value = total + "$";
-
-                })
-
-            
-        }
-        incrementValue();   
-        function navSlide() {
-            const burger = document.querySelector(".burger");
-            const nav = document.querySelector(".nav-link");
-            const navLinks = document.querySelectorAll(".nav-link li");
-            
-            burger.addEventListener("click", function(){
-                //Toggle Nav
-                nav.classList.toggle("nav-active");
-                
-                //Animate Links
-                navLinks.forEach(function(link, index) {
-                    if (link.style.animation) {
-                        link.style.animation = ""
-                    } else {
-                        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
-                    }
-                });
-                //Burger Animation
-                burger.classList.toggle("toggles");
-            });
-            
-        }
-        navSlide();
-
-
-        
-    
-    
+    <script src="cart.js">
     </script>
+    
 </body>
 </html>

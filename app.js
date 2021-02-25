@@ -21,41 +21,40 @@ function navSlide() {
     
 }
 navSlide();
-
 function whatsNew(){
-        var imgSrc1 = document.querySelector(".bannerImg1");
-        var imgSrc2 = document.querySelector(".bannerImg2");
-        var imgSrc3 = document.querySelector(".bannerImg3");
-        var imgSrc4 = document.querySelector(".bannerImg4");
-        var imgSrc5 = document.querySelector(".bannerImg5");
-        var imgSrc6 = document.querySelector(".bannerImg6");
-        var imgSrc7 = document.querySelector(".bannerImg7");
-        var imgSrc8 = document.querySelector(".bannerImg8");
-        var imgSrc9 = document.querySelector(".bannerImg9");
-        var imgSrc10 = document.querySelector(".bannerImg10");
-        var imgSrc11 = document.querySelector(".bannerImg11");
-        var imgSrc12 = document.querySelector(".bannerImg12");
-        var imgSrc13 = document.querySelector(".bannerImg13");
-        var imgSrc14 = document.querySelector(".bannerImg14");
-        var imgSrc15 = document.querySelector(".bannerImg15");
-        var imgSrc16 = document.querySelector(".bannerImg16");
-        var imgSrc17 = document.querySelector(".bannerImg17");
-        var imgSrc18 = document.querySelector(".bannerImg18");
-        var imgSrc19 = document.querySelector(".bannerImg19");
-        var imgSrc20 = document.querySelector(".bannerImg20");
-        var imgSrc21 = document.querySelector(".bannerImg21");
-        var imgSrc22 = document.querySelector(".bannerImg22");
-        var imgSrc23 = document.querySelector(".bannerImg23");
+        const imgSrc1 = document.querySelector(".bannerImg1");
+        const imgSrc2 = document.querySelector(".bannerImg2");
+        const imgSrc3 = document.querySelector(".bannerImg3");
+        const imgSrc4 = document.querySelector(".bannerImg4");
+        const imgSrc5 = document.querySelector(".bannerImg5");
+        const imgSrc6 = document.querySelector(".bannerImg6");
+        const imgSrc7 = document.querySelector(".bannerImg7");
+        const imgSrc8 = document.querySelector(".bannerImg8");
+        const imgSrc9 = document.querySelector(".bannerImg9");
+        const imgSrc10 = document.querySelector(".bannerImg10");
+        const imgSrc11 = document.querySelector(".bannerImg11");
+        const imgSrc12 = document.querySelector(".bannerImg12");
+        const imgSrc13 = document.querySelector(".bannerImg13");
+        const imgSrc14 = document.querySelector(".bannerImg14");
+        const imgSrc15 = document.querySelector(".bannerImg15");
+        const imgSrc16 = document.querySelector(".bannerImg16");
+        const imgSrc17 = document.querySelector(".bannerImg17");
+        const imgSrc18 = document.querySelector(".bannerImg18");
+        const imgSrc19 = document.querySelector(".bannerImg19");
+        const imgSrc20 = document.querySelector(".bannerImg20");
+        const imgSrc21 = document.querySelector(".bannerImg21");
+        const imgSrc22 = document.querySelector(".bannerImg22");
+        const imgSrc23 = document.querySelector(".bannerImg23");
 
 
-        imgSrc1.addEventListener('click', ()=>{
+        imgSrc1.addEventListener("click", ()=>{
             localStorage.setItem("cake1", imgSrc1.src);
             cakeName = document.getElementById("cakeType1");
             localStorage.setItem("cakeNm", cakeName.textContent);
             //var prc = document.getElementById("prc");
             // var prc = cakeName.setAttribute("name", "dada");
             
-            let val = 35
+            let val = 35;
 
             localStorage.setItem("val",val);
             // true                     
@@ -265,25 +264,102 @@ function whatsNew(){
         })
 
 }
+whatsNew();  
 
-whatsNew();
+function roundCk(){
+    const rounds = document.querySelectorAll("img");
+    const nm = document.querySelectorAll("#ck")
+        rounds.forEach(function(main,index){
+            main.onclick = function(){
+                if(index == 24){
+                    localStorage.setItem("cake1", main.src);
+                    localStorage.setItem("cakeNm", nm[0].textContent);
+                    console.log(index);
+                    let val = 35;
+                    localStorage.setItem("val",val);
+                    window.location.href = "./cart.html"; 
+                }
+                else if(index == 25){
+                    localStorage.setItem("cake1", main.src);
+                    localStorage.setItem("cakeNm", nm[1].textContent);
+                    console.log(index);
+                    let val = 25;
+                    localStorage.setItem("val",val);
+                    window.location.href = "./cart.html";
+                }
+                else if(index == 26){
+                    localStorage.setItem("cake1", main.src);
+                    localStorage.setItem("cakeNm", nm[2].textContent);
+                    console.log(index);
+                    let val = 25;
+                    localStorage.setItem("val",val);
+                    window.location.href = "./cart.html";  
+                }
+                else if(index == 27){
+                    localStorage.setItem("cake1", main.src);
+                    localStorage.setItem("cakeNm", nm[3].textContent);
+                    console.log(index);
+                    let val = 25;
+                    localStorage.setItem("val",val);
+                    window.location.href = "./cart.html";    
+                }
+                else if(index == 28){
+                    localStorage.setItem("cake1", main.src);
+                    localStorage.setItem("cakeNm", nm[4].textContent);
+                    console.log(index);
+                    let val = 25;
+                    localStorage.setItem("val",val); 
+                    window.location.href = "./cart.html";   
+                }
+                else if(index == 29){
+                    localStorage.setItem("cake1", main.src);
+                    localStorage.setItem("cakeNm", nm[5].textContent);
+                    console.log(index);
+                    let val = 25;
+                    localStorage.setItem("val",val); 
+                    window.location.href = "./cart.html";   
+                }
+                else if(index == 30){
+                    localStorage.setItem("cake1", main.src);
+                    localStorage.setItem("cakeNm", nm[6].textContent);
+                    console.log(index);
+                    let val = 25;
+                    localStorage.setItem("val",val); 
+                    window.location.href = "./cart.html";  
+                }
+                else if(index == 31){
+                    localStorage.setItem("cake1", main.src);
+                    localStorage.setItem("cakeNm", nm[7].textContent);
+                    console.log(index);
+                    let val = 25;
+                    localStorage.setItem("val",val);   
+                    window.location.href = "./cart.html"; 
+                }
+            }
+        })
+    
+}
+
+roundCk();
+
+
 
 function cakeSlide(){
-    const whatsNew = document.getElementById("whatsNew");
+    const whatsNews = document.getElementById("whatsNew");
     const roundCakes = document.getElementById("roundCakes");
     const rollCakes = document.getElementById("rollCakes");
     const dreamCakes = document.getElementById("dreamCakes");
     const cupCakes = document.getElementById("cupCakes");
     const sweetBites = document.getElementById("sweetBites");
-    var watsnew = document.getElementById("watsNew");
-    var roundcake = document.getElementById("roundCake");
-    var rollcake = document.getElementById("rollCake");
-    var dreamcake = document.getElementById("dcCake");
-    var cupcake = document.getElementById("cupCake");
-    var sweetbites = document.getElementById("sweetBts");
+    const watsnew = document.getElementById("watsNew");
+    const roundcake = document.getElementById("roundCake");
+    const rollcake = document.getElementById("rollCake");
+    const dreamcake = document.getElementById("dcCake");
+    const cupcake = document.getElementById("cupCake");
+    const sweetbites = document.getElementById("sweetBts");
 
 
-    whatsNew.addEventListener('click', ()=>{
+    whatsNews.addEventListener('click', ()=>{
         watsnew.classList.remove("wActive2");
         roundcake.classList.remove("rActive");
         rollcake.classList.remove("rcActive");
@@ -332,15 +408,39 @@ function cakeSlide(){
         cupcake.classList.remove("cActive");
         sweetbites.classList.add("sActive");
     })
-
-
-
 }
 
 cakeSlide();
 
+function btn(){
+    const ourcakes = document.getElementById("ocakes");
+    const orders = document.getElementById("order");
+    const cntact = document.getElementById("contactus");
+    const close = document.getElementById("closeBtn");
+    const submit = document.getElementById("sub")
 
+    ourcakes.onclick = function(){
+        location.href = "#navbar";
+    }
+    orders.onclick = function(){
+        location.href = "#navbar";
+        alert("Please Choose a Cake");
+    }
+    cntact.onclick = function(){
+        var form = document.getElementById("cnt");
+        location.href = "#navbar";
+        form.classList.add("contactActive");
+        close.onclick = function(){
+            form.classList.remove("contactActive");
+       }
+    }
 
-
+    submit.onclick = function(){
+        location.href = "https://m.me/Chosen1cakes";
+    }
 
     
+
+}
+
+btn();

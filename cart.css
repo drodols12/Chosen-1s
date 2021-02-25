@@ -97,9 +97,10 @@ nav h1{
     right: -400px;
     margin: 0 auto;
     z-index: 99999;
+    cursor: pointer;
 }
 
-.dropdown a p{
+.dropdown div p{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -111,7 +112,7 @@ nav h1{
     transition: all .7s ease;
 }
 
-.dropdown a:hover p{
+.dropdown div:hover p{
     background-color: rgb(190, 131, 190);
     transform: scale(1.1);
     border-radius: 15px;
@@ -120,16 +121,9 @@ nav h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "Poppins";
-    text-transform: uppercase;
-    color: white;
-    cursor: pointer;
     transition: all .5s ease;
     border: none;
     background-color: plum;
-    letter-spacing: 3px;
-    font-weight: bold;
-    font-size: 1.2rem;
     width: 50%;
     height: 5vh;
 }
@@ -146,7 +140,14 @@ button:focus{
     outline: none;
 }
 
-.menu p{
+.menu h3{
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    font-family: "Poppins";
+    text-transform: uppercase;
+    cursor: pointer;
+    color: white;
     margin-right: 5px;
 }
 .select{
@@ -441,11 +442,11 @@ transform: rotate(45deg) translate(-7px, -6px);
         overflow-y: hidden;
     }
 
-    .dropdown a{
+    .dropdown div{
         width: 100%;
     }
 
-    .dropdown a p{
+    .dropdown div p{
         display: flex;
         margin: 0 auto;
         width: 20vh;

@@ -135,30 +135,12 @@ function contactUS(){
 
 contactUS();
 
-function SmoothVerticalScrolling(e, time, where) {
-    var eTop = e.getBoundingClientRect().top;
-    var eAmt = eTop / 100;
-    var curTime = 0;
-    while (curTime <= time) {
-        window.setTimeout(SVS_B, curTime, eAmt, where);
-        curTime += time / 100;
-    }
-}
 
-function SVS_B(eAmt, where) {
-    if(where == "center" || where == "")
-        window.scrollBy(0, eAmt / 2);
-    if (where == "top")
-        window.scrollBy(0, eAmt);
-}
 
 var gotoAbout = document.getElementById("texts1");
 gotoAbout.addEventListener('click', ()=>{
 var about = window.location.href = "index.html#cont3";
 var navv = document.querySelector(".nav-link");
-    SmoothVerticalScrolling(about, 2700, "center");
-
-    
     navv.classList.remove("active");
     navv.classList.add("active1");
     return;
@@ -180,3 +162,18 @@ function scrollFunc(){
 }
 
 scrollFunc();
+
+
+function btnFunc(){
+    const ocks = document.getElementById("oc");
+    const ord = document.getElementById("order");
+
+    ocks.onclick = function(){
+        location.href = "cakepage.html";
+    }
+    ord.onclick = function(){
+        alert("Click the 'Our Cakes' button");
+    }
+}
+
+btnFunc();

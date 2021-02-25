@@ -540,10 +540,6 @@ input[type="button"]:active{
         z-index: 0; 
     }
 }
-
-
-
-
 @keyframes navLinkFade {
 from {
     opacity: 0;
