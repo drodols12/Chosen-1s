@@ -339,9 +339,210 @@ function roundCk(){
         })
     
 }
-
 roundCk();
 
+function rollCk(){
+    const roll = document.querySelectorAll("img")
+    const nm = document.querySelectorAll("#ck");
+
+    roll.forEach(function(roll, index){
+        roll.onclick = function(){
+            if(index == 32){
+                localStorage.setItem("cake1", roll.src);
+                localStorage.setItem("cakeNm", nm[8].textContent);
+                console.log(index);
+                let val = 35;
+                localStorage.setItem("val",val);
+                window.location.href = "./cart.html"; 
+            }else if(index == 33){
+                localStorage.setItem("cake1", roll.src);
+                localStorage.setItem("cakeNm", nm[9].textContent);
+                console.log(index);
+                let val = 35;
+                localStorage.setItem("val",val);
+                window.location.href = "./cart.html"; 
+            }else if(index == 34){
+                localStorage.setItem("cake1", roll.src);
+                localStorage.setItem("cakeNm", nm[10].textContent);
+                console.log(index);
+                let val = 35;
+                localStorage.setItem("val",val);
+                window.location.href = "./cart.html"; 
+            }
+        }
+    })
+}
+rollCk();
+
+function dreamCk(){
+    const dream = document.querySelectorAll("img");
+    const nm = document.querySelectorAll("#ck");
+
+    dream.forEach(function(dream, index){
+        dream.onclick = function(){
+            if(index == 35){
+                localStorage.setItem("cake1", dream.src);
+                localStorage.setItem("cakeNm", nm[11].textContent);
+                console.log(index);
+                let val = 35;
+                localStorage.setItem("val",val);
+                window.location.href = "./cart.html"; 
+            }else if(index == 36){
+                localStorage.setItem("cake1", dream.src);
+                localStorage.setItem("cakeNm", nm[12].textContent);
+                console.log(index);
+                let val = 35;
+                localStorage.setItem("val",val);
+                window.location.href = "./cart.html"; 
+            }else if(index == 37){
+                localStorage.setItem("cake1", dream.src);
+                localStorage.setItem("cakeNm", nm[13].textContent);
+                console.log(index);
+                let val = 35;
+                localStorage.setItem("val",val);
+                window.location.href = "./cart.html"; 
+            }else if(index == 38){
+                localStorage.setItem("cake1", dream.src);
+                localStorage.setItem("cakeNm", nm[14].textContent);
+                console.log(index);
+                let val = 35;
+                localStorage.setItem("val",val);
+                window.location.href = "./cart.html"; 
+            }else if(index == 39){
+                localStorage.setItem("cake1", dream.src);
+                localStorage.setItem("cakeNm", nm[15].textContent);
+                console.log(index);
+                let val = 35;
+                localStorage.setItem("val",val);
+                window.location.href = "./cart.html"; 
+            }else if(index == 40){
+                localStorage.setItem("cake1", dream.src);
+                localStorage.setItem("cakeNm", nm[16].textContent);
+                console.log(index);
+                let val = 35;
+                localStorage.setItem("val",val);
+                window.location.href = "./cart.html"; 
+            }
+        }
+    })
+}
+dreamCk();
+
+function cupCk(){
+    const cupcake = document.querySelectorAll("img");
+    const nm = document.querySelectorAll("#ck");
+
+    cupcake.forEach(function(cup, index){
+        cup.onclick = function(){
+            if(index == 41){
+                localStorage.setItem("cake1", cup.src);
+                localStorage.setItem("cakeNm", nm[17].textContent);
+                console.log(index);
+                let val = 35;
+                localStorage.setItem("val",val);
+                window.location.href = "./cart.html"; 
+            }else if(index == 42){
+                localStorage.setItem("cake1", cup.src);
+                localStorage.setItem("cakeNm", nm[18].textContent);
+                console.log(index);
+                let val = 35;
+                localStorage.setItem("val",val);
+                window.location.href = "./cart.html"; 
+            }else if(index == 43){
+                localStorage.setItem("cake1", cup.src);
+                localStorage.setItem("cakeNm", nm[19].textContent);
+                console.log(index);
+                let val = 35;
+                localStorage.setItem("val",val);
+                window.location.href = "./cart.html"; 
+            }else if(index == 44){
+                localStorage.setItem("cake1", cup.src);
+                localStorage.setItem("cakeNm", nm[20].textContent);
+                console.log(index);
+                let val = 35;
+                localStorage.setItem("val",val);
+                window.location.href = "./cart.html"; 
+            }else if(index == 45){
+                localStorage.setItem("cake1", cup.src);
+                localStorage.setItem("cakeNm", nm[21].textContent);
+                console.log(index);
+                let val = 35;
+                localStorage.setItem("val",val);
+                window.location.href = "./cart.html"; 
+            }else if(index == 46){
+                localStorage.setItem("cake1", cup.src);
+                localStorage.setItem("cakeNm", nm[22].textContent);
+                console.log(index);
+                let val = 35;
+                localStorage.setItem("val",val);
+                window.location.href = "./cart.html"; 
+            }
+        }
+    })
+}
+cupCk();
+
+function sweetBt(){
+    const sweet = document.querySelectorAll("img");
+    const nm = document.querySelectorAll("#ck");
+
+    sweet.forEach(function(swt, index){
+        swt.onclick = function(){
+            if(index == 47){
+                localStorage.setItem("cake1", swt.src);
+                localStorage.setItem("cakeNm", nm[23].textContent);
+                console.log(index);
+                let val = 35;
+                localStorage.setItem("val",val);
+                window.location.href = "./cart.html"; 
+            }else if(index == 48){
+                localStorage.setItem("cake1", swt.src);
+                localStorage.setItem("cakeNm", nm[24].textContent);
+                console.log(index);
+                let val = 35;
+                localStorage.setItem("val",val);
+                window.location.href = "./cart.html"; 
+            }else if(index == 49){
+                localStorage.setItem("cake1", swt.src);
+                localStorage.setItem("cakeNm", nm[25].textContent);
+                console.log(index);
+                let val = 35;
+                localStorage.setItem("val",val);
+                window.location.href = "./cart.html"; 
+            }else if(index == 50){
+                localStorage.setItem("cake1", swt.src);
+                localStorage.setItem("cakeNm", nm[26].textContent);
+                console.log(index);
+                let val = 35;
+                localStorage.setItem("val",val);
+                window.location.href = "./cart.html"; 
+            }else if(index == 51){
+                localStorage.setItem("cake1", swt.src);
+                localStorage.setItem("cakeNm", nm[27].textContent);
+                console.log(index);
+                let val = 35;
+                localStorage.setItem("val",val);
+                window.location.href = "./cart.html"; 
+            }else if(index == 52){
+                localStorage.setItem("cake1", swt.src);
+                localStorage.setItem("cakeNm", nm[28].textContent);
+                console.log(index);
+                let val = 35;
+                localStorage.setItem("val",val);
+                window.location.href = "./cart.html"; 
+            
+            }else if(index == 53){
+                localStorage.setItem("cake1", swt.src);
+                localStorage.setItem("cakeNm", nm[29].textContent);
+                console.log(index);
+                let val = 35;
+                localStorage.setItem("val",val);
+                window.location.href = "./cart.html"; 
+            }
+        }
+    })
+}
+sweetBt();
 
 
 function cakeSlide(){
