@@ -395,7 +395,7 @@ function dreamCk(){
                 let val = 35;
                 localStorage.setItem("val",val);
                 window.location.href = "./cart.html"; 
-            }else if(index == 3){
+            }else if(index == 2){
                 localStorage.setItem("cake1", dream.src);
                 localStorage.setItem("cakeNm", nm[3].textContent);
                 console.log(index);
