@@ -19,7 +19,6 @@ window.addEventListener('scroll', ()=>{
                 if(document.body.scrollTop > 2200 || document.documentElement.scrollTop > 2200){
                     scrollUp.classList.add("scrollAct");
                     scrollUp.classList.remove("scrollAct2");
-                    console.log(y);
                 }else{
                     scrollUp.classList.remove("scrollAct");
                     scrollUp.classList.add("scrollAct2");
