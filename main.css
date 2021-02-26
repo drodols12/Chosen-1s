@@ -790,7 +790,7 @@ transform: rotate(45deg) translate(-7px, -6px);
     }
     .scrollAct{
         position: absolute;
-        bottom: -28vh;
+        bottom: -26vh;
         right: 2vw;
         font-size: 3rem;
         color: plum;
