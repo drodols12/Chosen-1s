@@ -92,3 +92,11 @@ function navSlides() {
 }
 navSlides();
 
+function reserveNow(){
+    const rsv = document.getElementById("rsv");
+
+    rsv.onclick = function(){
+        location.href = "https://m.me/Chosen1cakes";
+    }
+}
+reserveNow();
