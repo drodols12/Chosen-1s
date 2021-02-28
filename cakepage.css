@@ -587,7 +587,7 @@ button:active{
     .cake{
         display: block;
         width: 40%;
-        height: 30%;
+        height: 20%;
         margin: 2vh 10px;
         background-color: #ff9b9b;
         color: white;
@@ -601,7 +601,7 @@ button:active{
     .cake h3{
         width: 100%;
         text-align: center;
-        font: .6rem "Poppins";
+        font: 1rem "Poppins";
         letter-spacing: 1px;
         margin: 1vh auto;
     }
@@ -609,7 +609,7 @@ button:active{
     .cake p{
         margin: 1vh auto;
         width: 100%;
-        font-size: 1rem;
+        font-size: 1.2rem;
         text-align: center;
     }
     .whatsNew .cake:nth-last-of-type(1){
