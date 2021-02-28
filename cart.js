@@ -30,10 +30,10 @@ function incrementValue(){
         var price = parseInt(document.getElementById("price").value = prc);
         var value = parseInt(document.getElementById("num").value, 10);
         var total;
-        var x;
+        
 
 
-
+            minus.disabled = false;
             value++;
             total = (value)*price;
                 
@@ -49,15 +49,16 @@ function incrementValue(){
         
         var total;
 
-            total = (value*price)-price;
+        
 
-            if(price == "0$"){
-                minus.removeEventListener("click");
+            total = (value*price)-price;
+            value = value - 1;
+
+            
+            if(value == 0 ){
+                minus.disabled = true;
             }
             
-            if(value-- === 0){
-                minus.removeEventListener("click");
-            }
            
 
             document.getElementById("num").value = value;

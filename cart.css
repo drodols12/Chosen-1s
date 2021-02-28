@@ -288,10 +288,12 @@ button:focus{
     margin: 0 auto;
 }
 
-.orderForm i{
+.orderForm button{
     margin: 0 10px;
-    font-size: 20px;
+    font-size: 15px;
     transition: all .5s ease;
+    background-color: transparent;
+    border: none;
 }
 
 .orderForm i:hover{
