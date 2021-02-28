@@ -138,7 +138,7 @@ contactUS();
 
 var gotoAbout = document.getElementById("texts1");
 gotoAbout.addEventListener('click', ()=>{
-var about = window.location.href = "index.html#cont3";
+var about = window.location.href = "index.html#about";
 var navv = document.querySelector(".nav-link");
     navv.classList.remove("active");
     navv.classList.add("active1");
