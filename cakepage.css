@@ -609,7 +609,7 @@ button:active{
     .cake p{
         margin: 1vh auto;
         width: 100%;
-        font-size: .5rem;
+        font-size: 1rem;
         text-align: center;
     }
     .whatsNew .cake:nth-last-of-type(1){
