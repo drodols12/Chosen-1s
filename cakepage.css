@@ -601,7 +601,7 @@ button:active{
     .cake h3{
         width: 100%;
         text-align: center;
-        font: .7rem "Poppins";
+        font: 15px "Poppins";
         letter-spacing: 1px;
         margin: 1vh auto;
     }
@@ -609,7 +609,7 @@ button:active{
     .cake p{
         margin: 1vh auto;
         width: 100%;
-        font-size: .7rem;
+        font-size: 12px;
         text-align: center;
     }
     .whatsNew .cake:nth-last-of-type(1){
