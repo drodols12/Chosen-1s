@@ -315,9 +315,12 @@ a .cheesecake{
     width: 60vw;
     height: 80vh;
     border-radius: 10px;
-    overflow: hidden;
+    overflow-x: scroll;
     margin: 5vh auto;
+}
 
+.slider::-webkit-scrollbar{
+    display: none;
 }
   
   .slides{
