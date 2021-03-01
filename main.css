@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -36,12 +36,29 @@ body{
     height: 20vh;
     margin-left: 60px;
 }
+.name{
+    width: 50%
+    ;
+}
 
 .logo h1{
+    margin: -10px auto;
     width: 100%;
     color: white;
     font-size: 50px;
     font-family: "Dancing Script";
+}
+p.small{
+    text-align: center;
+    position: relative;
+    display: flex;
+    color: white;
+    font-size: 1rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-left: 10px;
+    text-transform: uppercase;
 }
 #navbar {
     position: relative;

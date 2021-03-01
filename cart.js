@@ -22,7 +22,13 @@ function incrementValue(){
     const add = document.getElementById("add");
     const minus = document.getElementById("minus");
     const prc = localStorage.getItem('val')
-    
+    let totalprc;
+    let totalval;
+    const rsv = document.getElementById("rsv");
+
+    window.onload = function(){
+        minus.disabled = true;
+    }
 
 
     add.addEventListener("click", ()=>{
@@ -31,18 +37,27 @@ function incrementValue(){
         var value = parseInt(document.getElementById("num").value, 10);
         var total;
         
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var yyyy = today.getFullYear();
+
+        today = mm + '/' + dd + '/' + yyyy;
 
 
             minus.disabled = false;
             value++;
             total = (value)*price;
                 
-            document.getElementById("num").value = value;
-            document.getElementById("price").value = total + "$";
-        
+           totalval = document.getElementById("num").value = value;
+           totalprc = document.getElementById("price").value = total + "$";
 
+
+           rsv.onclick = function(){
+                window.open('mailto:chosen1sbakeshop@gmail.com?subject=cake%20order&body=value: ' +totalval + '%0D%0Atotal price: ' + totalprc + '%0D%0Adate ordered: ' + today);
+           }
     })
-      
+    
     minus.addEventListener("click", ()=>{
         var price = parseInt(document.getElementById("price").value = prc);
         var value = parseInt(document.getElementById("num").value, 10);
@@ -55,17 +70,12 @@ function incrementValue(){
             value = value - 1;
 
             
-            if(value == 0 ){
+            if((value <= 0 )||(value === 0 )){
                 minus.disabled = true;
             }
-            
-           
-
-            document.getElementById("num").value = value;
-            document.getElementById("price").value = total + "$";
-
+            totalprc = document.getElementById("num").value = value;
+            totalval = document.getElementById("price").value = total + "$";
         })
-
     
 }
 incrementValue();   
@@ -93,11 +103,3 @@ function navSlides() {
 }
 navSlides();
 
-function reserveNow(){
-    const rsv = document.getElementById("rsv");
-
-    rsv.onclick = function(){
-        location.href = "https://m.me/Chosen1cakes";
-    }
-}
-reserveNow();
