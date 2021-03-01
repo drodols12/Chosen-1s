@@ -600,8 +600,12 @@ transform: rotate(45deg) translate(-7px, -6px);
     }
 
     .logo h1{
-        font-size: 2rem;
+        font-size: 24px;
     }
+    p.small{
+        font-size: 12px;
+    }
+
     .mySlides {
         margin:0 auto;
         display: none;

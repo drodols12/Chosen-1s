@@ -55,6 +55,7 @@ function incrementValue(){
 
            rsv.onclick = function(){
                 window.open('mailto:chosen1sbakeshop@gmail.com?subject=cake%20order&body=value: ' +totalval + '%0D%0Atotal price: ' + totalprc + '%0D%0Adate ordered: ' + today);
+               
            }
     })
     

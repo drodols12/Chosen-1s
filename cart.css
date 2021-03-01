@@ -284,7 +284,7 @@ button:focus{
 
 
 .orderForm input:nth-last-of-type(2){
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
 }
 
@@ -351,7 +351,7 @@ transform: rotate(45deg) translate(-7px, -6px);
 
 
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 800px){
     *{
         margin: 0;
         padding: 0;
