@@ -241,7 +241,7 @@ button:focus{
     position: relative;
     display: block;
     width: 50%;
-    height: 55vh;
+    height: 60vh;
     margin: 20px;
     
 }
@@ -283,13 +283,13 @@ button:focus{
 
 
 
-.orderForm input:nth-last-of-type(3){
-    width: 80%;
+.orderForm input:nth-last-of-type(2){
+    width: 85%;
     margin: 0 auto;
 }
 
 .orderForm button{
-    margin: 0 10px;
+    margin: 0 5px;
     font-size: 15px;
     transition: all .5s ease;
     background-color: transparent;
@@ -316,8 +316,8 @@ button:focus{
     transform: scale(1.3);
 }
 
-.orderForm input[type=button]{
-    margin: 20px 0;
+.orderForm button#rsv{
+    margin: 7px 0;
     width: 100%;
     height: 45px;
     border: none;
@@ -522,8 +522,8 @@ transform: rotate(45deg) translate(-7px, -6px);
         color: black;
     }
     
-    .orderForm input:nth-last-of-type(3){
-        width: 65%;
+    .orderForm input:nth-last-of-type(2){
+        width: 75%;
         margin: 0 auto;
     }
     

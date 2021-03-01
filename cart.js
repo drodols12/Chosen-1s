@@ -8,57 +8,55 @@ function getCake(){
     let totalval;
     const rsv = document.getElementById("rsv");
     const getOrder = document.getElementById("date");
+    var price = parseInt(document.getElementById("price").value);
+    var value = parseInt(document.getElementById("num").value);
+    var total;
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
 
 
     window.addEventListener('load', ()=>{
-    ckNM.textContent = localStorage.getItem('cakeNm');
-    cakeImg.setAttribute("src", localStorage.getItem('cake1'));
-
+        ckNM.textContent = localStorage.getItem('cakeNm');
+        cakeImg.setAttribute("src", localStorage.getItem('cake1'));
     })
 
     
         window.onload = function(){
             minus.disabled = true;
         }
-    
-    
+
+
         add.addEventListener("click", ()=>{
-            // var value;
-            var price = parseInt(document.getElementById("price").value = prc);
-            var value = parseInt(document.getElementById("num").value, 10);
-            var total;
-            var today = new Date();
-            var dd = String(today.getDate()).padStart(2, '0');
-            var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-            var yyyy = today.getFullYear();
+
     
             today = mm + '/' + dd + '/' + yyyy;
             
-            
+            price = prc;
     
-                minus.disabled = false;
-                value++;
-                total = (value)*price;
+            minus.disabled = false;
+            value++;
+            total = (value)*price;
                     
-               totalval = document.getElementById("num").value = value;
-               totalprc = document.getElementById("price").value = total + "$";
-    
-    
-               rsv.onclick = function(){
-                    alert("Note: Please wait for the confirmation of your order!" + "\r\n" + "Please 'OK' to Continue, thank you!");
-                    window.open('mailto:chosen1sbakeshop@gmail.com?subject=cake%20order&body=Cake you ordered: ' + ckNM.textContent + '%0D%0AQuantity: ' +totalval + '%0D%0ATotal Amount: ' + totalprc + '%0D%0ADate ordered: ' + today + "%0D%0ADelivery Needed: " + getOrder.value + '%0D%0A' + '%0D%0ANote: ');
-                   
-               }
+            totalval = document.getElementById("num").value = value;
+            totalprc = document.getElementById("price").value = total + "$";    
         })
-        
+
+
+        if(getOrder.placeholder === "Set the date when do you want to deliver"){
+            rsv.onclick = function(){
+                alert("Please put the Date when will you need it. Thank you!");
+            }
+        }else{            
+            rsv.onclick = function(){
+                alert("Note: Please wait for the confirmation of your order!" + "\r\n" + "Please 'OK' to Continue, thank you!");
+                window.open('mailto:chosen1sbakeshop@gmail.com?subject=cake%20order&body=Cake you ordered: ' + ckNM.textContent + '%0D%0AQuantity: ' +totalval + '%0D%0ATotal Amount: ' + totalprc + '%0D%0ADate ordered: ' + today + "%0D%0ADelivery Needed: " + getOrder.value);
+               
+           }
+        }
+
         minus.addEventListener("click", ()=>{
-            var price = parseInt(document.getElementById("price").value = prc);
-            var value = parseInt(document.getElementById("num").value, 10);
-            
-            var total;
-    
-            
-    
                 total = (value*price)-price;
                 value = value - 1;
     
