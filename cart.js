@@ -45,7 +45,8 @@ function getCake(){
     
     
                rsv.onclick = function(){
-                    window.open('mailto:chosen1sbakeshop@gmail.com?subject=cake%20order&body=Cake you ordered: ' + ckNM.textContent + '%0D%0AQuantity: ' +totalval + '%0D%0ATotal Amount: ' + totalprc + '%0D%0ADate ordered: ' + today + "%0D%0ADelivery Needed: " + getOrder.value);
+                    alert("Note: Please wait for the confirmation of your order!" + "\r\n" + "Please 'OK' to Continue, thank you!");
+                    window.open('mailto:chosen1sbakeshop@gmail.com?subject=cake%20order&body=Cake you ordered: ' + ckNM.textContent + '%0D%0AQuantity: ' +totalval + '%0D%0ATotal Amount: ' + totalprc + '%0D%0ADate ordered: ' + today + "%0D%0ADelivery Needed: " + getOrder.value + '%0D%0A' + '%0D%0ANote: ');
                    
                }
         })

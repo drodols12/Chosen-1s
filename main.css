@@ -307,19 +307,127 @@ a .cheesecake{
     display: block;
     background-color: #ff9b9b;
     text-align: center;
+    width: 100%;
+    height: 81vh;
 }
 
-.cardContainer h1{
-    margin: 20px auto; 
-    font: 3rem "Dancing Script";
-}
+.slider{
+    width: 60vw;
+    height: 80vh;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 5vh auto;
 
-.cardContainer p{
-    width: 70%;
-    font-size: 1rem;
-    margin: 25px auto;
-    padding-bottom: 20px;
 }
+  
+  .slides{
+    width: 500%;
+    height: 70vh;
+    display: flex;
+
+  }
+  
+  .slides input{
+    display: none;
+  }
+  
+  .slide{
+    width: 20%;
+    transition: 2s;
+
+  }
+  
+  .slide img{
+    width: 50vw;
+    height: 70vh;
+    object-fit: cover;
+  }
+  
+  /*css for manual slide navigation*/
+  
+  .navigation-manual{
+    position: absolute;
+    width: 60vw;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .manual-btn{
+    border: 2px solid #ff9b9b;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+  }
+  
+  .manual-btn:not(:last-child){
+    margin-right: 40px;
+  }
+  
+  .manual-btn:hover{
+    background: #ff9b9b;
+  }
+  
+  #radio1:checked ~ .first{
+    margin-left: 0;
+  }
+  
+  #radio2:checked ~ .first{
+    margin-left: -20%;
+  }
+  
+  #radio3:checked ~ .first{
+    margin-left: -40%;
+  }
+  
+  #radio4:checked ~ .first{
+    margin-left: -60%;
+  }
+  
+  #radio5:checked ~ .first{
+    margin-left: -80%;
+  }
+  
+  /*css for automatic navigation*/
+  
+  .navigation-auto{
+    position: absolute;
+    display: flex;
+    width: 60vw;
+    justify-content: center;
+    margin-top: 100vh;
+  }
+  
+  .navigation-auto div{
+    border: 2px solid #40D3DC;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+  }
+  
+  .navigation-auto div:not(:last-child){
+    margin-right: 40px;
+  }
+  
+  #radio1:checked ~ .navigation-auto .auto-btn1{
+    background: #ff9b9b;
+  }
+  
+  #radio2:checked ~ .navigation-auto .auto-btn2{
+    background: #ff9b9b;
+  }
+  
+  #radio3:checked ~ .navigation-auto .auto-btn3{
+    background: #ff9b9b;
+  }
+  
+  #radio4:checked ~ .navigation-auto .auto-btn4{
+    background: #ff9b9b;
+  }
+  #radio5:checked ~ .navigation-auto .auto-btn4{
+    background: #ff9b9b;
+  }
 
 
 /*!!!!!!!!!!!!! FOOTEEEERRR !!!!!!!!!!!!!!*/
@@ -600,7 +708,8 @@ transform: rotate(45deg) translate(-7px, -6px);
     }
 
     .logo h1{
-        font-size: 24px;
+        font-size: 20px;
+        width: 100%;
     }
     p.small{
         font-size: 12px;
@@ -746,20 +855,70 @@ transform: rotate(45deg) translate(-7px, -6px);
     .cardContainer{
         display: block;
         width: 100%;
+        height: 60vh;
         text-align: center;
         margin: 0 auto;
     }
-    .cardContainer h1{
-        margin: 20px auto; 
-        font: 2.5rem "Dancing Script";
-    }
 
-    .cardContainer p{
-        width: 90%;
-        font-size: .7rem;
-        text-align: center;
-        padding: 10px;    
+    .slider{
+        width: 90vw;
+        height: 50vh;
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 5vh auto;
+    
     }
+      
+      .slides{
+        width: 500%;
+        height: 70vh;
+        display: flex;
+    
+      }
+      
+      .slides input{
+        display: none;
+      }
+      
+      .slide{
+        width: 20%;
+        transition: 2s;
+    
+      }
+      
+      .slide img{
+        width: 90vw;
+        height: 70vh;
+        object-fit: cover;
+      }
+      .navigation-manual{
+        position: absolute;
+        width: 60vw;
+        bottom: 50px;
+        z-index: 2;
+        display: flex;
+        left: 23vw;
+        justify-content: center;
+      }
+      #radio1:checked ~ .navigation-auto .auto-btn1{
+        background: #ff9b9b;
+      }
+      
+      #radio2:checked ~ .navigation-auto .auto-btn2{
+        background: #ff9b9b;
+      }
+      
+      #radio3:checked ~ .navigation-auto .auto-btn3{
+        background: #ff9b9b;
+      }
+      
+      #radio4:checked ~ .navigation-auto .auto-btn4{
+        background: #ff9b9b;
+      }
+      #radio5:checked ~ .navigation-auto .auto-btn4{
+        background: #ff9b9b;
+      }
+
     footer{
         background-color: plum;
         position: absolute;
