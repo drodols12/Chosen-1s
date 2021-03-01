@@ -185,7 +185,7 @@ function slideShow(){
       if(counter > 5){
         counter = 1;
       }
-    }, 2500);
+    }, 3500);
 }
 
 slideShow();
