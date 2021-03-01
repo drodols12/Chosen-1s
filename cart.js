@@ -25,6 +25,7 @@ function incrementValue(){
     let totalprc;
     let totalval;
     const rsv = document.getElementById("rsv");
+    const getOrder = document.getElementById("date");
 
     window.onload = function(){
         minus.disabled = true;
@@ -36,14 +37,13 @@ function incrementValue(){
         var price = parseInt(document.getElementById("price").value = prc);
         var value = parseInt(document.getElementById("num").value, 10);
         var total;
-        
         var today = new Date();
         var dd = String(today.getDate()).padStart(2, '0');
         var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
         var yyyy = today.getFullYear();
 
         today = mm + '/' + dd + '/' + yyyy;
-
+        
 
             minus.disabled = false;
             value++;
@@ -54,7 +54,7 @@ function incrementValue(){
 
 
            rsv.onclick = function(){
-                window.open('mailto:chosen1sbakeshop@gmail.com?subject=cake%20order&body=value: ' +totalval + '%0D%0Atotal price: ' + totalprc + '%0D%0Adate ordered: ' + today);
+                window.open('mailto:chosen1sbakeshop@gmail.com?subject=cake%20order&body=value: ' +totalval + '%0D%0Atotal price: ' + totalprc + '%0D%0Adate ordered: ' + today + "%0D%0ADelivery Date: " + getOrder.value);
                
            }
     })

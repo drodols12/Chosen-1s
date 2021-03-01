@@ -283,8 +283,8 @@ button:focus{
 
 
 
-.orderForm input:nth-last-of-type(2){
-    width: 70%;
+.orderForm input:nth-last-of-type(3){
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -296,6 +296,21 @@ button:focus{
     border: none;
 }
 
+.orderForm #date{
+    width: 100%;
+    height: 5vh;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-family: "Poppins";
+    text-align: center;
+    background-color: #efefef4d;
+    color: white;
+    font-size: 15px;
+}
+#date::placeholder{
+    color: white;
+}
 .orderForm i:hover{
     color: white;
     transform: scale(1.3);
@@ -317,7 +332,6 @@ button:focus{
 
 .orderForm input:focus{
     outline: none;
-    
 }
 
 .orderForm input:hover{
@@ -506,6 +520,22 @@ transform: rotate(45deg) translate(-7px, -6px);
     }
     .orderForm input[type=text], input[type=tel]{
         color: black;
+    }
+    
+    .orderForm input:nth-last-of-type(3){
+        width: 65%;
+        margin: 0 auto;
+    }
+    
+    .orderForm #date{
+        height: 12vh;
+        text-align: center;
+    }
+    .orderForm #date::placeholder{
+        white-space:pre-line; 
+        text-align: center;
+        position: relative;
+        top: 0;
     }
 
     .orderForm i{
