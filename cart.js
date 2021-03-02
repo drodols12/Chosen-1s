@@ -44,11 +44,11 @@ function getCake(){
         })
 
 
-        if(getOrder.value.length === 0){
+        if(getOrder.value == " "){
             rsv.onclick = function(){
                 alert("Please put the Date when will you need it. Thank you!");
             }
-        }else if(getOrder.value){            
+        }else{            
             rsv.onclick = function(){
                 alert("Note: Please wait for the confirmation of your order!" + "\r\n" + "Please 'OK' to Continue, thank you!");
                 window.open('mailto:chosen1sbakeshop@gmail.com?subject=cake%20order&body=Cake you ordered: ' + ckNM.textContent + '%0D%0AQuantity: ' +totalval + '%0D%0ATotal Amount: ' + totalprc + '%0D%0ADate ordered: ' + today + "%0D%0ADelivery Needed: " + getOrder.value);
