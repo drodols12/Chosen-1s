@@ -275,7 +275,7 @@ a .cheesecake{
 .container3{
     position: relative;
     display: block;
-    height: 100vh;
+    height: 50vh;
 }
 .bGround{
     background-attachment: fixed;
@@ -311,20 +311,20 @@ a .cheesecake{
 }
 
 .slider{
-    width: 60vw;
-    height: 80vh;
+    width: 100vw;
+    height: 100%;
     border-radius: 10px;
     overflow-x: scroll;
-    margin: 5vh auto;
+    margin: 20vh auto;
 }
 
 
   
   .slides{
     width: 500%;
-    height: 70vh;
+    height: 80vh;
     display: flex;
-    overflow-x: s;
+    overflow-x: scroll;
   }
   .slides::-webkit-scrollbar{
     display: none;
@@ -341,8 +341,8 @@ a .cheesecake{
   }
   
   .slide img{
-    width: 50vw;
-    height: 70vh;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
   }
   
@@ -350,7 +350,7 @@ a .cheesecake{
   
   .navigation-manual{
     position: absolute;
-    width: 60vw;
+    width: 100%;
     margin-top: -40px;
     display: flex;
     justify-content: center;
@@ -397,13 +397,13 @@ a .cheesecake{
   .navigation-auto{
     position: absolute;
     display: flex;
-    width: 60vw;
+    width: 100%;
     justify-content: center;
-    margin-top: 100vh;
+    margin-top: -40px;
   }
   
   .navigation-auto div{
-    border: 2px solid #40D3DC;
+    border: 2px solid #ff9b9b;
     padding: 5px;
     border-radius: 10px;
     transition: 1s;
@@ -428,7 +428,7 @@ a .cheesecake{
   #radio4:checked ~ .navigation-auto .auto-btn4{
     background: #ff9b9b;
   }
-  #radio5:checked ~ .navigation-auto .auto-btn4{
+  #radio5:checked ~ .navigation-auto .auto-btn5{
     background: #ff9b9b;
   }
 
@@ -437,7 +437,7 @@ a .cheesecake{
 footer{
     background-color: plum;
     position: absolute;
-    bottom: -100vh;
+    bottom:0vh;
     width: 100%;
     height: 30vh;
     display: block;
@@ -479,40 +479,6 @@ footer p a{
     text-decoration: none;
 }
 
-.scrollup{
-    position: fixed;
-    right: 2vw;
-    bottom: 0;
-    font-size: 60px;
-    color: plum;
-    z-index: 2;
-    opacity: 1;
-    cursor: pointer;
-}
-.scrollup:active{
-    transform: scale(.9);
-}
-.scrollAct{
-    position: absolute;
-    bottom: -365vh;
-    right: 2vw;
-    font-size: 60px;
-    color: plum;
-    z-index: 2;
-    opacity: 1;
-   
-    cursor: pointer;
-}
-.scrollAct2{
-    position: fixed;
-    right: 2vw;
-    bottom: 0;
-    font-size: 60px;
-    color: plum;swt
-    z-index: 2;
-    opacity: 1;
-    cursor: pointer;
-}
 
 /* ALL Hover EFFECTS */
 header nav ul li:hover h4{
@@ -718,47 +684,7 @@ transform: rotate(45deg) translate(-7px, -6px);
         font-size: 12px;
     }
 
-    .mySlides {
-        margin:0 auto;
-        display: none;
-      
-    }
-    .mySlides img {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        width: 100%;
-        height: 70vh;
-        object-fit: cover;
-        object-position: 80%;
-    }
-
-    .slideshow-container {
-        width: 100%;
-        height: 50vh;
-        position: relative;
-        margin: 0 auto;
-      }
-      
-      .choices{
-          position: absolute;
-          width: 100%;
-          bottom: 100vh;
-          left: 48%;
-          display: flex;
-          margin: 0 auto;
-      }
-      
-      /* The dots/bullets/indicators */
-      .dot {
-        height: 15px;
-        width: 15px;
-        margin: 0 5px;
-        background-color: rgb(255, 255, 255);
-        border-radius: 50%;
-        display: inline-block;
-        transition: background-color 0.6s ease;
-      }
+   
       .contactus form input[type="button"]{
         width: 30%;
     }
@@ -864,10 +790,10 @@ transform: rotate(45deg) translate(-7px, -6px);
     }
 
     .slider{
-        width: 90vw;
+        width: 100%;
         height: 50vh;
         border-radius: 10px;
-        overflow: hidden;
+        overflow-x: scroll;
         margin: 5vh auto;
     
     }
@@ -876,7 +802,7 @@ transform: rotate(45deg) translate(-7px, -6px);
         width: 500%;
         height: 70vh;
         display: flex;
-    
+        
       }
       
       .slides input{
@@ -886,22 +812,20 @@ transform: rotate(45deg) translate(-7px, -6px);
       .slide{
         width: 20%;
         transition: 2s;
-    
       }
       
       .slide img{
-        width: 90vw;
+        width: 100%;
         height: 70vh;
         object-fit: cover;
+        
       }
       .navigation-manual{
         position: absolute;
-        width: 60vw;
-        bottom: 50px;
-        z-index: 2;
         display: flex;
-        left: 23vw;
+        width: 100%;
         justify-content: center;
+        margin-top: 55vh;
       }
       #radio1:checked ~ .navigation-auto .auto-btn1{
         background: #ff9b9b;
@@ -918,14 +842,21 @@ transform: rotate(45deg) translate(-7px, -6px);
       #radio4:checked ~ .navigation-auto .auto-btn4{
         background: #ff9b9b;
       }
-      #radio5:checked ~ .navigation-auto .auto-btn4{
+      #radio5:checked ~ .navigation-auto .auto-btn5{
         background: #ff9b9b;
+      }
+      .navigation-auto{
+        position: absolute;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-top: 55vh;
       }
 
     footer{
         background-color: plum;
         position: absolute;
-        bottom: -400px;
+        bottom: 0;
         width: 100%;
         height: 30vh;
         display: block;
@@ -960,37 +891,6 @@ transform: rotate(45deg) translate(-7px, -6px);
     footer p a{
         color: white;
         text-decoration: none;
-    }
-    .scrollup{
-        position: fixed;
-        right: 2vw;
-        bottom: 0;
-        font-size: 3rem;
-        color: plum;
-        z-index: 2;
-        opacity: 1;
-        cursor: pointer;
-    }
-    .scrollAct{
-        position: absolute;
-        bottom: -25vh;
-        right: 2vw;
-        font-size: 3rem;
-        color: plum;
-        z-index: 2;
-        opacity: 1;
-       
-        cursor: pointer;
-    }
-    .scrollAct2{
-        position: fixed;
-        right: 2vw;
-        bottom: 0;
-        font-size: 3rem;
-        color: plum;
-        z-index: 2;
-        opacity: 1;
-        cursor: pointer;
     }
     .one{
         display: none;

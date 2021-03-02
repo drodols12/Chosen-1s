@@ -42,19 +42,16 @@ function getCake(){
             totalval = document.getElementById("num").value = value;
             totalprc = document.getElementById("price").value = total + "$";    
         })
+        rsv.onclick = function(){
 
-
-        if(getOrder.value == " "){
-            rsv.onclick = function(){
-                alert("Please put the Date when will you need it. Thank you!");
-            }
-        }else{            
-            rsv.onclick = function(){
+            if(getOrder.value !== "Set your delivery date!"){            
                 alert("Note: Please wait for the confirmation of your order!" + "\r\n" + "Please 'OK' to Continue, thank you!");
                 window.open('mailto:chosen1sbakeshop@gmail.com?subject=cake%20order&body=Cake you ordered: ' + ckNM.textContent + '%0D%0AQuantity: ' +totalval + '%0D%0ATotal Amount: ' + totalprc + '%0D%0ADate ordered: ' + today + "%0D%0ADelivery Needed: " + getOrder.value);
-               
-           }
+            }else{
+                alert("Please put the Date when will you need it. Thank you!");
+            } 
         }
+
 
         minus.addEventListener("click", ()=>{
                 total = (value*price)-price;
