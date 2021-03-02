@@ -44,7 +44,7 @@ function getCake(){
         })
 
 
-        if(getOrder.value === " "){
+        if(getOrder.value.length === 0){
             rsv.onclick = function(){
                 alert("Please put the Date when will you need it. Thank you!");
             }
