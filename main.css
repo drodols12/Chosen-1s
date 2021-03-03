@@ -75,14 +75,14 @@ nav h1{
 }
 .nav-link{
     display: flex;
-    width: 30%;
+    width: 35%;
     justify-content: space-around;
 }
 .nav-link li{
     color: white;
     list-style: none;
-    /* margin-right: 10px; */
-    letter-spacing: 3px;
+     margin-right: 10px; 
+    letter-spacing: 2px;
     font-weight: bold;
     font-size: 1.5rem;
 }
@@ -345,7 +345,6 @@ a .cheesecake{
     margin-top: -40px;
     display: flex;
     justify-content: center;
-    z-index: 9999;
   }
   
   .manual-btn{
@@ -503,7 +502,7 @@ a:hover .cheesecake{
     top: 0;
     left: 0;
     margin: 0 auto;
-    background-color: rgb(243, 197, 243);
+    background-color: rgba(243, 197, 243, 0.9);
     z-index: 3;
     color: white;
     transform: translateY(-150%);
@@ -515,7 +514,7 @@ a:hover .cheesecake{
     margin: 0 auto;
     width: 100%;
     height: 15vh;
-    background-color: plum;
+    background-color: rgba(221, 160, 221, 0.9);
 }
 
 .card h1{

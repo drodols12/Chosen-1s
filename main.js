@@ -76,7 +76,7 @@ function contactUS(){
     const contactForm = document.querySelector(".contactus");
     const closeBtn = document.getElementById("closeBtn");
     contact.addEventListener('click', ()=>{
-        
+        window.location.href = "index.html#navbar";
         contactForm.classList.add("contactactive")
         contactForm.classList.remove("contactactive1")
     })
@@ -106,6 +106,7 @@ function btnFunc(){
     const ocks = document.getElementById("oc");
     const ord = document.getElementById("order");
     const submit = document.getElementById("sub")
+    
 
     ocks.onclick = function(){
         location.href = "cakepage.html";
@@ -128,8 +129,7 @@ function btnFunc(){
             swal({
                 title: "Thank you for your feedback!",
                 icon: "success"
-            })
-            .then(function(){
+            }).then(function(){
                 emailjs.send("gmail","template_v0omm4h", tempParams).then(function(res){
                     console.log("success", res.status);
                 })
