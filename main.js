@@ -124,6 +124,9 @@ function slideShow(){
       if(counter > 5){
         counter = 1;
       }
+      if(document.querySelector('.first').style == "margin-left:0"){
+          document.getElementById('radio').checked = true;
+      }
     }, 3000);
 }
 
