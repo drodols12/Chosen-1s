@@ -56,19 +56,24 @@ nav h1{
 }
 .nav-link{    
     display: flex;
-    width: 30%;
+    width: 35%;
     justify-content: space-around;
 }
 .nav-link li{
+    color: white;
     list-style: none;
+    margin-right: 10px; 
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 .nav-link a{
     color: white;
     text-decoration: none;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     font-weight: bold;
     font-size: 1.5rem;
-    width: 20%;
+    width: 35%;
 }
 .burger{
     display: none;
@@ -109,6 +114,7 @@ nav h1{
     width: 20vw;
     height: 8vh;
     transition: all .5s ease;
+    overflow: hidden;
 }
 .cakes ul li.active{
     display: none;
@@ -140,10 +146,12 @@ nav h1{
 .cake{
     display: block;
     width: 20vw;
+    height: 40vh;
     margin: 2vh 10px;
     border-radius: 5px;
     background-color: #ff9b9b;
     color: white;
+    overflow: hidden;
 }
 .cake img{
     width: 20vw;
@@ -154,6 +162,7 @@ nav h1{
 
 .cake h3{
     width: 20vw;
+    height: 7vh;
     text-align: center;
     font: 1.2rem "Poppins";
     letter-spacing: 1px;
@@ -165,6 +174,12 @@ nav h1{
     width: 20vw;
     text-align: center;
 }
+.cakes ul li.none{
+    display: none;
+    position: absolute;
+    width: 100%;
+}
+
 /* whats new */
 .whatsNew1{
     width: 100%;
@@ -494,14 +509,18 @@ button:active{
     }
     
     .cakes ul li.active{
-        /* background-color: #ff9b9b73; */
-        border-radius: 0;
         width: 100%;
         display: flex;
         text-align: center;
         align-items: center;
         justify-content: space-around;
-        /* pointer-events: none; */
+    }
+    .cakes ul li.active hr{
+        display: block;
+        width: 90%;
+        height: 2px;
+        background-color: white;
+        border: none;
     }
     .cakes ul li:hover h3{
         color: white;
@@ -592,6 +611,7 @@ button:active{
         margin: 2vh 10px;
         background-color: #ff9b9b;
         color: white;
+        overflow: hidden;
     }
     .cake img{
         width:100%; 
@@ -602,9 +622,12 @@ button:active{
     .cake h3{
         width: 100%;
         text-align: center;
-        font: 14px "Poppins";
-        letter-spacing: 1px;
+        font: 13px "Poppins";
         margin: 1vh auto;
+        overflow: hidden;
+        align-items: center;
+        display: flex;
+        justify-content: center;
     }
     
     .cake p{
@@ -616,6 +639,13 @@ button:active{
     .whatsNew .cake:nth-last-of-type(1){
         margin-right: 50%;
     }
+    .rollCakes .cake:nth-last-of-type(1){
+        margin-right: 50%;
+    }
+    .sweetBites .cake:nth-last-of-type(1){
+        margin-right: 50%;
+    }
+    
     
     footer{
         background-color: plum;

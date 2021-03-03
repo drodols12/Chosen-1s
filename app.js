@@ -376,10 +376,10 @@ function rollCk(){
 rollCk();
 
 function dreamCk(){
-    const dream = document.querySelectorAll("#dream");
     const nm = document.querySelectorAll("#ck2");
+    const img = document.querySelectorAll("#dr");
 
-    dream.forEach(function(dream, index){
+    img.forEach(function(dream, index){
         dream.onclick = function(){
             if(index == 0){
                 localStorage.setItem("cake1", dream.src);
@@ -387,42 +387,42 @@ function dreamCk(){
                 console.log(index);
                 let val = 35;
                 localStorage.setItem("val",val);
-                window.location.href = "./cart.html"; 
+                window.location.href = "/cart.html"; 
             }else if(index == 1){
                 localStorage.setItem("cake1", dream.src);
                 localStorage.setItem("cakeNm", nm[1].textContent);
                 console.log(index);
                 let val = 35;
                 localStorage.setItem("val",val);
-                window.location.href = "./cart.html"; 
+                window.location.href = "/cart.html"; 
             }else if(index == 2){
                 localStorage.setItem("cake1", dream.src);
                 localStorage.setItem("cakeNm", nm[2].textContent);
                 console.log(index);
                 let val = 35;
                 localStorage.setItem("val",val);
-                window.location.href = "./cart.html"; 
+                window.location.href = "/cart.html"; 
             }else if(index == 3){
                 localStorage.setItem("cake1", dream.src);
                 localStorage.setItem("cakeNm", nm[3].textContent);
                 console.log(index);
                 let val = 35;
                 localStorage.setItem("val",val);
-                window.location.href = "./cart.html"; 
+                window.location.href = "/cart.html"; 
             }else if(index == 4){
                 localStorage.setItem("cake1", dream.src);
                 localStorage.setItem("cakeNm", nm[4].textContent);
                 console.log(index);
                 let val = 35;
                 localStorage.setItem("val",val);
-                window.location.href = "./cart.html"; 
+                window.location.href = "/cart.html"; 
             }else if(index == 5){
                 localStorage.setItem("cake1", dream.src);
                 localStorage.setItem("cakeNm", nm[5].textContent);
                 console.log(index);
                 let val = 35;
                 localStorage.setItem("val",val);
-                window.location.href = "./cart.html"; 
+                window.location.href = "/cart.html"; 
             }
         }
     })
