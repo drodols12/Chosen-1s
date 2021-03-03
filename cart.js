@@ -58,18 +58,21 @@ function getCake(){
             if(totalprc == "NaN$"){
                 rsv.disabled = true;
             }else{
-                if(getOrder.placeholder !== "Set your delivery date!"){            
+                var date = parseInt(getOrder.value);  
+                if( Number.isInteger(date) == true){
+                           
                     swal({
                         title: "Good job!", 
                         text: "Note: Please wait for the confirmation, Thanks", 
                         icon: "success"
-                    }).then(function(params){
+                    })
+                    .then(function(params){
                       var tempParams = {
                         cake: ckNM.textContent,
                         qty: totalval,
                         amount: totalprc,
                         tdy: today,
-                        dlvr: getOrder.value
+                        dlvr: date
                       }
                       emailjs.send("reservation","template_icqt3na", tempParams).then(function(res){
                           console.log("success", res.status);

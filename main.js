@@ -105,6 +105,7 @@ var navv = document.querySelector(".nav-link");
 function btnFunc(){
     const ocks = document.getElementById("oc");
     const ord = document.getElementById("order");
+    const submit = document.getElementById("sub")
 
     ocks.onclick = function(){
         location.href = "cakepage.html";
@@ -114,6 +115,32 @@ function btnFunc(){
             location.href = "index.html#cnt";
         });
         
+    }
+    submit.onclick = function(params){
+        var tempParams ={
+            from_name: document.getElementById('fname').value,
+            to_name: document.getElementById('em').value,
+            message: document.getElementById('cmt').value
+        }
+
+
+        if((tempParams['from_name'] !== " ") && (tempParams['to_name'] !== " ") && (tempParams['message'] !== " ")){
+            swal({
+                title: "Thank you for your feedback!",
+                icon: "success"
+            })
+            .then(function(){
+                emailjs.send("gmail","template_v0omm4h", tempParams).then(function(res){
+                    console.log("success", res.status);
+                })
+            })
+        }else{
+            swal({
+                title: "You forgot Something..",
+                text: "Please fill all the input fields before submitting, Thank you!",
+                icon: "warning"
+            })
+        }
     }
 }
 
