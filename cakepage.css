@@ -13,10 +13,6 @@ body{
     overflow-y: scroll;
     
 }
-
-::-webkit-scrollbar{
-    display: none;
-}
 /*Navigations*/
 .logo{
     display: flex;

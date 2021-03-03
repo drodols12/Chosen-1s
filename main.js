@@ -110,7 +110,7 @@ function btnFunc(){
         location.href = "cakepage.html";
     }
     ord.onclick = function(){
-        alert("Click the 'Our Cakes' button");
+        swal("Hello there", "Please choose in 'Our Cakes' button/tab to order, Thank you");
     }
 }
 
