@@ -5,14 +5,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
 }
 
 body{
     font-family: "Poppins";
     overflow-y: scroll;
-    overflow-x: scroll;
+    overflow-x: hidden;
 }
 .body{
     position: relative;
@@ -307,10 +305,9 @@ a .cheesecake{
 }
 
 .slider{
-    width: 100vw;
+    width: 99vw;
     height: 100%;
-    border-radius: 10px;
-    overflow-x: scroll;
+    overflow: hidden;
     margin: 0 auto;
 }
 
@@ -320,11 +317,7 @@ a .cheesecake{
     width: 500%;
     height: 80vh;
     display: flex;
-    overflow-x: scroll;
-    overflow-y:unset;
-  }
-  .slides::-webkit-scrollbar{
-    display: none;
+    overflow: hidden;
   }
   
   .slides input{
@@ -334,13 +327,14 @@ a .cheesecake{
   .slide{
     width: 20%;
     transition: 2s;
-
+    overflow: hidden;
   }
   
   .slide img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    overflow: hidden;
   }
   
   /*css for manual slide navigation*/
@@ -663,6 +657,11 @@ transform: rotate(45deg) translate(-7px, -6px);
     } 
     body{
         position: relative;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    ::-webkit-scrollbar{
+      display: none;
     }
     .logo{
         display: flex;
@@ -791,7 +790,7 @@ transform: rotate(45deg) translate(-7px, -6px);
         width: 100%;
         height: 50vh;
         border-radius: 10px;
-        overflow-x: hidden;
+        overflow: hidden;
         margin: 5vh auto;
     
     }
