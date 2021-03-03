@@ -10,7 +10,7 @@
 body{
     font-family: "Poppins";
     position: relative;
-    overflow-y: scroll;
+    overflow-y: auto;
     
 }
 /*Navigations*/
@@ -171,7 +171,7 @@ nav h1{
     margin: 10px;
     display: block;
     position: relative;
-    overflow-y: scroll;
+    overflow-y: auto;
     
 }
 /* .wActive{
@@ -436,7 +436,7 @@ button:active{
     body{
         font-family: "Poppins";
         position: relative;
-        overflow-y: scroll;
+        overflow-y: auto;
         
     }
     .logo h1{

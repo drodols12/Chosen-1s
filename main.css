@@ -9,7 +9,7 @@
 
 body{
     font-family: "Poppins";
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
 }
 .body{
@@ -657,7 +657,7 @@ transform: rotate(45deg) translate(-7px, -6px);
     } 
     body{
         position: relative;
-        overflow-y: scroll;
+        overflow-y: auto;
         overflow-x: hidden;
     }
     ::-webkit-scrollbar{
