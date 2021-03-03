@@ -34,6 +34,7 @@ function getCake(){
                 }).then(function(){
                     rsv.disabled = true;
                     add.disabled = true;
+                    location.href = "cakepage.html";
                 })
             }
         }
