@@ -625,8 +625,13 @@ function btn(){
         location.href = "#navbar";
     }
     orders.onclick = function(){
-        location.href = "#navbar";
-        alert("Please Choose a Cake");
+        swal({
+            title: "Hello there!",
+            text: "Please go to 'Our Cakes' section to see the menu and to order",
+            icon: "info"
+        }).then(function(){
+            location.href = "#navbar";
+        })
     }
     cntact.onclick = function(){
         var form = document.getElementById("cnt");
@@ -637,8 +642,30 @@ function btn(){
        }
     }
 
-    submit.onclick = function(){
-        location.href = "https://m.me/Chosen1cakes";
+    submit.onclick = function(params){
+        var tempParams ={
+            from_name: document.getElementById('fname').value,
+            to_name: document.getElementById('em').value,
+            message: document.getElementById('cmt').value
+        }
+
+
+        if((tempParams['from_name'] !== " ") && (tempParams['to_name'] !== " ") && (tempParams['message'] !== " ")){
+            swal({
+                title: "Thank you for your feedback!",
+                icon: "success"
+            }).then(function(){
+                emailjs.send("gmail","template_v0omm4h", tempParams).then(function(res){
+                    console.log("success", res.status);
+                })
+            })
+        }else{
+            swal({
+                title: "You forgot Something..",
+                text: "Please fill all the input fields before submitting, Thank you!",
+                icon: "warning"
+            })
+        }
     }
 
     

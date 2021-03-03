@@ -44,14 +44,23 @@ function getCake(){
         })
         rsv.onclick = function(){
 
-            if((getOrder.value !== "Set your delivery date!")&&(getOrder.value !== "mm/dd/yyyy")){            
+            if(getOrder.value !== "Set your delivery date!"){            
                 swal({
                     title: "Good job!", 
                     text: "Note: Please wait for the confirmation, Thanks", 
                     icon: "success"
-                })
-                    .then(function(){
-                    window.open('mailto:chosen1sbakeshop@gmail.com?subject=cake%20order&body=Cake you ordered: ' + ckNM.textContent + '%0D%0AQuantity: ' +totalval + '%0D%0ATotal Amount: ' + totalprc + '%0D%0ADate ordered: ' + today + "%0D%0ADelivery Needed: " + getOrder.value);
+                }).then(function(params){
+                  var tempParams = {
+                    cake: ckNM.textContent,
+                    qty: totalval,
+                    amount: totalprc,
+                    tdy: today,
+                    dlvr: getOrder.value
+                  }
+                  emailjs.send("reservation","template_icqt3na", tempParams).then(function(res){
+                      console.log("success", res.status);
+                  })
+
                 });
             }else{
                 swal("You forgot!", "Please fill all the input fields", "warning");

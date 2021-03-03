@@ -11,6 +11,7 @@ body{
     font-family: "Poppins";
     position: relative;
     overflow-y: auto;
+    overflow-x: hidden;
     
 }
 /*Navigations*/
@@ -172,7 +173,9 @@ nav h1{
     display: block;
     position: relative;
     overflow-y: auto;
-    
+}
+.whatsNew1::-webkit-scrollbar{
+    display: none;
 }
 /* .wActive{
     transform: translateX(0);
@@ -367,15 +370,15 @@ footer p a{
     opacity: .5;
 }
 
-.contactus form{
+.contactus .form{
     display: block;
     width: 80%;
     margin: 10px auto;
 }
-.contactus form h3{
+.contactus .form h3{
     margin-bottom: 10px;
 }
-.contactus form input{
+.contactus .form input{
     width: 100%;
     height: 3vh;
     margin-bottom: 5px;

@@ -16,15 +16,15 @@
             <h1> CONTACT US </h1>
             <p>Please fill up the form.</p> 
         </div>
-        <form action="">
+        <div class="form">
             <h3>Full Name</h3>
-            <input type="text">
+            <input type="text" id="fname" value=" ">
             <h3>Email</h3>
-            <input type="email" name="" id="">
+            <input type="email" id="em" value=" ">
             <h3>Message</h3>
-            <textarea rows="4" cols="100" name="comment"></textarea>
+            <textarea rows="4" cols="100" name="comment" id="cmt" value=" "></textarea>
            
-        </form>
+        </div>
         <button id="sub">Submit</button>
         <div class="scrollToTop" id="scrtop"></div>
     </div>
@@ -451,5 +451,13 @@
     <script src="app.js">
     </script>   
      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+     <script src="https://smtpjs.com/v3/smtp.js">
+     </script>
+     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+     <script type="text/javascript">
+     (function() {
+     emailjs.init("user_bfnLSVrQ3UTjHYW7if9Dq");
+     })();
+     </script>
 </body>
 </html>

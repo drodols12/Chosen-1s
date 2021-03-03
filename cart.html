@@ -52,7 +52,7 @@
                 <div class="orderForm">
                     <input id="price" type="tel" disabled placeholder="0" value="0">
                     <button id="minus" class="fas fa-minus"></button><input type="text" id="num" disabled value="0"><button id="add" class="fas fa-plus"></button>
-                    <input value="Set your delivery date!" type="text" onfocus="(this.type='date')"  id="date">
+                    <input placeholder="Set your delivery date!" type="text" onfocus="(this.type='date')"  id="date">
                     
                     <button id="rsv">Reserve Now</button>
                     
@@ -65,6 +65,12 @@
     <script src="cart.js">
     </script>
      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+     <script type="text/javascript">
+     (function() {
+     emailjs.init("user_bfnLSVrQ3UTjHYW7if9Dq");
+     })();
+     </script>
     
 </body>
 </html>
