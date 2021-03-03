@@ -58,7 +58,7 @@ function getCake(){
             if(totalprc == "NaN$"){
                 rsv.disabled = true;
             }else{
-                if(getOrder.value !== "Set your delivery date!"){            
+                if(getOrder.placeholder !== "Set your delivery date!"){            
                     swal({
                         title: "Good job!", 
                         text: "Note: Please wait for the confirmation, Thanks", 
