@@ -25,6 +25,17 @@ function getCake(){
     
         window.onload = function(){
             minus.disabled = true;
+            if(prc == "soon"){
+                document.getElementById("price").value = prc;
+                swal({
+                    title: "This item is available Soon",
+                    text: "We will announce when its available in our website",
+                    icon: "info"
+                }).then(function(){
+                    rsv.disabled = true;
+                    add.disabled = true;
+                })
+            }
         }
 
 
@@ -43,28 +54,31 @@ function getCake(){
             totalprc = document.getElementById("price").value = total + "$";    
         })
         rsv.onclick = function(){
-
-            if(getOrder.value !== "Set your delivery date!"){            
-                swal({
-                    title: "Good job!", 
-                    text: "Note: Please wait for the confirmation, Thanks", 
-                    icon: "success"
-                }).then(function(params){
-                  var tempParams = {
-                    cake: ckNM.textContent,
-                    qty: totalval,
-                    amount: totalprc,
-                    tdy: today,
-                    dlvr: getOrder.value
-                  }
-                  emailjs.send("reservation","template_icqt3na", tempParams).then(function(res){
-                      console.log("success", res.status);
-                  })
-
-                });
+            if(totalprc == "NaN$"){
+                rsv.disabled = true;
             }else{
-                swal("You forgot!", "Please fill all the input fields", "warning");
-            } 
+                if(getOrder.value !== "Set your delivery date!"){            
+                    swal({
+                        title: "Good job!", 
+                        text: "Note: Please wait for the confirmation, Thanks", 
+                        icon: "success"
+                    }).then(function(params){
+                      var tempParams = {
+                        cake: ckNM.textContent,
+                        qty: totalval,
+                        amount: totalprc,
+                        tdy: today,
+                        dlvr: getOrder.value
+                      }
+                      emailjs.send("reservation","template_icqt3na", tempParams).then(function(res){
+                          console.log("success", res.status);
+                      })
+    
+                    });
+                }else{
+                    swal("You forgot!", "Please fill all the input fields", "warning");
+                }
+            }
         }
 
 
