@@ -304,125 +304,101 @@ a .cheesecake{
     height: 81vh;
 }
 
-.slider{
-    width: 99vw;
-    height: 100%;
-    overflow: hidden;
-    margin: 0 auto;
+/* IMAGE SLIDER */
+.mySlides {
+  display: none
+
+}
+.mySlides img{
+  margin-top: 0;
+  vertical-align: middle;
+  width: 100%;
+  height: 70vh;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: black;
+  font-weight: 400;
+  font-size: 2rem;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgb(255, 255, 255);
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+.dt{
+  position: absolute;
+  bottom: 3vh;
+  left: 46%;
 }
 
 
-  
-  .slides{
-    width: 500%;
-    height: 80vh;
-    display: flex;
-    overflow: hidden;
-  }
-  
-  .slides input{
-    display: none;
-  }
-  
-  .slide{
-    width: 20%;
-    transition: 2s;
-    overflow: hidden;
-  }
-  
-  .slide img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    overflow: hidden;
-  }
-  
-  /*css for manual slide navigation*/
-  
-  .navigation-manual{
-    position: absolute;
-    width: 100%;
-    margin-top: -40px;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .manual-btn{
-    border: 2px solid #ff9b9b;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;
-  }
-  
-  .manual-btn:not(:last-child){
-    margin-right: 40px;
-  }
-  
-  .manual-btn:hover{
-    background: #ff9b9b;
-  }
-  
-  #radio1:checked ~ .first{
-    margin-left: 0;
-  }
-  
-  #radio2:checked ~ .first{
-    margin-left: -20%;
-  }
-  
-  #radio3:checked ~ .first{
-    margin-left: -40%;
-  }
-  
-  #radio4:checked ~ .first{
-    margin-left: -60%;
-  }
-  
-  #radio5:checked ~ .first{
-    margin-left: -80%;
-  }
-  
-  /*css for automatic navigation*/
-  
-  .navigation-auto{
-    position: absolute;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    margin-top: -40px;
-  }
-  
-  .navigation-auto div{
-    border: 2px solid #ff9b9b;
-    padding: 5px;
-    border-radius: 10px;
-    transition: 1s;
-  }
-  
-  .navigation-auto div:not(:last-child){
-    margin-right: 40px;
-  }
-  
-  #radio1:checked ~ .navigation-auto .auto-btn1{
-    background: #ff9b9b;
-  }
-  
-  #radio2:checked ~ .navigation-auto .auto-btn2{
-    background: #ff9b9b;
-  }
-  
-  #radio3:checked ~ .navigation-auto .auto-btn3{
-    background: #ff9b9b;
-  }
-  
-  #radio4:checked ~ .navigation-auto .auto-btn4{
-    background: #ff9b9b;
-  }
-  #radio5:checked ~ .navigation-auto .auto-btn5{
-    background: #ff9b9b;
-  }
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
 
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+  
+ 
 
 /*!!!!!!!!!!!!! FOOTEEEERRR !!!!!!!!!!!!!!*/
 footer{
@@ -580,7 +556,7 @@ textarea{
   cursor: pointer;
   outline: 0;
 }
-button:active{
+.contactus button:active{
   transition: all .5s ease;
   outline: 0;
   transform: scale(.8);
@@ -817,82 +793,7 @@ transform: rotate(45deg) translate(-7px, -6px);
         margin: 0 auto;
         display: block; 
       }
-      .navigation-manual{
-        position: absolute;
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        margin-top: 35px;
-      }
-      .manual-btn{
-        border: 2px solid #ff9b9b;
-        padding: 5px;
-        border-radius: 10px;
-        cursor: pointer;
-        transition: 1s;
-      }
-      
-      .manual-btn:not(:last-child){
-        margin-right: 40px;
-      }
-      
-      .manual-btn:hover{
-        background: #ff9b9b;
-      }
-      
-      #radio1:checked ~ .first{
-        margin-left: 0;
-      }
-      
-      #radio2:checked ~ .first{
-        margin-left: -20%;
-      }
-      
-      #radio3:checked ~ .first{
-        margin-left: -40%;
-      }
-      
-      #radio4:checked ~ .first{
-        margin-left: -60%;
-      }
-      
-      #radio5:checked ~ .first{
-        margin-left: -80%;
-      }
-      #radio1:checked ~ .navigation-auto .auto-btn1{
-        background: #ff9b9b;
-      }
-      
-      #radio2:checked ~ .navigation-auto .auto-btn2{
-        background: #ff9b9b;
-      }
-      
-      #radio3:checked ~ .navigation-auto .auto-btn3{
-        background: #ff9b9b;
-      }
-      
-      #radio4:checked ~ .navigation-auto .auto-btn4{
-        background: #ff9b9b;
-      }
-      #radio5:checked ~ .navigation-auto .auto-btn5{
-        background: #ff9b9b;
-      }
-      .navigation-auto{
-        position: absolute;
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        margin-top: 55vh;
-      }
-      .navigation-auto div{
-        border: 2px solid #ff9b9b;
-        padding: 5px;
-        border-radius: 10px;
-        transition: 1s;
-      }
-        .navigation-auto div:not(:last-child){
-            margin-right: 40px;
-        }
+
     footer{
         background-color: plum;
         position: absolute;
