@@ -106,7 +106,7 @@ function btnFunc(){
     const ocks = document.getElementById("oc");
     const ord = document.getElementById("order");
     const submit = document.getElementById("sub")
-    
+    const custom = document.getElementById("texts1");
 
     ocks.onclick = function(){
         location.href = "cakepage.html";
@@ -142,6 +142,10 @@ function btnFunc(){
             })
         }
     }
+    custom.onclick = function(){
+        location.href = "customized.html"
+    }
+
 }
 
 btnFunc();

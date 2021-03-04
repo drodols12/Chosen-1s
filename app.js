@@ -265,7 +265,6 @@ function whatsNew(){
 
 }
 whatsNew();  
-
 function roundCk(){
     const rounds = document.querySelectorAll("#round");
     const nm = document.querySelectorAll("#ck")

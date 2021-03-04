@@ -685,11 +685,6 @@ transform: rotate(45deg) translate(-7px, -6px);
         font-size: 12px;
     }
 
-   
-      .contactus form input[type="button"]{
-        width: 30%;
-    }
-
     nav{
         position: relative;
     }
