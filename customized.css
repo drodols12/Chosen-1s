@@ -342,6 +342,7 @@ footer p a{
     margin-bottom: 10px;
 }
 .contactus .form input{
+    display: block;
     width: 100%;
     height: 3vh;
     margin-bottom: 5px;
