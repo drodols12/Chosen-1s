@@ -10,7 +10,7 @@ function clkPhoto(){
     const logo = document.getElementById("logo");
     
     ord.onclick = function(){
-       window.location.href = "https:/m.me/Chosen1cakes/"
+       location.href = "https://m.me/Chosen1cakes/"
     }
 
     logo.onclick = function(){
