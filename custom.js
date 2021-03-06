@@ -2,9 +2,21 @@ function clkPhoto(){
     const all = document.getElementById("check1");
     const kds = document.getElementById("check2");
     const adt = document.getElementById("check3");
+    const ord = document.getElementById("ord");
+    const sh = document.getElementById("show");
     const cake1 = document.querySelectorAll(".adt");
     const cake2 = document.querySelectorAll(".kd");
     const cake = document.querySelectorAll("img");
+    const logo = documen.getElementById("logo");
+    
+    ord.onclick = function(){
+       window.location.href = "https:/m.me/Chosen1cakes/"
+    }
+
+    logo.onclick = function(){
+        document.location.href = "/index.html";
+    } 
+
 
     all.onclick = function(){
         cake1.forEach(function(change){
@@ -106,7 +118,7 @@ function btn(){
     const orders = document.getElementById("order");
     const cntact = document.getElementById("contactus");
     const close = document.getElementById("closeBtn");
-    const submit = document.getElementById("sub")
+    
 
     ourcakes.onclick = function(){
         location.href = "#navbar";
@@ -154,9 +166,9 @@ function btn(){
             })
         }
     }
-
-    
+   
 
 }
 
 btn();
+

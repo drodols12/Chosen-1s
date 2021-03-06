@@ -1,6 +1,7 @@
 function getCake(){
     const cakeImg = document.getElementById("cakeImg");
     const ckNM = document.getElementById("cakeType2");
+    const descrip = document.getElementById("desc");
     const add = document.getElementById("add");
     const minus = document.getElementById("minus");
     const prc = localStorage.getItem('val')
@@ -17,9 +18,11 @@ function getCake(){
     var yyyy = today.getFullYear();
 
 
+
     window.addEventListener('load', ()=>{
         ckNM.textContent = localStorage.getItem('cakeNm');
         cakeImg.setAttribute("src", localStorage.getItem('cake1'));
+        descrip.textContent = localStorage.getItem('cakeDesc');
     })
 
     
@@ -58,9 +61,10 @@ function getCake(){
             if(totalprc == "NaN$"){
                 rsv.disabled = true;
             }else{
-                var date = parseInt(getOrder.value);  
-                if( Number.isInteger(date) == true){
-                           
+                var date = getOrder.value;
+                var info = document.getElementById("info");
+                if(today < date ){
+                          
                     swal({
                         title: "Good job!", 
                         text: "Note: Please wait for the confirmation, Thanks", 
@@ -71,6 +75,7 @@ function getCake(){
                         cake: ckNM.textContent,
                         qty: totalval,
                         amount: totalprc,
+                        cnt: info.value,
                         tdy: today,
                         dlvr: date
                       }

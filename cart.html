@@ -42,17 +42,19 @@
         <h1>Order Cart</h1>
         <div class="card">
             <div class="cake">
-                <img id="cakeImg"  alt="">
+                <img id="cakeImg" alt="">
             </div>
             <div class="order">
                 <h3 id="cakeType2"></h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Rem mollitia dolor iste voluptas quasi distinctio, fugiat 
+                <p id="desc">
                 </p>
                 <div class="orderForm">
                     <input id="price" type="tel" disabled placeholder="0" value="0">
                     <button id="minus" class="fas fa-minus"></button><input type="text" id="num" disabled value="0"><button id="add" class="fas fa-plus"></button>
-                    <input placeholder="Set your delivery date!" type="text" onfocus="(this.type='date')"  id="date">
+                    <p>Please input your email, facebook link, or number below for confirmation of your reservation.</p>
+                    <input type="text" id="info" placeholder="Email, FB link or Phone Number">
+                    <input type="text" placeholder="Set your delivery date!"
+        onfocus="(this.type='date')" id="date"> 
                     
                     <button id="rsv">Reserve Now</button>
                     

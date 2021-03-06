@@ -23,6 +23,8 @@ body{
 .logo{
     display: flex;
     align-items: center;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 
@@ -58,7 +60,7 @@ p.small{
     position: relative;
     top: 0px;
     transition: all 1s ease;
-    z-index: 1;
+    z-index: 2;
   }
 nav{
     position: fixed;
@@ -83,6 +85,9 @@ nav h1{
     color: white;
     list-style: none;
      margin-right: 10px; 
+
+}
+.nav-link li h3{
     letter-spacing: 2px;
     font-weight: bold;
     font-size: 1.5rem;
@@ -120,11 +125,19 @@ input{
 }
 .header{
     width: 90%;
+    height: 20vh;
     margin: 0 auto;
-   
+    z-index: 2;
+    background-color: white;
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 .header h1{
+    background-color: white;
     width: 100%;
+    height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -141,22 +154,117 @@ input{
 .navi{
     background-color: rgb(180, 133, 180);
     height: 60px;
-    display: flex;
-    align-items: center;
     width: 90%;
     margin: 0 auto;
+    z-index: 1;
+    position: relative;
 }
-.navi label{
+.navigations{
+    background-color: rgb(180, 133, 180);
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+}
+.nav-cont label{
     display: inline-block;
     margin:0 40px;
     color: white;
     cursor: pointer;
 }
-.navi label:hover{
+.nav-cont label:hover{
     transform: scale(1.2);
     transition: all .5s ease;
     color: rgb(0, 0, 0);;
 }
+.orderhere i{
+    margin-top:10px;
+    margin-right: 20px;
+    font-size: 30px;
+    color: white;
+}
+.orderhere{
+    display: flex;
+    cursor: pointer;
+}
+.orderhere p{
+    margin: 15px 6px;
+    color: white;
+}
+.orderhere:hover p, .navi .orderhere:hover i{
+    transition: all .5s ease;
+    color: rgb(0, 0, 0);
+}
+/* Order Form */
+/* .order-form{
+    height: 63vh;
+    width: 100%;
+    background-color: plum;
+    position: absolute;
+    z-index: -1;
+    transform: translateY(-100%);
+    opacity: 0;
+    border-radius: 0px 0px 13px 13px;
+    transition: all .05s ease-in-out;
+}
+.order-form h4{
+    margin-top: 10px;
+    margin-bottom: 0;
+    margin-left: 7%;
+    color: white;
+}
+.order-form h5{
+    margin-top: 10px;
+    margin-left: 7%;
+    margin-bottom: -2%;
+    color: white;
+}
+.order-form input{
+    background-color: #fff;
+    display: block;
+    margin-top: -2%;
+    margin-left: 7%;
+    width:85%;
+    height: 5vh;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    font: 14px "Lato";
+}
+.order-form textarea{
+    margin-top: -2%;
+    width: 85%;
+    height: 25vh;
+    margin-top: 3%;
+    margin-left: 7%;
+    font: 14px "Lato";
+}
+.order-form button{
+    float: right;
+    margin-right: 8%;
+    margin-top: 20px;
+    width: 100px;
+    height: 30px;
+    outline: none;
+    border: none;
+    background-color: rgb(191, 134, 191);
+    cursor: pointer;
+    font: 17px "Lato";
+    color: white;
+}
+.order-form button:active{
+    transform: scale(.9);
+    transition: all .5s ease-in-out;
+}
+.active{
+    transform: translateY(0);
+    opacity: 1;
+    z-index: -1;
+    transition: all .5s ease-in-out;
+} */
+/* Order Form */
 .cakes1{
     width: 100%;
     height: 100vh;

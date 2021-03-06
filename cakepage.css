@@ -133,8 +133,9 @@ nav h1{
 
 .whatsNew{
     position: absolute;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(5, 2fr);
+    grid-gap: 20px;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
@@ -146,7 +147,7 @@ nav h1{
 .cake{
     display: block;
     width: 20vw;
-    height: 40vh;
+    height: 45vh;
     margin: 2vh 10px;
     border-radius: 5px;
     background-color: #ff9b9b;
@@ -155,7 +156,7 @@ nav h1{
 }
 .cake img{
     width: 20vw;
-    height: 20vh;
+    height: 25vh;
     object-fit:  cover;
     cursor: pointer;
 }
@@ -170,10 +171,15 @@ nav h1{
 }
 
 .cake p{
-    margin: 1vh auto;
+    font-size: 13px;
+    margin: 2vh 3px;
     width: 20vw;
     text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
+
 .cakes ul li.none{
     display: none;
     position: absolute;
@@ -208,13 +214,14 @@ nav h1{
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    transform: scale(0);
+    transform: scale(1);
     transition: all .3s ease-in;
     z-index: 1;
+    overflow-y: hidden;
 }
 
 .rActive{
-    transform: scale(1);
+    transform: scale(0);
     transition: all .3s ease-in;
 }
 /* .rActive2{
@@ -232,6 +239,7 @@ nav h1{
     transform: scale(0);
     transition: all .3s ease-in;
     z-index: 1;
+    overflow-y: hidden;
 }
 .rcActive{
     transform: scale(1);
@@ -253,6 +261,7 @@ nav h1{
     transform: scale(0);
     transition: all .3s ease-in;
     z-index: 1;
+    overflow-y: hidden;
 }
 .dcActive{
     transform: scale(1);
@@ -270,6 +279,7 @@ nav h1{
     transform: scale(0);
     transition: all .3s ease-in;
     z-index: 1;
+    overflow-y: hidden;
 }
 .cActive{
     transform: scale(1);
@@ -287,6 +297,7 @@ nav h1{
     transform: scale(0);
     transition: all .3s ease-in;
     z-index: 1;
+    overflow-y: hidden;
 }
 .sActive{
     transform: scale(1);
@@ -584,7 +595,6 @@ button:active{
         justify-content: center;
         align-items: center;
         margin: 0 auto;
-        z-index: -1;
     }
     .cupCake{
         display: flex;
@@ -632,9 +642,11 @@ button:active{
     
     .cake p{
         margin: 1vh auto;
-        width: 100%;
         font-size: 12px;
         text-align: center;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space:nowrap;
     }
     .whatsNew .cake:nth-last-of-type(1){
         margin-right: 50%;

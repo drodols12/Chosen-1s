@@ -209,6 +209,7 @@ button:focus{
     margin-bottom: 20px;
 }
 .card{
+    height: 100vh;
     display: flex;
     background-color: rgb(201, 137, 201);
     border-radius: 10px;
@@ -226,7 +227,7 @@ button:focus{
 .cake img{
     margin: 70px 0;
     width: 100%;
-    height: 50vh;
+    height: 70vh;
     border-radius: 10px;
     object-fit: cover;
 }
@@ -252,7 +253,7 @@ button:focus{
 
 .orderForm{
     margin: 0 auto;
-    margin-top: 13vh;
+    margin-top: 10vh;
     display: block;
     width: 70%;
 }
@@ -272,12 +273,30 @@ button:focus{
     font-size: 20px;
     color: white;
 }
+#info{
+    cursor:text;
+    color: black;
+    margin-top: 0;
+    margin-bottom: -10px;
+    border-radius: 5px;
+}
+.orderForm p{
+    font-family: "Lato";
+    font-size: 16px;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+#info::placeholder{
+    font: 10px "Lato" ;
+}
 
 
 
 
-
-.orderForm input:nth-last-of-type(2){
+.orderForm input:nth-last-of-type(3){
     width: 85%;
     margin: 0 auto;
 }
@@ -303,11 +322,13 @@ button:focus{
     font-size: 15px;
 }
 #date::placeholder{
+    font: 18px "Lato";
     color: white;
 }
 
 
 .orderForm i:hover{
+    
     color: white;
     transform: scale(1.3);
 }
@@ -474,7 +495,8 @@ transform: rotate(45deg) translate(-7px, -6px);
 
     .card{
         display: block;
-        
+        height: 106vh;
+        overflow-y: hidden;
     }
     .card img{
         height: 25vh;
@@ -494,7 +516,7 @@ transform: rotate(45deg) translate(-7px, -6px);
         position: relative;
         display: block;
         width: 90%;
-        height: 70vh;
+        height: 90vh;
         margin: 0 auto;
     }
     .order h3{
@@ -505,7 +527,9 @@ transform: rotate(45deg) translate(-7px, -6px);
         margin: 10px auto;
         text-align: center;
     }
-
+    .orderForm #info{
+        font-size: 10px;
+    }
     .orderForm{
         display: block;
         width: 70%;
@@ -513,19 +537,25 @@ transform: rotate(45deg) translate(-7px, -6px);
         justify-self: center;
         align-items: center;
         z-index: 1;
+        overflow-y: hidden;
     }
     .orderForm input[type=text], input[type=tel]{
         color: black;
     }
     
-    .orderForm input:nth-last-of-type(2){
+    .orderForm input:nth-last-of-type(3){
         width: 75%;
         margin: 0 auto;
     }
+    .orderForm p{
+        width: 100%;
+        font-size: 12px;
+    }
     
     .orderForm #date{
-        height: 12vh;
+        height: 5vh;
         text-align: center;
+        font-size: 10px;
     }
     .orderForm #date::placeholder{
         white-space:pre-line; 
