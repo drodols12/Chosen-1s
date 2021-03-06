@@ -180,8 +180,8 @@ nav h1{
 }
 
 .container2 h1{
-    font: 3rem "Dancing Script";
-    padding-top: 20vh;
+    font: 4rem "Dancing Script";
+    padding-top: 5vh;
     margin-bottom: 10vh;
     text-align: center;
 }
@@ -210,12 +210,18 @@ nav h1{
     font-size: 1.2rem;
     display: block;
     margin: 10px auto;
+    pointer-events: all;
+    text-align: center;
+}
+.header a{
+    text-decoration: none;
+    color: white;
 }
 .new{
     position: relative;
     display: inline-block;
     width: 25%;
-    height: 50vh;
+    height: 54vh;
     margin: 0 40px;
     cursor: pointer;
     margin-bottom: 25vh;
@@ -227,12 +233,12 @@ nav h1{
     height: 100%;
     margin: 0 auto;
     object-fit: cover;
-    
 }
 
 
 
 .new p{
+    height: 10vh;
     padding: 10px 10px;
     text-align: center;
     color: white;

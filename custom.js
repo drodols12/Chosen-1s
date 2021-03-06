@@ -7,7 +7,7 @@ function clkPhoto(){
     const cake1 = document.querySelectorAll(".adt");
     const cake2 = document.querySelectorAll(".kd");
     const cake = document.querySelectorAll("img");
-    const logo = documen.getElementById("logo");
+    const logo = document.getElementById("logo");
     
     ord.onclick = function(){
        window.location.href = "https:/m.me/Chosen1cakes/"
@@ -118,7 +118,7 @@ function btn(){
     const orders = document.getElementById("order");
     const cntact = document.getElementById("contactus");
     const close = document.getElementById("closeBtn");
-    
+    const submit = document.getElementById("sub")
 
     ourcakes.onclick = function(){
         location.href = "#navbar";
@@ -166,8 +166,6 @@ function btn(){
             })
         }
     }
-   
-
 }
 
 btn();
