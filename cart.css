@@ -479,6 +479,12 @@ transform: rotate(45deg) translate(-7px, -6px);
         z-index: 99;
         overflow-y: hidden;
     }
+    #size{
+        font-size: 15px;
+    }
+    #flavors{
+        font-size: 15px;
+    }
 
     .dropdown div{
         width: 100%;
@@ -488,7 +494,7 @@ transform: rotate(45deg) translate(-7px, -6px);
         display: flex;
         margin: 0 auto;
         width: 20vh;
-        font-size: 0.4rem;
+        font-size: 12px;
         text-align: center;
     }
     .active{

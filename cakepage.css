@@ -271,6 +271,10 @@ nav h1{
     transform: scale(1);
     transition: all .3s ease-in;
 }
+.dreamCake .cake:nth-last-of-type(1){
+    margin-right: 66%;
+}
+
 /* cupcakes */
 .cupCake{
     position: absolute;
@@ -289,6 +293,9 @@ nav h1{
     transform: scale(1);
     transition: all .3s ease-in;
 }
+.cupCake .cake:nth-last-of-type(1){
+    margin-right: 44.3%;
+}
 /* sweet bites */
 .sweetBites{
     position: absolute;
@@ -305,6 +312,9 @@ nav h1{
 .sActive{
     transform: scale(1);
     transition: all .3s ease-in;
+}
+.sweetBites .cake:nth-last-of-type(1){
+    margin-right: 22.4%;
 }
 
 
@@ -455,17 +465,21 @@ button:active{
     transition: all .5s ease;
 }
 .swal-title {
-    font-family: "Lato";
+    font-family: "Poppins";
+   font-size: 24px;
   }
 .swal-text {
     font-family: sans-serif;
+    font-size: 15px;
   }
 .swal-button {
-    font-family: sans-serif;
+    font-family: "Poppins";
     padding: 7px 19px;
     border-radius: 2px;
     font-size: 12px;
  }
+
+
  
 
 @media screen and (max-width: 768px){

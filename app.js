@@ -774,7 +774,7 @@ function roundCk(){
             round.onclick = function(){
                 Swal.fire({
                     title: "Please choose 2 flavors you want",
-                    text: "Please choose between: Mango Bravissimo, Chocolate, Mocha, Mango, Ube Macapuno and Ube Yema",
+                    text: "Please choose between: Mango Bravissimo, Chocolate, Mocha, Mango Cake, Ube Macapuno and Ube Yema",
                     input: 'text',
                     confirmButtonText: "8' - 40$",
                     showCancelButton: true,
@@ -782,6 +782,9 @@ function roundCk(){
                     inputValidator: (value) => {
                         if (!value) {
                           return 'You need to write something!'
+                        }
+                        if(value.length > 30){
+                          return 'Too many flavors!'
                         }
                       }
                 }).then((result) => {
@@ -1712,8 +1715,8 @@ function cupCk(){
                                 });
                                 break;
                            
-                              default:
-                                swal("Hello!","Choose a size of cake again", "info");
+                              // default:
+                              //   swal("Hello!","Choose a size of cake again", "info");
                             }
                         }); 
                         break;
@@ -1775,14 +1778,14 @@ function cupCk(){
                                 });
                                 break;
                            
-                              default:
-                                swal("Hello!","Choose a size of cake again", "info");
+                              // default:
+                              //   swal("Hello!","Choose a size of cake again", "info");
                             }
                         }); 
                         break;
                    
-                      default:
-                        swal("Hello!","Choose a size of cake again", "info");
+                      // default:
+                      //   swal("Hello!","Choose a size of cake again", "info");
                     }
                 }); 
             }else if(index == 4){

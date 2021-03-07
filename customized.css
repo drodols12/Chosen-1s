@@ -498,6 +498,7 @@ button:active{
     transition: all .5s ease;
 }
 
+
 @media screen and (max-width: 768px){
     html, body{ 
         overflow-x: hidden;
