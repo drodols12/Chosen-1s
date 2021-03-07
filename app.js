@@ -328,8 +328,8 @@ function roundCk(){
                             });
                             break;
                        
-                          default:
-                            swal("Hello!","Choose a size of cake again", "info");
+                        //   default:
+                        //     swal("Hello!","Choose a size of cake again", "info");
                         }
                     });
                 }
@@ -390,8 +390,8 @@ function roundCk(){
                             });
                             break;
                        
-                          default:
-                            swal("Hello!","Choose a size of cake again", "info");
+                        //   default:
+                        //     swal("Hello!","Choose a size of cake again", "info");
                         }
                     });
                 }
@@ -452,8 +452,8 @@ function roundCk(){
                             });
                             break;
                        
-                          default:
-                            swal("Hello!","Choose a size of cake again", "info");
+                        //   default:
+                        //     swal("Hello!","Choose a size of cake again", "info");
                         }
                     }); 
                 }
@@ -514,8 +514,8 @@ function roundCk(){
                             });
                             break;
                        
-                          default:
-                            swal("Hello!","Choose a size of cake again", "info");
+                        //   default:
+                        //     swal("Hello!","Choose a size of cake again", "info");
                         }
                     });  
                 }
@@ -576,8 +576,8 @@ function roundCk(){
                             });
                             break;
                        
-                          default:
-                            swal("Hello!","Choose a size of cake again", "info");
+                        //   default:
+                        //     swal("Hello!","Choose a size of cake again", "info");
                         }
                     });   
                 }
@@ -638,8 +638,8 @@ function roundCk(){
                             });
                             break;
                        
-                          default:
-                            swal("Hello!","Choose a size of cake again", "info");
+                        //   default:
+                        //     swal("Hello!","Choose a size of cake again", "info");
                         }
                     });  
                 }
@@ -700,8 +700,8 @@ function roundCk(){
                             });
                             break;
                        
-                          default:
-                            swal("Hello!","Choose a size of cake again", "info");
+                        //   default:
+                        //     swal("Hello!","Choose a size of cake again", "info");
                         }
                     }); 
                 }
@@ -764,8 +764,8 @@ function roundCk(){
                             });
                             break;
                        
-                          default:
-                            swal("Hello!","Choose a size of cake again", "info");
+                        //   default:
+                        //     swal("Hello!","Choose a size of cake again", "info");
                         }
                     });
                 }
@@ -851,8 +851,8 @@ function rollCk(){
                         });
                         break;
                    
-                      default:
-                        swal("Hello!","Choose a size of cake again", "info");
+                    //   default:
+                    //     swal("Hello!","Choose a size of cake again", "info");
                     }
                 });
 
@@ -889,8 +889,8 @@ function rollCk(){
                         });
                         break;
                    
-                      default:
-                        swal("Hello!","Choose a size of cake again", "info");
+                    //   default:
+                    //     swal("Hello!","Choose a size of cake again", "info");
                     }
                 });
             }else if(index == 2){
@@ -926,8 +926,8 @@ function rollCk(){
                         });
                         break;
                    
-                      default:
-                        swal("Hello!","Choose a size of cake again", "info");
+                    //   default:
+                    //     swal("Hello!","Choose a size of cake again", "info");
                     }
                 });
             }
@@ -975,8 +975,8 @@ function dreamCk(){
                         });
                         break;
                    
-                      default:
-                        swal("Hello!","Choose a size of cake again", "info");
+                    //   default:
+                    //     swal("Hello!","Choose a size of cake again", "info");
                     }
                 });
 
@@ -1013,8 +1013,8 @@ function dreamCk(){
                         });
                         break;
                    
-                      default:
-                        swal("Hello!","Choose a size of cake again", "info");
+                    //   default:
+                    //     swal("Hello!","Choose a size of cake again", "info");
                     }
                 });
             }else if(index == 2){
@@ -1050,8 +1050,8 @@ function dreamCk(){
                         });
                         break;
                    
-                      default:
-                        swal("Hello!","Choose a size of cake again", "info");
+                    //   default:
+                    //     swal("Hello!","Choose a size of cake again", "info");
                     }
                 });
             }else if(index == 3){
@@ -1087,8 +1087,8 @@ function dreamCk(){
                         });
                         break;
                    
-                      default:
-                        swal("Hello!","Choose a size of cake again", "info");
+                    //   default:
+                    //     swal("Hello!","Choose a size of cake again", "info");
                     }
                 });
             }else if(index == 4){
@@ -1124,8 +1124,8 @@ function dreamCk(){
                         });
                         break;
                    
-                      default:
-                        swal("Hello!","Choose a size of cake again", "info");
+                    //   default:
+                    //     swal("Hello!","Choose a size of cake again", "info");
                     }
                 });
             }else if(index == 5){
@@ -1161,8 +1161,8 @@ function dreamCk(){
                         });
                         break;
                    
-                      default:
-                        swal("Hello!","Choose a size of cake again", "info");
+                    //   default:
+                    //     swal("Hello!","Choose a size of cake again", "info");
                     }
                 });
             }
@@ -1414,8 +1414,8 @@ function cupCk(){
                                 });
                                 break;
                            
-                              default:
-                                swal("Hello!","Choose a size of cake again", "info");
+                            //   default:
+                            //     swal("Hello!","Choose a size of cake again", "info");
                             }
                         }); 
                         break;
@@ -1477,8 +1477,8 @@ function cupCk(){
                                 });
                                 break;
                            
-                              default:
-                                swal("Hello!","Choose a size of cake again", "info");
+                            //   default:
+                            //     swal("Hello!","Choose a size of cake again", "info");
                             }
                         }); 
                         break;
@@ -1563,8 +1563,8 @@ function cupCk(){
                                 });
                                 break;
                            
-                              default:
-                                swal("Hello!","Choose a size of cake again", "info");
+                            //   default:
+                            //     swal("Hello!","Choose a size of cake again", "info");
                             }
                         }); 
                         break;
@@ -1626,8 +1626,8 @@ function cupCk(){
                                 });
                                 break;
                            
-                              default:
-                                swal("Hello!","Choose a size of cake again", "info");
+                            //   default:
+                            //     swal("Hello!","Choose a size of cake again", "info");
                             }
                         }); 
                         break;
@@ -1861,8 +1861,8 @@ function cupCk(){
                                 });
                                 break;
                            
-                              default:
-                                swal("Hello!","Choose a size of cake again", "info");
+                            //   default:
+                            //     swal("Hello!","Choose a size of cake again", "info");
                             }
                         }); 
                         break;
@@ -1924,8 +1924,8 @@ function cupCk(){
                                 });
                                 break;
                            
-                              default:
-                                swal("Hello!","Choose a size of cake again", "info");
+                            //   default:
+                            //     swal("Hello!","Choose a size of cake again", "info");
                             }
                         }); 
                         break;
@@ -2010,8 +2010,8 @@ function cupCk(){
                                 });
                                 break;
                            
-                              default:
-                                swal("Hello!","Choose a size of cake again", "info");
+                            //   default:
+                            //     swal("Hello!","Choose a size of cake again", "info");
                             }
                         }); 
                         break;
@@ -2073,8 +2073,8 @@ function cupCk(){
                                 });
                                 break;
                            
-                              default:
-                                swal("Hello!","Choose a size of cake again", "info");
+                            //   default:
+                            //     swal("Hello!","Choose a size of cake again", "info");
                             }
                         }); 
                         break;
