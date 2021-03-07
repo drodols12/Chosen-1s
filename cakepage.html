@@ -7,7 +7,9 @@
     <link rel="icon" href="logo/logo.png">
     <link rel="stylesheet" href="cakepage.css">
     <link rel="stylesheet" href="/fontawesome/css/all.css">
-    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+    <!-- <link rel="stylesheet" href="@sweetalert2/theme-material-ui/material-ui.css"> -->
+
+    
 </head>
 <body>
     <div class="contactus" id="cnt">
@@ -69,7 +71,7 @@
                 <h3>What's New</h3>
             </li> -->
             <li class="typeofCakes" id="roundCakes">
-                <h3>Round Cakes</h3>
+                <h3>Round Cakes and Double Flavor Cakes</h3>
             </li>
             <li class="typeofCakes" id="rollCakes">
                 <h3>Roll Cakes</h3>
@@ -270,12 +272,19 @@
                
                 <p id="dsc">Made of ube halaya, cheese, flour, egg, sweetened milk, butter, and sugar</p>
             </div>
+            <div class="cake" id="dbl">
+                <h3 id="cks">Double Flavor Cake</h3>
+                
+                    <img id="rounds" src="/cakes/Round/Double Flavor/3.jpeg" alt="">
+               
+                    <p id="ds">Round Cake with 2 flavors in one</p>
+            </div>
         </div> 
         <div class="rollCakes" id="rollCake">
             <div class="cake">
                 <h3 id="ck1">Brazo de Mercedez Roll</h3>
                
-                    <img id="roll" src="./cake/Roll Cakes/Brazo de Mercedez.jpg" alt="">
+                    <img id="roll" src="cakes/Roll/Brazo De Mercedez.jpeg" alt="">
                 
                 <p id="dsc1">Made from a sheet of soft meringue with custard filling with a mixture of egg and flour</p>
             </div>
@@ -330,7 +339,7 @@
             <div class="cake">
                 <h3 id="ck3">Chocolate Cupcake</h3>
                
-                    <img id="cup" src="./cake/Cupcake/Chocolate.jpg" alt="">
+                    <img id="cup" src="cakes/Cupcake/Chocolate CP.png" alt="">
                 
                 <p>Made of cream, chocolate flavor, egg, and flour</p>
             </div>
@@ -344,28 +353,28 @@
             <div class="cake">
                 <h3 id="ck3">Mango Cupcake</h3>
                 
-                    <img id="cup" src="./cake/Cupcake/Mango.jpg" alt="">
+                    <img id="cup" src="cakes/Cupcake/Mango CP.jpeg.png" alt="">
                 
                 <p id="dsc3">Made with egg, flour, milk,cream, and mango flavoring</p>
             </div>
             <div class="cake">
                 <h3 id="ck3">Mocha Cupcake</h3>
                 
-                    <img id="cup" src="./cake/Cupcake/Mocha.jpg" alt="">
+                    <img id="cup" src="cakes/Cupcake/Mocha CP.png" alt="">
                 
                 <p id="dsc3">Made with egg, flour, milk,cream,chocolate and coffee flavoring</p>
             </div>
             <div class="cake">
                 <h3 id="ck3">Ube Cupcake</h3>
                
-                    <img id="cup" src="./cake/Cupcake/Ube.jpg" alt="">
+                    <img id="cup" src="cakes/Cupcake/Ube CP.jpeg.png" alt="">
                 
                 <p id="dsc3">Made of cream, ube, sweetened macapuno, egg, and flour</p>
             </div>
             <div class="cake">
                 <h3 id="ck3">Vanilla Cupcake</h3>
                
-                    <img id="cup" src="./cake/Cupcake/Vanilla.jpg" alt="">
+                    <img id="cup" src="cakes/Cupcake/Vanilla CP.png" alt="">
                 
                 <p id="dsc3">Made of cream, vanilla flavor, sweetened macapuno, egg, and flour</p>
             </div>
@@ -437,7 +446,7 @@
 
     <script src="app.js">
     </script>   
-     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    
      <script src="https://smtpjs.com/v3/smtp.js">
      </script>
      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
@@ -446,5 +455,8 @@
      emailjs.init("user_bfnLSVrQ3UTjHYW7if9Dq");
      })();
      </script>
+     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+     <!-- <script src="sweetalert2/dist/sweetalert2.min.js"></script> -->
+     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>

@@ -16,18 +16,23 @@ function getCake(){
     var dd = String(today.getDate()).padStart(2, '0');
     var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
     var yyyy = today.getFullYear();
-
+    var size = document.getElementById("size");
+    var flavor = document.getElementById("flavors");
 
 
     window.addEventListener('load', ()=>{
         ckNM.textContent = localStorage.getItem('cakeNm');
         cakeImg.setAttribute("src", localStorage.getItem('cake1'));
         descrip.textContent = localStorage.getItem('cakeDesc');
+        size.textContent = localStorage.getItem("cakeSize");
+        flavor.textContent = localStorage.getItem("cakeFlavor");
+      
     })
 
     
         window.onload = function(){
             minus.disabled = true;
+
             if(prc == "soon"){
                 document.getElementById("price").value = prc;
                 swal({
@@ -57,6 +62,9 @@ function getCake(){
             totalval = document.getElementById("num").value = value;
             totalprc = document.getElementById("price").value = total + "$";    
         })
+
+        
+
         rsv.onclick = function(){
             if(totalprc == "NaN$"){
                 rsv.disabled = true;
@@ -71,17 +79,36 @@ function getCake(){
                         icon: "success"
                     })
                     .then(function(params){
-                      var tempParams = {
-                        cake: ckNM.textContent,
-                        qty: totalval,
-                        amount: totalprc,
-                        cnt: info.value,
-                        tdy: today,
-                        dlvr: date
-                      }
-                      emailjs.send("reservation","template_icqt3na", tempParams).then(function(res){
-                          console.log("success", res.status);
-                      })
+                        if(localStorage.hasOwnProperty("cakeFlavor") === true ){
+                            var tempParams = {
+                                cake: ckNM.textContent,
+                                size: size.textContent,
+                                flavor: flavor.textContent,
+                                qty: totalval,
+                                amount: totalprc,
+                                cnt: info.value,
+                                tdy: today,
+                                dlvr: date
+                              }
+                              emailjs.send("reservation","template_icqt3na", tempParams).then(function(res){
+                                  console.log("success", res.status);
+                              })
+                        }else{
+                            console.log("false");
+                            var tempParams = {
+                                cake: ckNM.textContent,
+                                size: size.textContent,
+                                qty: totalval,
+                                amount: totalprc,
+                                cnt: info.value,
+                                tdy: today,
+                                dlvr: date
+                              }
+                              emailjs.send("reservation","template_icqt3na", tempParams).then(function(res){
+                                  console.log("success", res.status);
+                              })
+                        }
+
     
                     });
                 }else{

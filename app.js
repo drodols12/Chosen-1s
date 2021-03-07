@@ -267,120 +267,669 @@ navSlide();
 // whatsNew();  
 function roundCk(){
     const rounds = document.querySelectorAll("#round");
+    const round = document.querySelector("#rounds");
     const nm = document.querySelectorAll("#ck")
     const desc = document.querySelectorAll('#dsc')
+    const ckName = document.getElementById("cks");
+    const descrip = document.getElementById("ds");
+
+
+    window.onload = ()=>{
+        localStorage.clear();
+    }
         rounds.forEach(function(main,index){
             main.onclick = function(){
                 console.log(index);
                 if(index == 0){
-                    localStorage.setItem("cake1", main.src);
-                    localStorage.setItem("cakeNm", nm[0].textContent);
-                    localStorage.setItem("cakeDesc", desc[0].textContent);
-                    console.log(index);
-                    let val = 35;
-                    localStorage.setItem("val",val);
-                    window.location.href = "./cart.html"; 
+                    swal({
+                        title:"Choose the size of the cake",
+                        icon: "info",
+                        buttons: {
+                              catch: {
+                                text: "6' - 35$",
+                                value: "catch1",
+                              },
+                              catch2: {
+                                text: "8' - soon",
+                                value: "catch2",
+                              }, 
+                              cancel: "Cancel",
+                            },
+                    })
+                    .then((value) => {
+                        switch (value) {
+                       
+                          case "catch1":
+                            swal({
+                                title:"Your Order are recorded",
+                                text: "Press 'OK' to continue",
+                                icon: "success"
+                            }).then(function(){
+                                var size = document.getElementsByTagName("P").innerHtml = "Size of the cake: 6'";
+
+                                localStorage.setItem("cake1", main.src);
+                                localStorage.setItem("cakeNm", nm[0].textContent);
+                                localStorage.setItem("cakeDesc", desc[0].textContent);
+                                localStorage.setItem("cakeSize", size);
+                                console.log(index);
+                                let val = 35;
+                                localStorage.setItem("val",val);
+                                window.location.href = "./cart.html"; 
+                            });
+                            break;
+                       
+                          case "catch2":
+                            swal({
+                                title:"This size will be available soon!",
+                                text: "Contact Us, or Browse to our Cakepage gallery for more!",
+                                icon: "info"
+                            }).then(function(){
+                                window.location.reload()
+                            });
+                            break;
+                       
+                          default:
+                            swal("Hello!","Choose a size of cake again", "info");
+                        }
+                    });
                 }
                 else if(index == 1){
-                    localStorage.setItem("cake1", main.src);
-                    localStorage.setItem("cakeNm", nm[1].textContent);
-                    localStorage.setItem("cakeDesc", desc[1].textContent);
-                    console.log(index);
-                    let val = 25;
-                    localStorage.setItem("val",val);
-                    window.location.href = "./cart.html";
+                    swal({
+                        title:"Choose the size of the cake",
+                        icon: "info",
+                        buttons: {
+                              catch: {
+                                text: "6' - 25$",
+                                value: "catch1",
+                              },
+                              catch2: {
+                                text: "8' - 30$",
+                                value: "catch2",
+                              }, 
+                              cancel: "Cancel",
+                            },
+                    })
+                    .then((value) => {
+                        switch (value) {
+                       
+                          case "catch1":
+                            swal({
+                                title:"Size is confirmed",
+                                text: "Press 'OK' to continue",
+                                icon: "success"
+                            }).then(function(){
+                                var size = document.getElementsByTagName("P").innerHtml = "Size of the cake: 6'";
+
+                                localStorage.setItem("cake1", main.src);
+                                localStorage.setItem("cakeNm", nm[1].textContent);
+                                localStorage.setItem("cakeDesc", desc[1].textContent);
+                                localStorage.setItem("cakeSize", size);
+                                console.log(index);
+                                let val = 25;
+                                localStorage.setItem("val",val);
+                                window.location.href = "./cart.html"; 
+                            });
+                            break;
+                       
+                          case "catch2":
+                            swal({
+                                title:"Size is confirmed",
+                                text: "Press 'OK' to continue",
+                                icon: "success"
+                            }).then(function(){
+                                var size = document.getElementsByTagName("P").innerHtml = "Size of the cake: 8'";
+
+                                localStorage.setItem("cake1", main.src);
+                                localStorage.setItem("cakeNm", nm[1].textContent);
+                                localStorage.setItem("cakeDesc", desc[1].textContent);
+                                localStorage.setItem("cakeSize", size);
+                                console.log(index);
+                                let val = 30;
+                                localStorage.setItem("val",val);
+                                window.location.href = "./cart.html"; 
+                            });
+                            break;
+                       
+                          default:
+                            swal("Hello!","Choose a size of cake again", "info");
+                        }
+                    });
                 }
                 else if(index == 2){
-                    localStorage.setItem("cake1", main.src);
-                    localStorage.setItem("cakeNm", nm[2].textContent);
-                    localStorage.setItem("cakeDesc", desc[2].textContent);
-                    console.log(index);
-                    let val = 25;
-                    localStorage.setItem("val",val);
-                    window.location.href = "./cart.html";  
+                    swal({
+                        title:"Choose the size of the cake",
+                        icon: "info",
+                        buttons: {
+                              catch: {
+                                text: "6' - 25$",
+                                value: "catch1",
+                              },
+                              catch2: {
+                                text: "8' - 30$",
+                                value: "catch2",
+                              }, 
+                              cancel: "Cancel",
+                            },
+                    })
+                    .then((value) => {
+                        switch (value) {
+                       
+                          case "catch1":
+                            swal({
+                                title:"Size is confirmed",
+                                text: "Press 'OK' to continue",
+                                icon: "success"
+                            }).then(function(){
+                                var size = document.getElementsByTagName("P").innerHtml = "Size of the cake: 6'";
+
+                                localStorage.setItem("cake1", main.src);
+                                localStorage.setItem("cakeNm", nm[2].textContent);
+                                localStorage.setItem("cakeDesc", desc[2].textContent);
+                                localStorage.setItem("cakeSize", size);
+                                console.log(index);
+                                let val = 25;
+                                localStorage.setItem("val",val);
+                                window.location.href = "./cart.html"; 
+                            });
+                            break;
+                       
+                          case "catch2":
+                            swal({
+                                title:"Size is confirmed",
+                                text: "Press 'OK' to continue",
+                                icon: "success"
+                            }).then(function(){
+                                var size = document.getElementsByTagName("P").innerHtml = "Size of the cake: 8'";
+
+                                localStorage.setItem("cake1", main.src);
+                                localStorage.setItem("cakeNm", nm[2].textContent);
+                                localStorage.setItem("cakeDesc", desc[2].textContent);
+                                localStorage.setItem("cakeSize", size);
+                                console.log(index);
+                                let val = 30;
+                                localStorage.setItem("val",val);
+                                window.location.href = "./cart.html"; 
+                            });
+                            break;
+                       
+                          default:
+                            swal("Hello!","Choose a size of cake again", "info");
+                        }
+                    }); 
                 }
                 else if(index == 3){
-                    localStorage.setItem("cake1", main.src);
-                    localStorage.setItem("cakeNm", nm[3].textContent);
-                    localStorage.setItem("cakeDesc", desc[3].textContent);
-                    console.log(index);
-                    let val = 25;
-                    localStorage.setItem("val",val);
-                    window.location.href = "./cart.html";    
+                    swal({
+                        title:"Choose the size of the cake",
+                        icon: "info",
+                        buttons: {
+                              catch: {
+                                text: "6' - 25$",
+                                value: "catch1",
+                              },
+                              catch2: {
+                                text: "8' - 30$",
+                                value: "catch2",
+                              }, 
+                              cancel: "Cancel",
+                            },
+                    })
+                    .then((value) => {
+                        switch (value) {
+                       
+                          case "catch1":
+                            swal({
+                                title:"Size is confirmed",
+                                text: "Press 'OK' to continue",
+                                icon: "success"
+                            }).then(function(){
+                                var size = document.getElementsByTagName("P").innerHtml = "Size of the cake: 6'";
+
+                                localStorage.setItem("cake1", main.src);
+                                localStorage.setItem("cakeNm", nm[3].textContent);
+                                localStorage.setItem("cakeDesc", desc[3].textContent);
+                                localStorage.setItem("cakeSize", size);
+                                console.log(index);
+                                let val = 25;
+                                localStorage.setItem("val",val);
+                                window.location.href = "./cart.html"; 
+                            });
+                            break;
+                       
+                          case "catch2":
+                            swal({
+                                title:"Size is confirmed",
+                                text: "Press 'OK' to continue",
+                                icon: "success"
+                            }).then(function(){
+                                var size = document.getElementsByTagName("P").innerHtml = "Size of the cake: 8'";
+
+                                localStorage.setItem("cake1", main.src);
+                                localStorage.setItem("cakeNm", nm[3].textContent);
+                                localStorage.setItem("cakeDesc", desc[3].textContent);
+                                localStorage.setItem("cakeSize", size);
+                                console.log(index);
+                                let val = 30;
+                                localStorage.setItem("val",val);
+                                window.location.href = "./cart.html"; 
+                            });
+                            break;
+                       
+                          default:
+                            swal("Hello!","Choose a size of cake again", "info");
+                        }
+                    });  
                 }
                 else if(index == 4){
-                    localStorage.setItem("cake1", main.src);
-                    localStorage.setItem("cakeNm", nm[4].textContent);
-                    localStorage.setItem("cakeDesc", desc[4].textContent);
-                    console.log(index);
-                    let val = 25;
-                    localStorage.setItem("val",val); 
-                    window.location.href = "./cart.html";   
+                    swal({
+                        title:"Choose the size of the cake",
+                        icon: "info",
+                        buttons: {
+                              catch: {
+                                text: "6' - 25$",
+                                value: "catch1",
+                              },
+                              catch2: {
+                                text: "8' - 30$",
+                                value: "catch2",
+                              }, 
+                              cancel: "Cancel",
+                            },
+                    })
+                    .then((value) => {
+                        switch (value) {
+                       
+                          case "catch1":
+                            swal({
+                                title:"Size is confirmed",
+                                text: "Press 'OK' to continue",
+                                icon: "success"
+                            }).then(function(){
+                                var size = document.getElementsByTagName("P").innerHtml = "Size of the cake: 6'";
+
+                                localStorage.setItem("cake1", main.src);
+                                localStorage.setItem("cakeNm", nm[4].textContent);
+                                localStorage.setItem("cakeDesc", desc[4].textContent);
+                                localStorage.setItem("cakeSize", size);
+                                console.log(index);
+                                let val = 25;
+                                localStorage.setItem("val",val);
+                                window.location.href = "./cart.html"; 
+                            });
+                            break;
+                       
+                          case "catch2":
+                            swal({
+                                title:"Size is confirmed",
+                                text: "Press 'OK' to continue",
+                                icon: "success"
+                            }).then(function(){
+                                var size = document.getElementsByTagName("P").innerHtml = "Size of the cake: 8'";
+
+                                localStorage.setItem("cake1", main.src);
+                                localStorage.setItem("cakeNm", nm[4].textContent);
+                                localStorage.setItem("cakeDesc", desc[4].textContent);
+                                localStorage.setItem("cakeSize", size);
+                                console.log(index);
+                                let val = 30;
+                                localStorage.setItem("val",val);
+                                window.location.href = "./cart.html"; 
+                            });
+                            break;
+                       
+                          default:
+                            swal("Hello!","Choose a size of cake again", "info");
+                        }
+                    });   
                 }
                 else if(index == 5){
-                    localStorage.setItem("cake1", main.src);
-                    localStorage.setItem("cakeNm", nm[5].textContent);
-                    localStorage.setItem("cakeDesc", desc[5].textContent);
-                    console.log(index);
-                    let val = 25;
-                    localStorage.setItem("val",val); 
-                    window.location.href = "./cart.html";   
+                    swal({
+                        title:"Choose the size of the cake",
+                        icon: "info",
+                        buttons: {
+                              catch: {
+                                text: "6' - 25$",
+                                value: "catch1",
+                              },
+                              catch2: {
+                                text: "8' - 30$",
+                                value: "catch2",
+                              }, 
+                              cancel: "Cancel",
+                            },
+                    })
+                    .then((value) => {
+                        switch (value) {
+                       
+                          case "catch1":
+                            swal({
+                                title:"Size is confirmed",
+                                text: "Press 'OK' to continue",
+                                icon: "success"
+                            }).then(function(){
+                                var size = document.getElementsByTagName("P").innerHtml = "Size of the cake: 6'";
+
+                                localStorage.setItem("cake1", main.src);
+                                localStorage.setItem("cakeNm", nm[5].textContent);
+                                localStorage.setItem("cakeDesc", desc[5].textContent);
+                                localStorage.setItem("cakeSize", size);
+                                console.log(index);
+                                let val = 25;
+                                localStorage.setItem("val",val);
+                                window.location.href = "./cart.html"; 
+                            });
+                            break;
+                       
+                          case "catch2":
+                            swal({
+                                title:"Size is confirmed",
+                                text: "Press 'OK' to continue",
+                                icon: "success"
+                            }).then(function(){
+                                var size = document.getElementsByTagName("P").innerHtml = "Size of the cake: 8'";
+
+                                localStorage.setItem("cake1", main.src);
+                                localStorage.setItem("cakeNm", nm[5].textContent);
+                                localStorage.setItem("cakeDesc", desc[5].textContent);
+                                localStorage.setItem("cakeSize", size);
+                                console.log(index);
+                                let val = 30;
+                                localStorage.setItem("val",val);
+                                window.location.href = "./cart.html"; 
+                            });
+                            break;
+                       
+                          default:
+                            swal("Hello!","Choose a size of cake again", "info");
+                        }
+                    });  
                 }
                 else if(index == 6){
-                    localStorage.setItem("cake1", main.src);
-                    localStorage.setItem("cakeNm", nm[6].textContent);
-                    localStorage.setItem("cakeDesc", desc[6].textContent);
-                    console.log(index);
-                    let val = 25;
-                    localStorage.setItem("val",val); 
-                    window.location.href = "./cart.html";  
+                    swal({
+                        title:"Choose the size of the cake",
+                        icon: "info",
+                        buttons: {
+                              catch: {
+                                text: "6' - 25$",
+                                value: "catch1",
+                              },
+                              catch2: {
+                                text: "8' - 30$",
+                                value: "catch2",
+                              }, 
+                              cancel: "Cancel",
+                            },
+                    })
+                    .then((value) => {
+                        switch (value) {
+                       
+                          case "catch1":
+                            swal({
+                                title:"Size is confirmed",
+                                text: "Press 'OK' to continue",
+                                icon: "success"
+                            }).then(function(){
+                                var size = document.getElementsByTagName("P").innerHtml = "Size of the cake: 6'";
+
+                                localStorage.setItem("cake1", main.src);
+                                localStorage.setItem("cakeNm", nm[6].textContent);
+                                localStorage.setItem("cakeDesc", desc[6].textContent);
+                                localStorage.setItem("cakeSize", size);
+                                console.log(index);
+                                let val = 25;
+                                localStorage.setItem("val",val);
+                                window.location.href = "./cart.html"; 
+                            });
+                            break;
+                       
+                          case "catch2":
+                            swal({
+                                title:"Size is confirmed",
+                                text: "Press 'OK' to continue",
+                                icon: "success"
+                            }).then(function(){
+                                var size = document.getElementsByTagName("P").innerHtml = "Size of the cake: 8'";
+
+                                localStorage.setItem("cake1", main.src);
+                                localStorage.setItem("cakeNm", nm[6].textContent);
+                                localStorage.setItem("cakeDesc", desc[6].textContent);
+                                localStorage.setItem("cakeSize", size);
+                                console.log(index);
+                                let val = 30;
+                                localStorage.setItem("val",val);
+                                window.location.href = "./cart.html"; 
+                            });
+                            break;
+                       
+                          default:
+                            swal("Hello!","Choose a size of cake again", "info");
+                        }
+                    }); 
                 }
                 else if(index == 7){
-                    localStorage.setItem("cake1", main.src);
-                    localStorage.setItem("cakeNm", nm[7].textContent);
-                    localStorage.setItem("cakeDesc", desc[7].textContent);
-                    console.log(index);
-                    let val = 25;
-                    localStorage.setItem("val",val);   
-                    window.location.href = "./cart.html"; 
+                    swal({
+                        title:"Choose the size of the cake",
+                        icon: "info",
+                        buttons: {
+                              catch: {
+                                text: "6' - 25$",
+                                value: "catch1",
+                              },
+                              catch2: {
+                                text: "8' - 30$",
+                                value: "catch2",
+                              }, 
+                              cancel: "Cancel",
+                            },
+                    })
+                    .then((value) => {
+                        localStorage.clear();
+                        switch (value) {
+                       
+                          case "catch1":
+                            swal({
+                                title:"Size is confirmed",
+                                text: "Press 'OK' to continue",
+                                icon: "success"
+                            }).then(function(){
+                                var size = document.getElementsByTagName("P").innerHtml = "Size of the cake: 6'";
+
+                                localStorage.setItem("cake1", main.src);
+                                localStorage.setItem("cakeNm", nm[7].textContent);
+                                localStorage.setItem("cakeDesc", desc[7].textContent);
+                                localStorage.setItem("cakeSize", size);
+                                console.log(index);
+                                let val = 25;
+                                localStorage.setItem("val",val);
+                                window.location.href = "./cart.html"; 
+                            });
+                            break;
+                       
+                          case "catch2":
+                            swal({
+                                title:"Size is confirmed",
+                                text: "Press 'OK' to continue",
+                                icon: "success"
+                            }).then(function(){
+                                var size = document.getElementsByTagName("P").innerHtml = "Size of the cake: 8'";
+                               
+
+                                localStorage.setItem("cake1", main.src);
+                                localStorage.setItem("cakeNm", nm[7].textContent);
+                                localStorage.setItem("cakeDesc", desc[7].textContent);
+                                localStorage.setItem("cakeSize", size);
+                                console.log(index);
+                                let val = 30;
+                                localStorage.setItem("val",val);
+                                window.location.href = "./cart.html"; 
+                            });
+                            break;
+                       
+                          default:
+                            swal("Hello!","Choose a size of cake again", "info");
+                        }
+                    });
                 }
             }
         })
+            round.onclick = function(){
+                Swal.fire({
+                    title: "Please choose 2 flavors you want",
+                    text: "Please choose between: Mango Bravissimo, Chocolate, Mocha, Mango, Ube Macapuno and Ube Yema",
+                    input: 'text',
+                    confirmButtonText: "8' - 40$",
+                    showCancelButton: true,
+                    cancelButtonText: "Cancel",
+                    inputValidator: (value) => {
+                        if (!value) {
+                          return 'You need to write something!'
+                        }
+                      }
+                }).then((result) => {
+                    if(result.isConfirmed){
+                        Swal.fire({
+                            title:"Size is confirmed",
+                            text: "Press 'OK' to continue",
+                            icon: "success"
+                        }).then(function(){
+                            var size = document.getElementsByTagName("P").innerHtml = "Size of the cake: 8'";
+                            var flavors = document.getElementsByTagName("P").innerHtml = "Flavors: " + result.value;
+                            
     
+                            localStorage.setItem("cake1", round.src);
+                            localStorage.setItem("cakeNm", ckName.textContent);
+                            localStorage.setItem("cakeDesc", descrip.textContent);
+                            localStorage.setItem("cakeSize", size);
+                            localStorage.setItem("cakeFlavor", flavors);
+                            let val = 40;
+                            localStorage.setItem("val",val);
+                            window.location.href = "./cart.html"; 
+                        });
+                    }
+                });
+                
+            }
 }
 roundCk();
 
 function rollCk(){
     const roll = document.querySelectorAll("#roll")
     const nm = document.querySelectorAll("#ck1");
-    const desc = document.querySelectorAll('#dsc1')
+    const desc = document.querySelectorAll("#dsc1")
 
     roll.forEach(function(roll, index){
         roll.onclick = function(){
             if(index == 0){
-                localStorage.setItem("cake1", roll.src);
-                localStorage.setItem("cakeNm", nm[0].textContent);
-                localStorage.setItem("cakeDesc", desc[0].textContent);
-                console.log(index);
-                let val = 35;
-                localStorage.setItem("val",val);
-                window.location.href = "./cart.html"; 
+                swal({
+                    title:"Choose the size of the cake",
+                    icon: "info",
+                    buttons: {
+                          catch: {
+                            text: "half - 15$",
+                            value: "catch1",
+                          },
+                          cancel: "Cancel",
+                        },
+                })
+                .then((value) => {
+                    switch (value) {
+                      case "catch1":
+                        swal({
+                            title:"Size is confirmed",
+                            text: "Press 'OK' to continue",
+                            icon: "success"
+                        }).then(function(){
+                            var size = document.getElementsByTagName("P").innerHtml = "Size of the cake: half";
+
+                            localStorage.setItem("cake1", roll.src);
+                            localStorage.setItem("cakeNm", nm[0].textContent);
+                            localStorage.setItem("cakeDesc", desc[0].textContent);
+                            localStorage.setItem("cakeSize", size);
+                            console.log(index);
+                            let val = 15;
+                            localStorage.setItem("val",val);
+                           window.location.href = "./cart.html"; 
+                        });
+                        break;
+                   
+                      default:
+                        swal("Hello!","Choose a size of cake again", "info");
+                    }
+                });
+
             }else if(index == 1){
-                localStorage.setItem("cake1", roll.src);
-                localStorage.setItem("cakeNm", nm[1].textContent);
-                localStorage.setItem("cakeDesc", desc[1].textContent);
-                console.log(index);
-                let val = 35;
-                localStorage.setItem("val",val);
-                window.location.href = "./cart.html"; 
+                swal({
+                    title:"Choose the size of the cake",
+                    icon: "info",
+                    buttons: {
+                          catch: {
+                            text: "half - 15$",
+                            value: "catch1",
+                          },
+                          cancel: "Cancel",
+                        },
+                })
+                .then((value) => {
+                    switch (value) {
+                      case "catch1":
+                        swal({
+                            title:"Size is confirmed",
+                            text: "Press 'OK' to continue",
+                            icon: "success"
+                        }).then(function(){
+                            var size = document.getElementsByTagName("P").innerHtml = "Size of the cake: half";
+
+                            localStorage.setItem("cake1", roll.src);
+                            localStorage.setItem("cakeNm", nm[1].textContent);
+                            localStorage.setItem("cakeDesc", desc[1].textContent);
+                            localStorage.setItem("cakeSize", size);
+                            console.log(index);
+                            let val = 15;
+                            localStorage.setItem("val",val);
+                            window.location.href = "./cart.html"; 
+                        });
+                        break;
+                   
+                      default:
+                        swal("Hello!","Choose a size of cake again", "info");
+                    }
+                });
             }else if(index == 2){
-                localStorage.setItem("cake1", roll.src);
-                localStorage.setItem("cakeNm", nm[2].textContent);
-                localStorage.setItem("cakeDesc", desc[2].textContent);
-                console.log(index);
-                let val = 35;
-                localStorage.setItem("val",val);
-                window.location.href = "./cart.html"; 
+                swal({
+                    title:"Choose the size of the cake",
+                    icon: "info",
+                    buttons: {
+                          catch: {
+                            text: "half - 15$",
+                            value: "catch1",
+                          },
+                          cancel: "Cancel",
+                        },
+                })
+                .then((value) => {
+                    switch (value) {
+                      case "catch1":
+                        swal({
+                            title:"Size is confirmed",
+                            text: "Press 'OK' to continue",
+                            icon: "success"
+                        }).then(function(){
+                            var size = document.getElementsByTagName("P").innerHtml = "Size of the cake: half";
+
+                            localStorage.setItem("cake1", roll.src);
+                            localStorage.setItem("cakeNm", nm[2].textContent);
+                            localStorage.setItem("cakeDesc", desc[2].textContent);
+                            localStorage.setItem("cakeSize", size);
+                            console.log(index);
+                            let val = 15;
+                            localStorage.setItem("val",val);
+                            window.location.href = "./cart.html"; 
+                        });
+                        break;
+                   
+                      default:
+                        swal("Hello!","Choose a size of cake again", "info");
+                    }
+                });
             }
         }
     })
@@ -394,53 +943,228 @@ function dreamCk(){
     img.forEach(function(dream, index){
         dream.addEventListener('click', (e)=>{
             if(index == 0){
-                localStorage.setItem("cake1", dream.src);
-                localStorage.setItem("cakeNm", nm[0].textContent);
-                localStorage.setItem("cakeDesc", desc[0].textContent);
-                console.log(index);
-                let val = 35;
-                localStorage.setItem("val",val);
-                window.location.href = "/cart.html"; 
+                swal({
+                    title:"Choose the size of the cake",
+                    icon: "info",
+                    buttons: {
+                          catch: {
+                            text: "8' - 35$",
+                            value: "catch1",
+                          },
+                          cancel: "Cancel",
+                        },
+                })
+                .then((value) => {
+                    switch (value) {
+                      case "catch1":
+                        swal({
+                            title:"Size is confirmed",
+                            text: "Press 'OK' to continue",
+                            icon: "success"
+                        }).then(function(){
+                            var size = document.getElementsByTagName("P").innerHtml = "Size of the cake: 8 inch";
+
+                            localStorage.setItem("cake1", dream.src);
+                            localStorage.setItem("cakeNm", nm[0].textContent);
+                            localStorage.setItem("cakeDesc", desc[0].textContent);
+                            localStorage.setItem("cakeSize", size);
+                            console.log(index);
+                            let val = 15;
+                            localStorage.setItem("val",val);
+                           window.location.href = "./cart.html"; 
+                        });
+                        break;
+                   
+                      default:
+                        swal("Hello!","Choose a size of cake again", "info");
+                    }
+                });
+
             }else if(index == 1){
-                localStorage.setItem("cake1", dream.src);
-                localStorage.setItem("cakeNm", nm[1].textContent);
-                localStorage.setItem("cakeDesc", desc[1].textContent);
-                console.log(index);
-                let val = 35;
-                localStorage.setItem("val",val);
-                window.location.href = "/cart.html"; 
+                swal({
+                    title:"Choose the size of the cake",
+                    icon: "info",
+                    buttons: {
+                          catch: {
+                            text: "8' - 35$",
+                            value: "catch1",
+                          },
+                          cancel: "Cancel",
+                        },
+                })
+                .then((value) => {
+                    switch (value) {
+                      case "catch1":
+                        swal({
+                            title:"Size is confirmed",
+                            text: "Press 'OK' to continue",
+                            icon: "success"
+                        }).then(function(){
+                            var size = document.getElementsByTagName("P").innerHtml = "Size of the cake: 8 inch";
+
+                            localStorage.setItem("cake1", dream.src);
+                            localStorage.setItem("cakeNm", nm[1].textContent);
+                            localStorage.setItem("cakeDesc", desc[1].textContent);
+                            localStorage.setItem("cakeSize", size);
+                            console.log(index);
+                            let val = 35;
+                            localStorage.setItem("val",val);
+                           window.location.href = "./cart.html"; 
+                        });
+                        break;
+                   
+                      default:
+                        swal("Hello!","Choose a size of cake again", "info");
+                    }
+                });
             }else if(index == 2){
-                localStorage.setItem("cake1", dream.src);
-                localStorage.setItem("cakeNm", nm[2].textContent);
-                localStorage.setItem("cakeDesc", desc[2].textContent);
-                console.log(index);
-                let val = 35;
-                localStorage.setItem("val",val);
-                window.location.href = "/cart.html"; 
+                swal({
+                    title:"Choose the size of the cake",
+                    icon: "info",
+                    buttons: {
+                          catch: {
+                            text: "8' - 35$",
+                            value: "catch1",
+                          },
+                          cancel: "Cancel",
+                        },
+                })
+                .then((value) => {
+                    switch (value) {
+                      case "catch1":
+                        swal({
+                            title:"Size is confirmed",
+                            text: "Press 'OK' to continue",
+                            icon: "success"
+                        }).then(function(){
+                            var size = document.getElementsByTagName("P").innerHtml = "Size of the cake: 8 inch";
+
+                            localStorage.setItem("cake1", dream.src);
+                            localStorage.setItem("cakeNm", nm[2].textContent);
+                            localStorage.setItem("cakeDesc", desc[2].textContent);
+                            localStorage.setItem("cakeSize", size);
+                            console.log(index);
+                            let val = 35;
+                            localStorage.setItem("val",val);
+                           window.location.href = "./cart.html"; 
+                        });
+                        break;
+                   
+                      default:
+                        swal("Hello!","Choose a size of cake again", "info");
+                    }
+                });
             }else if(index == 3){
-                localStorage.setItem("cake1", dream.src);
-                localStorage.setItem("cakeNm", nm[3].textContent);
-                localStorage.setItem("cakeDesc", desc[3].textContent);
-                console.log(index);
-                let val = 35;
-                localStorage.setItem("val",val);
-                window.location.href = "/cart.html"; 
+                swal({
+                    title:"Choose the size of the cake",
+                    icon: "info",
+                    buttons: {
+                          catch: {
+                            text: "8' - 35$",
+                            value: "catch1",
+                          },
+                          cancel: "Cancel",
+                        },
+                })
+                .then((value) => {
+                    switch (value) {
+                      case "catch1":
+                        swal({
+                            title:"Size is confirmed",
+                            text: "Press 'OK' to continue",
+                            icon: "success"
+                        }).then(function(){
+                            var size = document.getElementsByTagName("P").innerHtml = "Size of the cake: 8 inch";
+
+                            localStorage.setItem("cake1", dream.src);
+                            localStorage.setItem("cakeNm", nm[3].textContent);
+                            localStorage.setItem("cakeDesc", desc[3].textContent);
+                            localStorage.setItem("cakeSize", size);
+                            console.log(index);
+                            let val = 35;
+                            localStorage.setItem("val",val);
+                           window.location.href = "./cart.html"; 
+                        });
+                        break;
+                   
+                      default:
+                        swal("Hello!","Choose a size of cake again", "info");
+                    }
+                });
             }else if(index == 4){
-                localStorage.setItem("cake1", dream.src);
-                localStorage.setItem("cakeNm", nm[4].textContent);
-                localStorage.setItem("cakeDesc", desc[4].textContent);
-                console.log(index);
-                let val = 35;
-                localStorage.setItem("val",val);
-                window.location.href = "/cart.html"; 
+                swal({
+                    title:"Choose the size of the cake",
+                    icon: "info",
+                    buttons: {
+                          catch: {
+                            text: "8' - 25$",
+                            value: "catch1",
+                          },
+                          cancel: "Cancel",
+                        },
+                })
+                .then((value) => {
+                    switch (value) {
+                      case "catch1":
+                        swal({
+                            title:"Size is confirmed",
+                            text: "Press 'OK' to continue",
+                            icon: "success"
+                        }).then(function(){
+                            var size = document.getElementsByTagName("P").innerHtml = "Size of the cake: 8 inch";
+
+                            localStorage.setItem("cake1", dream.src);
+                            localStorage.setItem("cakeNm", nm[4].textContent);
+                            localStorage.setItem("cakeDesc", desc[4].textContent);
+                            localStorage.setItem("cakeSize", size);
+                            console.log(index);
+                            let val = 35;
+                            localStorage.setItem("val",val);
+                           window.location.href = "./cart.html"; 
+                        });
+                        break;
+                   
+                      default:
+                        swal("Hello!","Choose a size of cake again", "info");
+                    }
+                });
             }else if(index == 5){
-                localStorage.setItem("cake1", dream.src);
-                localStorage.setItem("cakeNm", nm[5].textContent);
-                localStorage.setItem("cakeDesc", desc[5].textContent);
-                console.log(index);
-                let val = 35;
-                localStorage.setItem("val",val);
-                window.location.href = "/cart.html"; 
+                swal({
+                    title:"Choose the size of the cake",
+                    icon: "info",
+                    buttons: {
+                          catch: {
+                            text: "8'- 25$",
+                            value: "catch1",
+                          },
+                          cancel: "Cancel",
+                        },
+                })
+                .then((value) => {
+                    switch (value) {
+                      case "catch1":
+                        swal({
+                            title:"Size is confirmed",
+                            text: "Press 'OK' to continue",
+                            icon: "success"
+                        }).then(function(){
+                            var size = document.getElementsByTagName("P").innerHtml = "Size of the cake: 8 inch";
+
+                            localStorage.setItem("cake1", dream.src);
+                            localStorage.setItem("cakeNm", nm[5].textContent);
+                            localStorage.setItem("cakeDesc", desc[5].textContent);
+                            localStorage.setItem("cakeSize", size);
+                            console.log(index);
+                            let val = 25;
+                            localStorage.setItem("val",val);
+                           window.location.href = "./cart.html"; 
+                        });
+                        break;
+                   
+                      default:
+                        swal("Hello!","Choose a size of cake again", "info");
+                    }
+                });
             }
         });
     })
@@ -455,53 +1179,910 @@ function cupCk(){
     cupcake.forEach(function(cup, index){
         cup.onclick = function(){
             if(index == 0){
-                localStorage.setItem("cake1", cup.src);
-                localStorage.setItem("cakeNm", nm[0].textContent);
-                localStorage.setItem("cakeDesc", desc[0].textContent);
-                console.log(index);
-                let val = 35;
-                localStorage.setItem("val",val);
-                window.location.href = "./cart.html"; 
+                swal({
+                    title:"Choose if you want casual or customized cupcake",
+                    icon: "info",
+                    buttons: {
+                          catch: {
+                            text: "Plain-2.00$/pc",
+                            value: "catch1",
+                          },
+                          catch2: {
+                            text: "Customized-2.50$/pcs",
+                            value: "catch2",
+                          }, 
+                          cancel: "Cancel",
+                        },
+                })
+                .then((value) => {
+                    switch (value) {
+                   
+                      case "catch1":
+                        swal({
+                            title:"Choose the size of the cake",
+                            icon: "info",
+                            buttons: {
+                                  catch: {
+                                    text: "12pcs - 24$",
+                                    value: "catch1",
+                                  },
+                                  catch2: {
+                                    text: "24pcs - 48$",
+                                    value: "catch2",
+                                  }, 
+                                  cancel: "Cancel",
+                                },
+                        })
+                        .then((value) => {
+                            switch (value) {
+                           
+                              case "catch1":
+                                swal({
+                                    title:"Size is confirmed",
+                                    text: "Press 'OK' to continue",
+                                    icon: "success"
+                                }).then(function(){
+                                    var size = document.getElementsByTagName("P").innerHtml = "Cupcake type and pieces: Casual - 12pcs";
+    
+                                    localStorage.setItem("cake1", cup.src);
+                                    localStorage.setItem("cakeNm", nm[0].textContent);
+                                    localStorage.setItem("cakeDesc", desc[0].textContent);
+                                    localStorage.setItem("cakeSize", size);
+                                    console.log(index);
+                                    let val = 24;
+                                    localStorage.setItem("val",val);
+                                    window.location.href = "./cart.html"; 
+                                });
+                                break;
+                           
+                              case "catch2":
+                                swal({
+                                    title:"Size is confirmed",
+                                    text: "Press 'OK' to continue",
+                                    icon: "success"
+                                }).then(function(){
+                                    var size = document.getElementsByTagName("P").innerHtml = "Cupcake type and pieces: Casual - 24pcs";
+    
+                                    localStorage.setItem("cake1", cup.src);
+                                    localStorage.setItem("cakeNm", nm[0].textContent);
+                                    localStorage.setItem("cakeDesc", desc[0].textContent);
+                                    localStorage.setItem("cakeSize", size);
+                                    console.log(index);
+                                    let val = 48;
+                                    localStorage.setItem("val",val);
+                                    window.location.href = "./cart.html"; 
+                                });
+                                break;
+                           
+                              default:
+                                swal({
+                                    title:"Choose a cake please!",
+                                    icon: "info",
+                                    confirmButton: false,
+                                    timer: 2000
+                                });
+                            }
+                        }); 
+                        break;
+                   
+                      case "catch2":
+                        swal({
+                            title:"Choose the size of the cake",
+                            icon: "info",
+                            buttons: {
+                                  catch: {
+                                    text: "12pcs - 30$",
+                                    value: "catch1",
+                                  },
+                                  catch2: {
+                                    text: "24pcs - 60$",
+                                    value: "catch2",
+                                  }, 
+                                  cancel: "Cancel",
+                                },
+                        })
+                        .then((value) => {
+                            switch (value) {
+                           
+                              case "catch1":
+                                swal({
+                                    title:"Size is confirmed",
+                                    text: "Press 'OK' to continue",
+                                    icon: "success"
+                                }).then(function(){
+                                    var size = document.getElementsByTagName("P").innerHtml = "Cupcake type and pieces: Customized - 12pcs";
+    
+                                    localStorage.setItem("cake1", cup.src);
+                                    localStorage.setItem("cakeNm", nm[0].textContent);
+                                    localStorage.setItem("cakeDesc", desc[0].textContent);
+                                    localStorage.setItem("cakeSize", size);
+                                    console.log(index);
+                                    let val = 30;
+                                    localStorage.setItem("val",val);
+                                    window.location.href = "./cart.html"; 
+                                });
+                                break;
+                           
+                              case "catch2":
+                                swal({
+                                    title:"Size is confirmed",
+                                    text: "Press 'OK' to continue",
+                                    icon: "success"
+                                }).then(function(){
+                                    var size = document.getElementsByTagName("P").innerHtml = "Cupcake type and pieces: Customized - 24pcs";
+    
+                                    localStorage.setItem("cake1", cup.src);
+                                    localStorage.setItem("cakeNm", nm[0].textContent);
+                                    localStorage.setItem("cakeDesc", desc[0].textContent);
+                                    localStorage.setItem("cakeSize", size);
+                                    console.log(index);
+                                    let val = 60;
+                                    localStorage.setItem("val",val);
+                                    window.location.href = "./cart.html"; 
+                                });
+                                break;
+                           
+                              default:
+                                swal("Hello!","Choose a size of cake again", "info");
+                            }
+                        }); 
+                        break;
+                   
+                    //   default:
+                    //     swal({
+                    //         title:"Choose a  please!",
+                    //         text:" ",
+                    //         icon: "info",
+                    //         button: false,
+                    //         timer: 2000
+                    //     });
+                    }
+                }); 
             }else if(index == 1){
-                localStorage.setItem("cake1", cup.src);
-                localStorage.setItem("cakeNm", nm[1].textContent);
-                localStorage.setItem("cakeDesc", desc[1].textContent);
-                console.log(index);
-                let val = 35;
-                localStorage.setItem("val",val);
-                window.location.href = "./cart.html"; 
+                swal({
+                    title:"Choose if you want casual or customized cupcake",
+                    icon: "info",
+                    buttons: {
+                          catch: {
+                            text: "Plain -2.00$/pc",
+                            value: "catch1",
+                          },
+                          catch2: {
+                            text: "Customized-2.50$/pcs",
+                            value: "catch2",
+                          }, 
+                          cancel: "Cancel",
+                        },
+                })
+                .then((value) => {
+                    switch (value) {
+                   
+                      case "catch1":
+                        swal({
+                            title:"Choose the size of the cake",
+                            icon: "info",
+                            buttons: {
+                                  catch: {
+                                    text: "12pcs - 24$",
+                                    value: "catch1",
+                                  },
+                                  catch2: {
+                                    text: "24pcs - 48$",
+                                    value: "catch2",
+                                  }, 
+                                  cancel: "Cancel",
+                                },
+                        })
+                        .then((value) => {
+                            switch (value) {
+                           
+                              case "catch1":
+                                swal({
+                                    title:"Size is confirmed",
+                                    text: "Press 'OK' to continue",
+                                    icon: "success"
+                                }).then(function(){
+                                    var size = document.getElementsByTagName("P").innerHtml = "Cupcake type and pieces: Casual - 12pcs";
+    
+                                    localStorage.setItem("cake1", cup.src);
+                                    localStorage.setItem("cakeNm", nm[1].textContent);
+                                    localStorage.setItem("cakeDesc", desc[1].textContent);
+                                    localStorage.setItem("cakeSize", size);
+                                    console.log(index);
+                                    let val = 24;
+                                    localStorage.setItem("val",val);
+                                    window.location.href = "./cart.html"; 
+                                });
+                                break;
+                           
+                              case "catch2":
+                                swal({
+                                    title:"Size is confirmed",
+                                    text: "Press 'OK' to continue",
+                                    icon: "success"
+                                }).then(function(){
+                                    var size = document.getElementsByTagName("P").innerHtml = "Cupcake type and pieces: Casual - 24pcs";
+    
+                                    localStorage.setItem("cake1", cup.src);
+                                    localStorage.setItem("cakeNm", nm[1].textContent);
+                                    localStorage.setItem("cakeDesc", desc[1].textContent);
+                                    localStorage.setItem("cakeSize", size);
+                                    console.log(index);
+                                    let val = 48;
+                                    localStorage.setItem("val",val);
+                                    window.location.href = "./cart.html"; 
+                                });
+                                break;
+                           
+                              default:
+                                swal("Hello!","Choose a size of cake again", "info");
+                            }
+                        }); 
+                        break;
+                   
+                      case "catch2":
+                        swal({
+                            title:"Choose the size of the cake",
+                            icon: "info",
+                            buttons: {
+                                  catch: {
+                                    text: "12pcs - 30$",
+                                    value: "catch1",
+                                  },
+                                  catch2: {
+                                    text: "24pcs - 60$",
+                                    value: "catch2",
+                                  }, 
+                                  cancel: "Cancel",
+                                },
+                        })
+                        .then((value) => {
+                            switch (value) {
+                           
+                              case "catch1":
+                                swal({
+                                    title:"Size is confirmed",
+                                    text: "Press 'OK' to continue",
+                                    icon: "success"
+                                }).then(function(){
+                                    var size = document.getElementsByTagName("P").innerHtml = "Cupcake type and pieces: Customized - 12pcs";
+    
+                                    localStorage.setItem("cake1", cup.src);
+                                    localStorage.setItem("cakeNm", nm[1].textContent);
+                                    localStorage.setItem("cakeDesc", desc[1].textContent);
+                                    localStorage.setItem("cakeSize", size);
+                                    console.log(index);
+                                    let val = 30;
+                                    localStorage.setItem("val",val);
+                                    window.location.href = "./cart.html"; 
+                                });
+                                break;
+                           
+                              case "catch2":
+                                swal({
+                                    title:"Size is confirmed",
+                                    text: "Press 'OK' to continue",
+                                    icon: "success"
+                                }).then(function(){
+                                    var size = document.getElementsByTagName("P").innerHtml = "Cupcake type and pieces: Customized - 24pcs";
+    
+                                    localStorage.setItem("cake1", cup.src);
+                                    localStorage.setItem("cakeNm", nm[1].textContent);
+                                    localStorage.setItem("cakeDesc", desc[1].textContent);
+                                    localStorage.setItem("cakeSize", size);
+                                    console.log(index);
+                                    let val = 60;
+                                    localStorage.setItem("val",val);
+                                    window.location.href = "./cart.html"; 
+                                });
+                                break;
+                           
+                              default:
+                                swal("Hello!","Choose a size of cake again", "info");
+                            }
+                        }); 
+                        break;
+                   
+                    //   default:
+                    //     swal("Hello!","Choose a size of cake again", "info");
+                    }
+                }); 
             }else if(index == 2){
-                localStorage.setItem("cake1", cup.src);
-                localStorage.setItem("cakeNm", nm[2].textContent);
-                localStorage.setItem("cakeDesc", desc[2].textContent);
-                console.log(index);
-                let val = 35;
-                localStorage.setItem("val",val);
-                window.location.href = "./cart.html"; 
+                swal({
+                    title:"Choose if you want casual or customized cupcake",
+                    icon: "info",
+                    buttons: {
+                          catch: {
+                            text: "Plain-2.00$/pc",
+                            value: "catch1",
+                          },
+                          catch2: {
+                            text: "Customized-2.50$/pcs",
+                            value: "catch2",
+                          }, 
+                          cancel: "Cancel",
+                        },
+                })
+                .then((value) => {
+                    switch (value) {
+                   
+                      case "catch1":
+                        swal({
+                            title:"Choose the size of the cake",
+                            icon: "info",
+                            buttons: {
+                                  catch: {
+                                    text: "12pcs - 24$",
+                                    value: "catch1",
+                                  },
+                                  catch2: {
+                                    text: "24pcs - 48$",
+                                    value: "catch2",
+                                  }, 
+                                  cancel: "Cancel",
+                                },
+                        })
+                        .then((value) => {
+                            switch (value) {
+                           
+                              case "catch1":
+                                swal({
+                                    title:"Size is confirmed",
+                                    text: "Press 'OK' to continue",
+                                    icon: "success"
+                                }).then(function(){
+                                    var size = document.getElementsByTagName("P").innerHtml = "Cupcake type and pieces: Casual - 12pcs";
+    
+                                    localStorage.setItem("cake1", cup.src);
+                                    localStorage.setItem("cakeNm", nm[2].textContent);
+                                    localStorage.setItem("cakeDesc", desc[2].textContent);
+                                    localStorage.setItem("cakeSize", size);
+                                    console.log(index);
+                                    let val = 24;
+                                    localStorage.setItem("val",val);
+                                    window.location.href = "./cart.html"; 
+                                });
+                                break;
+                           
+                              case "catch2":
+                                swal({
+                                    title:"Size is confirmed",
+                                    text: "Press 'OK' to continue",
+                                    icon: "success"
+                                }).then(function(){
+                                    var size = document.getElementsByTagName("P").innerHtml = "Cupcake type and pieces: Casual - 24pcs";
+    
+                                    localStorage.setItem("cake1", cup.src);
+                                    localStorage.setItem("cakeNm", nm[2].textContent);
+                                    localStorage.setItem("cakeDesc", desc[2].textContent);
+                                    localStorage.setItem("cakeSize", size);
+                                    console.log(index);
+                                    let val = 48;
+                                    localStorage.setItem("val",val);
+                                    window.location.href = "./cart.html"; 
+                                });
+                                break;
+                           
+                              default:
+                                swal("Hello!","Choose a size of cake again", "info");
+                            }
+                        }); 
+                        break;
+                   
+                      case "catch2":
+                        swal({
+                            title:"Choose the size of the cake",
+                            icon: "info",
+                            buttons: {
+                                  catch: {
+                                    text: "12pcs - 30$",
+                                    value: "catch1",
+                                  },
+                                  catch2: {
+                                    text: "24pcs - 60$",
+                                    value: "catch2",
+                                  }, 
+                                  cancel: "Cancel",
+                                },
+                        })
+                        .then((value) => {
+                            switch (value) {
+                           
+                              case "catch1":
+                                swal({
+                                    title:"Size is confirmed",
+                                    text: "Press 'OK' to continue",
+                                    icon: "success"
+                                }).then(function(){
+                                    var size = document.getElementsByTagName("P").innerHtml = "Cupcake type and pieces: Customized - 12pcs";
+    
+                                    localStorage.setItem("cake1", cup.src);
+                                    localStorage.setItem("cakeNm", nm[2].textContent);
+                                    localStorage.setItem("cakeDesc", desc[2].textContent);
+                                    localStorage.setItem("cakeSize", size);
+                                    console.log(index);
+                                    let val = 30;
+                                    localStorage.setItem("val",val);
+                                    window.location.href = "./cart.html"; 
+                                });
+                                break;
+                           
+                              case "catch2":
+                                swal({
+                                    title:"Size is confirmed",
+                                    text: "Press 'OK' to continue",
+                                    icon: "success"
+                                }).then(function(){
+                                    var size = document.getElementsByTagName("P").innerHtml = "Cupcake type and pieces: Customized - 24pcs";
+    
+                                    localStorage.setItem("cake1", cup.src);
+                                    localStorage.setItem("cakeNm", nm[2].textContent);
+                                    localStorage.setItem("cakeDesc", desc[2].textContent);
+                                    localStorage.setItem("cakeSize", size);
+                                    console.log(index);
+                                    let val = 60;
+                                    localStorage.setItem("val",val);
+                                    window.location.href = "./cart.html"; 
+                                });
+                                break;
+                           
+                              default:
+                                swal("Hello!","Choose a size of cake again", "info");
+                            }
+                        }); 
+                        break;
+                   
+                    //   default:
+                    //     swal("Hello!","Choose a size of cake again", "info");
+                    }
+                }); 
             }else if(index == 3){
-                localStorage.setItem("cake1", cup.src);
-                localStorage.setItem("cakeNm", nm[3].textContent);
-                localStorage.setItem("cakeDesc", desc[3].textContent);
-                console.log(index);
-                let val = 35;
-                localStorage.setItem("val",val);
-                window.location.href = "./cart.html"; 
+                swal({
+                    title:"Choose if you want casual or customized cupcake",
+                    icon: "info",
+                    buttons: {
+                          catch: {
+                            text: "Plain-2.00$/pc",
+                            value: "catch1",
+                          },
+                          catch2: {
+                            text: "Customized-2.50$/pcs",
+                            value: "catch2",
+                          }, 
+                          cancel: "Cancel",
+                        },
+                })
+                .then((value) => {
+                    switch (value) {
+                   
+                      case "catch1":
+                        swal({
+                            title:"Choose the size of the cake",
+                            icon: "info",
+                            buttons: {
+                                  catch: {
+                                    text: "12pcs - 24$",
+                                    value: "catch1",
+                                  },
+                                  catch2: {
+                                    text: "24pcs - 48$",
+                                    value: "catch2",
+                                  }, 
+                                  cancel: "Cancel",
+                                },
+                        })
+                        .then((value) => {
+                            switch (value) {
+                           
+                              case "catch1":
+                                swal({
+                                    title:"Size is confirmed",
+                                    text: "Press 'OK' to continue",
+                                    icon: "success"
+                                }).then(function(){
+                                    var size = document.getElementsByTagName("P").innerHtml = "Cupcake type and pieces: Casual - 12pcs";
+    
+                                    localStorage.setItem("cake1", cup.src);
+                                    localStorage.setItem("cakeNm", nm[2].textContent);
+                                    localStorage.setItem("cakeDesc", desc[2].textContent);
+                                    localStorage.setItem("cakeSize", size);
+                                    console.log(index);
+                                    let val = 24;
+                                    localStorage.setItem("val",val);
+                                    window.location.href = "./cart.html"; 
+                                });
+                                break;
+                           
+                              case "catch2":
+                                swal({
+                                    title:"Size is confirmed",
+                                    text: "Press 'OK' to continue",
+                                    icon: "success"
+                                }).then(function(){
+                                    var size = document.getElementsByTagName("P").innerHtml = "Cupcake type and pieces: Casual - 24pcs";
+    
+                                    localStorage.setItem("cake1", cup.src);
+                                    localStorage.setItem("cakeNm", nm[2].textContent);
+                                    localStorage.setItem("cakeDesc", desc[2].textContent);
+                                    localStorage.setItem("cakeSize", size);
+                                    console.log(index);
+                                    let val = 48;
+                                    localStorage.setItem("val",val);
+                                    window.location.href = "./cart.html"; 
+                                });
+                                break;
+                           
+                              default:
+                                swal("Hello!","Choose a size of cake again", "info");
+                            }
+                        }); 
+                        break;
+                   
+                      case "catch2":
+                        swal({
+                            title:"Choose the size of the cake",
+                            icon: "info",
+                            buttons: {
+                                  catch: {
+                                    text: "12pcs - 30$",
+                                    value: "catch1",
+                                  },
+                                  catch2: {
+                                    text: "24pcs - 60$",
+                                    value: "catch2",
+                                  }, 
+                                  cancel: "Cancel",
+                                },
+                        })
+                        .then((value) => {
+                            switch (value) {
+                           
+                              case "catch1":
+                                swal({
+                                    title:"Size is confirmed",
+                                    text: "Press 'OK' to continue",
+                                    icon: "success"
+                                }).then(function(){
+                                    var size = document.getElementsByTagName("P").innerHtml = "Cupcake type and pieces: Customized - 12pcs";
+    
+                                    localStorage.setItem("cake1", cup.src);
+                                    localStorage.setItem("cakeNm", nm[2].textContent);
+                                    localStorage.setItem("cakeDesc", desc[2].textContent);
+                                    localStorage.setItem("cakeSize", size);
+                                    console.log(index);
+                                    let val = 30;
+                                    localStorage.setItem("val",val);
+                                    window.location.href = "./cart.html"; 
+                                });
+                                break;
+                           
+                              case "catch2":
+                                swal({
+                                    title:"Size is confirmed",
+                                    text: "Press 'OK' to continue",
+                                    icon: "success"
+                                }).then(function(){
+                                    var size = document.getElementsByTagName("P").innerHtml = "Cupcake type and pieces: Customized - 24pcs";
+    
+                                    localStorage.setItem("cake1", cup.src);
+                                    localStorage.setItem("cakeNm", nm[2].textContent);
+                                    localStorage.setItem("cakeDesc", desc[2].textContent);
+                                    localStorage.setItem("cakeSize", size);
+                                    console.log(index);
+                                    let val = 60;
+                                    localStorage.setItem("val",val);
+                                    window.location.href = "./cart.html"; 
+                                });
+                                break;
+                           
+                              default:
+                                swal("Hello!","Choose a size of cake again", "info");
+                            }
+                        }); 
+                        break;
+                   
+                      default:
+                        swal("Hello!","Choose a size of cake again", "info");
+                    }
+                }); 
             }else if(index == 4){
-                localStorage.setItem("cake1", cup.src);
-                localStorage.setItem("cakeNm", nm[4].textContent);
-                localStorage.setItem("cakeDesc", desc[4].textContent);
-                console.log(index);
-                let val = 35;
-                localStorage.setItem("val",val);
-                window.location.href = "./cart.html"; 
+                swal({
+                    title:"Choose if you want casual or customized cupcake",
+                    icon: "info",
+                    buttons: {
+                          catch: {
+                            text: "Plain-2.00$/pc",
+                            value: "catch1",
+                          },
+                          catch2: {
+                            text: "Customized-2.50$/pcs",
+                            value: "catch2",
+                          }, 
+                          cancel: "Cancel",
+                        },
+                })
+                .then((value) => {
+                    switch (value) {
+                   
+                      case "catch1":
+                        swal({
+                            title:"Choose the size of the cake",
+                            icon: "info",
+                            buttons: {
+                                  catch: {
+                                    text: "12pcs - 24$",
+                                    value: "catch1",
+                                  },
+                                  catch2: {
+                                    text: "24pcs - 48$",
+                                    value: "catch2",
+                                  }, 
+                                  cancel: "Cancel",
+                                },
+                        })
+                        .then((value) => {
+                            switch (value) {
+                           
+                              case "catch1":
+                                swal({
+                                    title:"Size is confirmed",
+                                    text: "Press 'OK' to continue",
+                                    icon: "success"
+                                }).then(function(){
+                                    var size = document.getElementsByTagName("P").innerHtml = "Cupcake type and pieces: Casual - 12pcs";
+    
+                                    localStorage.setItem("cake1", cup.src);
+                                    localStorage.setItem("cakeNm", nm[0].textContent);
+                                    localStorage.setItem("cakeDesc", desc[0].textContent);
+                                    localStorage.setItem("cakeSize", size);
+                                    console.log(index);
+                                    let val = 24;
+                                    localStorage.setItem("val",val);
+                                    window.location.href = "./cart.html"; 
+                                });
+                                break;
+                           
+                              case "catch2":
+                                swal({
+                                    title:"Size is confirmed",
+                                    text: "Press 'OK' to continue",
+                                    icon: "success"
+                                }).then(function(){
+                                    var size = document.getElementsByTagName("P").innerHtml = "Cupcake type and pieces: Casual - 24pcs";
+    
+                                    localStorage.setItem("cake1", cup.src);
+                                    localStorage.setItem("cakeNm", nm[4].textContent);
+                                    localStorage.setItem("cakeDesc", desc[4].textContent);
+                                    localStorage.setItem("cakeSize", size);
+                                    console.log(index);
+                                    let val = 48;
+                                    localStorage.setItem("val",val);
+                                    window.location.href = "./cart.html"; 
+                                });
+                                break;
+                           
+                              default:
+                                swal("Hello!","Choose a size of cake again", "info");
+                            }
+                        }); 
+                        break;
+                   
+                      case "catch2":
+                        swal({
+                            title:"Choose the size of the cake",
+                            icon: "info",
+                            buttons: {
+                                  catch: {
+                                    text: "12pcs - 30$",
+                                    value: "catch1",
+                                  },
+                                  catch2: {
+                                    text: "24pcs - 60$",
+                                    value: "catch2",
+                                  }, 
+                                  cancel: "Cancel",
+                                },
+                        })
+                        .then((value) => {
+                            switch (value) {
+                           
+                              case "catch1":
+                                swal({
+                                    title:"Size is confirmed",
+                                    text: "Press 'OK' to continue",
+                                    icon: "success"
+                                }).then(function(){
+                                    var size = document.getElementsByTagName("P").innerHtml = "Cupcake type and pieces: Customized - 12pcs";
+    
+                                    localStorage.setItem("cake1", cup.src);
+                                    localStorage.setItem("cakeNm", nm[4].textContent);
+                                    localStorage.setItem("cakeDesc", desc[4].textContent);
+                                    localStorage.setItem("cakeSize", size);
+                                    console.log(index);
+                                    let val = 30;
+                                    localStorage.setItem("val",val);
+                                    window.location.href = "./cart.html"; 
+                                });
+                                break;
+                           
+                              case "catch2":
+                                swal({
+                                    title:"Size is confirmed",
+                                    text: "Press 'OK' to continue",
+                                    icon: "success"
+                                }).then(function(){
+                                    var size = document.getElementsByTagName("P").innerHtml = "Cupcake type and pieces: Customized - 24pcs";
+    
+                                    localStorage.setItem("cake1", cup.src);
+                                    localStorage.setItem("cakeNm", nm[4].textContent);
+                                    localStorage.setItem("cakeDesc", desc[4].textContent);
+                                    localStorage.setItem("cakeSize", size);
+                                    console.log(index);
+                                    let val = 60;
+                                    localStorage.setItem("val",val);
+                                    window.location.href = "./cart.html"; 
+                                });
+                                break;
+                           
+                              default:
+                                swal("Hello!","Choose a size of cake again", "info");
+                            }
+                        }); 
+                        break;
+                   
+                    //   default:
+                    //     swal("Hello!","Choose a size of cake again", "info");
+                    }
+                }); 
             }else if(index == 5){
-                localStorage.setItem("cake1", cup.src);
-                localStorage.setItem("cakeNm", nm[5].textContent);
-                localStorage.setItem("cakeDesc", desc[5].textContent);
-                console.log(index);
-                let val = 35;
-                localStorage.setItem("val",val);
-                window.location.href = "./cart.html"; 
+                swal({
+                    title:"Choose if you want casual or customized cupcake",
+                    icon: "info",
+                    buttons: {
+                          catch: {
+                            text: "Plain-2.00$/pc",
+                            value: "catch1",
+                          },
+                          catch2: {
+                            text: "Customized-2.50$/pcs",
+                            value: "catch2",
+                          }, 
+                          cancel: "Cancel",
+                        },
+                })
+                .then((value) => {
+                    switch (value) {
+                   
+                      case "catch1":
+                        swal({
+                            title:"Choose the size of the cake",
+                            icon: "info",
+                            buttons: {
+                                  catch: {
+                                    text: "12pcs - 24$",
+                                    value: "catch1",
+                                  },
+                                  catch2: {
+                                    text: "24pcs - 48$",
+                                    value: "catch2",
+                                  }, 
+                                  cancel: "Cancel",
+                                },
+                        })
+                        .then((value) => {
+                            switch (value) {
+                           
+                              case "catch1":
+                                swal({
+                                    title:"Size is confirmed",
+                                    text: "Press 'OK' to continue",
+                                    icon: "success"
+                                }).then(function(){
+                                    var size = document.getElementsByTagName("P").innerHtml = "Cupcake type and pieces: Casual - 12pcs";
+    
+                                    localStorage.setItem("cake1", cup.src);
+                                    localStorage.setItem("cakeNm", nm[5].textContent);
+                                    localStorage.setItem("cakeDesc", desc[5].textContent);
+                                    localStorage.setItem("cakeSize", size);
+                                    console.log(index);
+                                    let val = 24;
+                                    localStorage.setItem("val",val);
+                                    window.location.href = "./cart.html"; 
+                                });
+                                break;
+                           
+                              case "catch2":
+                                swal({
+                                    title:"Size is confirmed",
+                                    text: "Press 'OK' to continue",
+                                    icon: "success"
+                                }).then(function(){
+                                    var size = document.getElementsByTagName("P").innerHtml = "Cupcake type and pieces: Casual - 24pcs";
+    
+                                    localStorage.setItem("cake1", cup.src);
+                                    localStorage.setItem("cakeNm", nm[5].textContent);
+                                    localStorage.setItem("cakeDesc", desc[5].textContent);
+                                    localStorage.setItem("cakeSize", size);
+                                    console.log(index);
+                                    let val = 48;
+                                    localStorage.setItem("val",val);
+                                    window.location.href = "./cart.html"; 
+                                });
+                                break;
+                           
+                              default:
+                                swal("Hello!","Choose a size of cake again", "info");
+                            }
+                        }); 
+                        break;
+                   
+                      case "catch2":
+                        swal({
+                            title:"Choose the size of the cake",
+                            icon: "info",
+                            buttons: {
+                                  catch: {
+                                    text: "12pcs - 30$",
+                                    value: "catch1",
+                                  },
+                                  catch2: {
+                                    text: "24pcs - 60$",
+                                    value: "catch2",
+                                  }, 
+                                  cancel: "Cancel",
+                                },
+                        })
+                        .then((value) => {
+                            switch (value) {
+                           
+                              case "catch1":
+                                swal({
+                                    title:"Size is confirmed",
+                                    text: "Press 'OK' to continue",
+                                    icon: "success"
+                                }).then(function(){
+                                    var size = document.getElementsByTagName("P").innerHtml = "Cupcake type and pieces: Customized - 12pcs";
+    
+                                    localStorage.setItem("cake1", cup.src);
+                                    localStorage.setItem("cakeNm", nm[5].textContent);
+                                    localStorage.setItem("cakeDesc", desc[5].textContent);
+                                    localStorage.setItem("cakeSize", size);
+                                    console.log(index);
+                                    let val = 30;
+                                    localStorage.setItem("val",val);
+                                    window.location.href = "./cart.html"; 
+                                });
+                                break;
+                           
+                              case "catch2":
+                                swal({
+                                    title:"Size is confirmed",
+                                    text: "Press 'OK' to continue",
+                                    icon: "success"
+                                }).then(function(){
+                                    var size = document.getElementsByTagName("P").innerHtml = "Cupcake type and pieces: Customized - 24pcs";
+    
+                                    localStorage.setItem("cake1", cup.src);
+                                    localStorage.setItem("cakeNm", nm[5].textContent);
+                                    localStorage.setItem("cakeDesc", desc[5].textContent);
+                                    localStorage.setItem("cakeSize", size);
+                                    console.log(index);
+                                    let val = 60;
+                                    localStorage.setItem("val",val);
+                                    window.location.href = "./cart.html"; 
+                                });
+                                break;
+                           
+                              default:
+                                swal("Hello!","Choose a size of cake again", "info");
+                            }
+                        }); 
+                        break;
+                   
+                    //   default:
+                    //     swal("Hello!","Choose a size of cake again", "info");
+                    }
+                }); 
             }
         }
     })
@@ -515,62 +2096,265 @@ function sweetBt(){
     sweet.forEach(function(swt, index){
         swt.onclick = function(){
             if(index == 0){
-                localStorage.setItem("cake1", swt.src);
-                localStorage.setItem("cakeNm", nm[0].textContent);
-                localStorage.setItem("cakeDesc", desc[0].textContent);
-                console.log(index);
-                let val = 35;
-                localStorage.setItem("val",val);
-                window.location.href = "./cart.html"; 
+                swal({
+                    title:"Choose how many pieces ",
+                    icon: "info",
+                    buttons: {
+                          catch: {
+                            text: "6pcs - 24$",
+                            value: "catch1",
+                          },
+                          cancel: "Cancel",
+                        },
+                })
+                .then((value) => {
+                    switch (value) {
+                      case "catch1":
+                        swal({
+                            title:"Size is confirmed",
+                            text: "Press 'OK' to continue",
+                            icon: "success"
+                        }).then(function(){
+                            var size = document.getElementsByTagName("P").innerHtml = "Quantity: 6pcs";
+
+                            localStorage.setItem("cake1", swt.src);
+                            localStorage.setItem("cakeNm", nm[0].textContent);
+                            localStorage.setItem("cakeDesc", desc[0].textContent);
+                            localStorage.setItem("cakeSize", size);
+                            console.log(index);
+                            let val = 24;
+                            localStorage.setItem("val",val);
+                            window.location.href = "./cart.html"; 
+                                    });
+                        break;
+                   
+                    //   default:
+                    //     swal("Hello!","Choose a size of cake again", "info");
+                    }
+                });
+
             }else if(index == 1){
-                localStorage.setItem("cake1", swt.src);
-                localStorage.setItem("cakeNm", nm[1].textContent);
-                localStorage.setItem("cakeDesc", desc[0].textContent);
-                console.log(index);
-                let val = 35;
-                localStorage.setItem("val",val);
-                window.location.href = "./cart.html"; 
+                swal({
+                    title:"Choose how many pieces",
+                    icon: "info",
+                    buttons: {
+                          catch: {
+                            text: "8pcs - 24$",
+                            value: "catch1",
+                          },
+                          cancel: "Cancel",
+                        },
+                })
+                .then((value) => {
+                    switch (value) {
+                      case "catch1":
+                        swal({
+                            title:"Size is confirmed",
+                            text: "Press 'OK' to continue",
+                            icon: "success"
+                        }).then(function(){
+                            var size = document.getElementsByTagName("P").innerHtml = "Quantity: 8pcs";
+
+                            localStorage.setItem("cake1", swt.src);
+                            localStorage.setItem("cakeNm", nm[1].textContent);
+                            localStorage.setItem("cakeDesc", desc[1].textContent);
+                            localStorage.setItem("cakeSize", size);
+                            console.log(index);
+                            let val = 24;
+                            localStorage.setItem("val",val);
+                            window.location.href = "./cart.html"; 
+                                    });
+                        break;
+                   
+                    //   default:
+                    //     swal("Hello!","Choose a size of cake again", "info");
+                    }
+                });
             }else if(index == 2){
-                localStorage.setItem("cake1", swt.src);
-                localStorage.setItem("cakeNm", nm[2].textContent);
-                localStorage.setItem("cakeDesc", desc[2].textContent);
-                console.log(index);
-                let val = 35;
-                localStorage.setItem("val",val);
-                window.location.href = "./cart.html"; 
+                swal({
+                    title:"Choose how many pieces",
+                    icon: "info",
+                    buttons: {
+                          catch: {
+                            text: "7pcs - 10$",
+                            value: "catch1",
+                          },
+                          cancel: "Cancel",
+                        },
+                })
+                .then((value) => {
+                    switch (value) {
+                      case "catch1":
+                        swal({
+                            title:"Size is confirmed",
+                            text: "Press 'OK' to continue",
+                            icon: "success"
+                        }).then(function(){
+                            var size = document.getElementsByTagName("P").innerHtml = "Quantity: 7pcs";
+
+                            localStorage.setItem("cake1", swt.src);
+                            localStorage.setItem("cakeNm", nm[2].textContent);
+                            localStorage.setItem("cakeDesc", desc[2].textContent);
+                            localStorage.setItem("cakeSize", size);
+                            console.log(index);
+                            let val = 10;
+                            localStorage.setItem("val",val);
+                            window.location.href = "./cart.html"; 
+                                    });
+                        break;
+                   
+                    //   default:
+                    //     swal("Hello!","Choose a size of cake again", "info");
+                    }
+                }); 
             }else if(index == 3){
-                localStorage.setItem("cake1", swt.src);
-                localStorage.setItem("cakeNm", nm[3].textContent);
-                localStorage.setItem("cakeDesc", desc[3].textContent);
-                console.log(index);
-                let val = 35;
-                localStorage.setItem("val",val);
-                window.location.href = "./cart.html"; 
+                swal({
+                    title:"Choose how many pieces",
+                    icon: "info",
+                    buttons: {
+                          catch: {
+                            text: "7pcs - 12$",
+                            value: "catch1",
+                          },
+                          cancel: "Cancel",
+                        },
+                })
+                .then((value) => {
+                    switch (value) {
+                      case "catch1":
+                        swal({
+                            title:"Size is confirmed",
+                            text: "Press 'OK' to continue",
+                            icon: "success"
+                        }).then(function(){
+                            var size = document.getElementsByTagName("P").innerHtml = "Quantity: 7pcs";
+                            localStorage.setItem("cake1", swt.src);
+                            localStorage.setItem("cakeNm", nm[3].textContent);
+                            localStorage.setItem("cakeDesc", desc[3].textContent);
+                            localStorage.setItem("cakeSize", size);
+                            console.log(index);
+                            let val = 12;
+                            localStorage.setItem("val",val);
+                            window.location.href = "./cart.html"; 
+                                    });
+                        break;
+                   
+                    //   default:
+                    //     swal("Hello!","Choose a size of cake again", "info");
+                    }
+                });  
             }else if(index == 4){
-                localStorage.setItem("cake1", swt.src);
-                localStorage.setItem("cakeNm", nm[4].textContent);
-                localStorage.setItem("cakeDesc", desc[4].textContent);
-                console.log(index);
-                let val = 35;
-                localStorage.setItem("val",val);
-                window.location.href = "./cart.html"; 
+                swal({
+                    title:"Choose how many pieces",
+                    icon: "info",
+                    buttons: {
+                          catch: {
+                            text: "7pcs - 12$",
+                            value: "catch1",
+                          },
+                          cancel: "Cancel",
+                        },
+                })
+                .then((value) => {
+                    switch (value) {
+                      case "catch1":
+                        swal({
+                            title:"Size is confirmed",
+                            text: "Press 'OK' to continue",
+                            icon: "success"
+                        }).then(function(){
+                            var size = document.getElementsByTagName("P").innerHtml = "Quantity: 7pcs";
+
+                            localStorage.setItem("cake1", swt.src);
+                            localStorage.setItem("cakeNm", nm[4].textContent);
+                            localStorage.setItem("cakeDesc", desc[4].textContent);
+                            localStorage.setItem("cakeSize", size);
+                            console.log(index);
+                            let val = 12;
+                            localStorage.setItem("val",val);
+                            window.location.href = "./cart.html"; 
+                                    });
+                        break;
+                   
+                    //   default:
+                    //     swal("Hello!","Choose a size of cake again", "info");
+                    }
+                });  
             }else if(index == 5){
-                localStorage.setItem("cake1", swt.src);
-                localStorage.setItem("cakeNm", nm[5].textContent);
-                localStorage.setItem("cakeDesc", desc[5].textContent);
-                console.log(index);
-                let val = 35;
-                localStorage.setItem("val",val);
-                window.location.href = "./cart.html"; 
+                swal({
+                    title:"Choose how many pieces",
+                    icon: "info",
+                    buttons: {
+                          catch: {
+                            text: "7pcs - 12$",
+                            value: "catch1",
+                          },
+                          cancel: "Cancel",
+                        },
+                })
+                .then((value) => {
+                    switch (value) {
+                      case "catch1":
+                        swal({
+                            title:"Size is confirmed",
+                            text: "Press 'OK' to continue",
+                            icon: "success"
+                        }).then(function(){
+                            var size = document.getElementsByTagName("P").innerHtml = "Quantity: 7pcs";
+
+                            localStorage.setItem("cake1", swt.src);
+                            localStorage.setItem("cakeNm", nm[5].textContent);
+                            localStorage.setItem("cakeDesc", desc[5].textContent);
+                            localStorage.setItem("cakeSize", size);
+                            console.log(index);
+                            let val = 12;
+                            localStorage.setItem("val",val);
+                            window.location.href = "./cart.html"; 
+                                    });
+                        break;
+                   
+                    //   default:
+                    //     swal("Hello!","Choose a size of cake again", "info");
+                    }
+                });  
             
             }else if(index == 6){
-                localStorage.setItem("cake1", swt.src);
-                localStorage.setItem("cakeNm", nm[6].textContent);
-                localStorage.setItem("cakeDesc", desc[6].textContent);
-                console.log(index);
-                let val = 35;
-                localStorage.setItem("val",val);
-                window.location.href = "./cart.html"; 
+                swal({
+                    title:"Choose how many pieces",
+                    icon: "info",
+                    buttons: {
+                          catch: {
+                            text: "7pcs - 12$",
+                            value: "catch1",
+                          },
+                          cancel: "Cancel",
+                        },
+                })
+                .then((value) => {
+                    switch (value) {
+                      case "catch1":
+                        swal({
+                            title:"Size is confirmed",
+                            text: "Press 'OK' to continue",
+                            icon: "success"
+                        }).then(function(){
+                             var size = document.getElementsByTagName("P").innerHtml = "Quantity: 7pcs";
+
+                            localStorage.setItem("cake1", swt.src);
+                            localStorage.setItem("cakeNm", nm[6].textContent);
+                            localStorage.setItem("cakeDesc", desc[6].textContent);
+                            localStorage.setItem("cakeSize", size);
+                            console.log(index);
+                            let val = 12;
+                            localStorage.setItem("val",val);
+                            window.location.href = "./cart.html"; 
+                                    });
+                        break;
+                   
+                    //   default:
+                    //     swal("Hello!","Choose a size of cake again", "info");
+                    }
+                });  
             }
         }
     })
@@ -681,7 +2465,6 @@ function btn(){
             message: document.getElementById('cmt').value
         }
 
-
         if((tempParams['from_name'] !== " ") && (tempParams['to_name'] !== " ") && (tempParams['message'] !== " ")){
             swal({
                 title: "Thank you for your feedback!",
@@ -699,9 +2482,5 @@ function btn(){
             })
         }
     }
-
-    
-
 }
-
 btn();

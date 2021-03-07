@@ -98,7 +98,7 @@ nav h1{
     display: flex;
     justify-content: space-around;
     align-items: center;
-   width: 100%;
+    width: 100%;
 }
 
 .cakes ul li{
@@ -108,10 +108,11 @@ nav h1{
     text-align: center;
     background-color: #da9999;
     color: white;
-    margin: 0 10px;
+    font-size: 14px;
+    margin: 0 8px;
     list-style: none;
-    border-radius: 20px;
-    width: 20vw;
+    border-radius: 10px;
+    width: 23vw;
     height: 8vh;
     transition: all .5s ease;
     overflow: hidden;
@@ -122,7 +123,7 @@ nav h1{
 
 .cakes ul li:hover{
     background-color:#fcd9d9;
-    border-radius: 30px;
+    border-radius: 20px;
     cursor: pointer;
 }
 
@@ -184,6 +185,9 @@ nav h1{
     display: none;
     position: absolute;
     width: 100%;
+}
+#dbl{
+    margin-right: 66%;
 }
 
 /* whats new */
@@ -288,7 +292,6 @@ nav h1{
 /* sweet bites */
 .sweetBites{
     position: absolute;
-
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -451,8 +454,19 @@ button:active{
     transform: translateY(-100%);
     transition: all .5s ease;
 }
-
-
+.swal-title {
+    font-family: "Lato";
+  }
+.swal-text {
+    font-family: sans-serif;
+  }
+.swal-button {
+    font-family: sans-serif;
+    padding: 7px 19px;
+    border-radius: 2px;
+    font-size: 12px;
+ }
+ 
 
 @media screen and (max-width: 768px){
     *{
@@ -707,6 +721,9 @@ button:active{
         border-radius: 5px;
         outline: 0;
         font: 1rem "Poppins";
+    }
+    #dbl{
+        margin-right: 49%;
     }
 
 }
