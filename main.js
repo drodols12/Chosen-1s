@@ -107,13 +107,32 @@ function btnFunc(){
     const ord = document.getElementById("order");
     const submit = document.getElementById("sub")
     const custom = document.getElementById("texts1");
+    const logo = document.getElementById("lg");
+
+
+    logo.onclick = function(){
+        location.href = "index.html";
+    }
+
 
     ocks.onclick = function(){
         location.href = "cakepage.html";
     }
     ord.onclick = function(){
-        swal("Hello there", "Please choose in 'Our Cakes' button/tab to order, Thank you").then(function(){
-            location.href = "index.html#cnt";
+        Swal.fire({
+            title:"Mission",
+            text:"Chosen 1 danish oath to be an industry leader in producing home made pastries with a continued commitment in providing products with the highest quality, value for money and exemplary customer service. A business that will promote practices of trust, accountability, transparency, discipline and respect to mother nature and to our citizens.",
+            confirmButtonText: "Next",
+            background: "#fad7d7",
+            confirmButtonColor: "rgb(255, 66, 170)",
+        }).then(()=>{
+            Swal.fire({
+                title:"Vision",
+                text:"Chosen 1 danish oath to be an industry leader in producing home made pastries with a continued commitment in providing products with the highest quality, value for money and exemplary customer service. A business that will promote practices of trust, accountability, transparency, discipline and respect to mother nature and to our citizens.",
+                background: "#fad7d7",
+                showConfirmButton:false,
+                timer: 5000,
+            })
         });
         
     }

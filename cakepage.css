@@ -296,6 +296,8 @@ nav h1{
 .cupCake .cake:nth-last-of-type(1){
     margin-right: 44.3%;
 }
+
+
 /* sweet bites */
 .sweetBites{
     position: absolute;
@@ -316,6 +318,7 @@ nav h1{
 .sweetBites .cake:nth-last-of-type(1){
     margin-right: 22.4%;
 }
+
 
 
 /* FOOTER */
@@ -479,7 +482,9 @@ button:active{
     font-size: 12px;
  }
 
-
+ #lg{
+    cursor:pointer;
+}
  
 
 @media screen and (max-width: 768px){
@@ -690,21 +695,19 @@ button:active{
     footer{
         background-color: plum;
         width: 100%;
-        height: 30vh;
+        height: 270px;
         display: block;
         text-align: center;
         overflow-y: hidden;
     }
     
     footer button{
-        width: 25vw;
-        height: 5vh;
+        width: 110px;
+        height: 40px;
         border-radius: 10px;
         border-style: none;
-        margin: 30px 5px;
-      
-        
-        font: .5rem "Poppins";
+        margin-bottom: 20px;
+        font: 11px "Poppins";
         color: white;
         background-color: rgb(255, 66, 170);
         cursor: pointer;
@@ -719,7 +722,7 @@ button:active{
     footer p{
         color: white;
         font-size: 10px;
-        margin: 0;
+        margin-top: 15px;
         width: 100vw;
     }
     .contactus button{
@@ -739,6 +742,16 @@ button:active{
     #dbl{
         margin-right: 49%;
     }
+    .sweetBites .cake:nth-last-of-type(1){
+        margin-right: 175px;
+    }
+    .cupCake .cake:nth-last-of-type(1){
+        margin-right: 0;
+    }
+    .dreamCake .cake:nth-last-of-type(1){
+        margin-right: 175px;
+    }
+    
 
 }
 

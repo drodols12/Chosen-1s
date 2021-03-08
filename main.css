@@ -113,6 +113,9 @@ nav h1{
     background-color: white;
     transition: all 0.3s ease;
 }
+#lg{
+    cursor:pointer;
+}
 
   
 /*!!!!!!!!!CONTENT!!!!!!!!!*/
@@ -415,7 +418,7 @@ footer{
     height: 30vh;
     display: block;
     text-align: center;
-    z-index: 99999;
+    z-index: 3;
 }
 
 footer h1{
@@ -425,12 +428,13 @@ footer h1{
 }
 
 footer button{
-    width: 100px;
+    width: 120px;
     height: 40px;
     border-radius: 10px;
     border-style: none;
+    margin-top: -20px;
     margin-left: 10px;
-    font: 14px "Poppins";
+    font: 13px "Poppins";
     color: white;
     background-color: rgb(255, 66, 170);
     cursor: pointer;
@@ -450,6 +454,21 @@ footer p{
 footer p a{
     color: white;
     text-decoration: none;
+}
+.swal-text{
+    font-family: "Poppins";
+    color: white;
+}
+.swal-title{
+    color: white;
+}
+.swal-modal{
+    background-color: #fcaaaa;
+}
+.swal-button{
+    outline: none;
+    margin: 0 auto;
+    background-color: rgb(255, 66, 170);
 }
 
 
@@ -805,7 +824,7 @@ transform: rotate(45deg) translate(-7px, -6px);
         position: absolute;
         bottom: 0;
         width: 100%;
-        height: 30vh;
+        height: 40vh;
         display: block;
         text-align: center;
     }
@@ -817,12 +836,13 @@ transform: rotate(45deg) translate(-7px, -6px);
     }
     
     footer button{
-        width: 25vw;
-        height: 5vh;
+        width: 110px;
+        height: 40px;
         border-radius: 10px;
         border-style: none;
-        margin-left: 10px;
-        font: 14px "Poppins";
+        margin-bottom: 12px;
+        margin-left: 12px;
+        font: 11px "Poppins";
         color: white;
         background-color: rgb(255, 66, 170);
         cursor: pointer;

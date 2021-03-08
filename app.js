@@ -2342,16 +2342,17 @@ function sweetBt(){
                             icon: "success"
                         }).then(function(){
                              var size = document.getElementsByTagName("P").innerHtml = "Quantity: 7pcs";
+                             var matcha = document.getElementById("dsc5").textContent;
 
                             localStorage.setItem("cake1", swt.src);
                             localStorage.setItem("cakeNm", nm[6].textContent);
-                            localStorage.setItem("cakeDesc", desc[6].textContent);
+                            localStorage.setItem("cakeDesc",matcha);
                             localStorage.setItem("cakeSize", size);
                             console.log(index);
                             let val = 12;
                             localStorage.setItem("val",val);
                             window.location.href = "./cart.html"; 
-                                    });
+                        });
                         break;
                    
                     //   default:
@@ -2439,6 +2440,12 @@ function btn(){
     const cntact = document.getElementById("contactus");
     const close = document.getElementById("closeBtn");
     const submit = document.getElementById("sub")
+    const logo = document.getElementById("lg");
+
+
+    logo.onclick = function(){
+        location.href = "index.html";
+    }
 
     ourcakes.onclick = function(){
         location.href = "#navbar";

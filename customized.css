@@ -497,6 +497,9 @@ button:active{
     transform: translateY(-100%);
     transition: all .5s ease;
 }
+#lg{
+    cursor:pointer;
+}
 
 
 @media screen and (max-width: 768px){

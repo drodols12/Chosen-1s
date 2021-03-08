@@ -18,6 +18,12 @@ function getCake(){
     var yyyy = today.getFullYear();
     var size = document.getElementById("size");
     var flavor = document.getElementById("flavors");
+    const logo = document.getElementById("lg");
+
+
+    logo.onclick = function(){
+        location.href = "index.html";
+    }
 
 
     window.addEventListener('load', ()=>{

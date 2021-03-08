@@ -119,6 +119,12 @@ function btn(){
     const cntact = document.getElementById("contactus");
     const close = document.getElementById("closeBtn");
     const submit = document.getElementById("sub")
+    const logo = document.getElementById("lg");
+
+
+    logo.onclick = function(){
+        location.href = "index.html";
+    }
 
     ourcakes.onclick = function(){
         location.href = "#navbar";
