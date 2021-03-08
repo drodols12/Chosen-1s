@@ -1177,7 +1177,7 @@ dreamCk();
 function cupCk(){
     const cupcake = document.querySelectorAll("#cup");
     const nm = document.querySelectorAll("#ck3");
-    const desc = document.querySelectorAll('#dsc3')
+    let desc = document.querySelectorAll("#dsc3");
 
     cupcake.forEach(function(cup, index){
         cup.onclick = function(){
@@ -1835,8 +1835,8 @@ function cupCk(){
                                     var size = document.getElementsByTagName("P").innerHtml = "Cupcake type and pieces: Casual - 12pcs";
     
                                     localStorage.setItem("cake1", cup.src);
-                                    localStorage.setItem("cakeNm", nm[0].textContent);
-                                    localStorage.setItem("cakeDesc", desc[0].textContent);
+                                    localStorage.setItem("cakeNm", nm[4].textContent);
+                                    localStorage.setItem("cakeDesc", desc[4].textContent);
                                     localStorage.setItem("cakeSize", size);
                                     console.log(index);
                                     let val = 24;
@@ -1982,15 +1982,15 @@ function cupCk(){
                                     icon: "success"
                                 }).then(function(){
                                     var size = document.getElementsByTagName("P").innerHtml = "Cupcake type and pieces: Casual - 12pcs";
-    
+                                    var descs = document.getElementById("dscs3");
                                     localStorage.setItem("cake1", cup.src);
                                     localStorage.setItem("cakeNm", nm[5].textContent);
-                                    localStorage.setItem("cakeDesc", desc[5].textContent);
+                                    localStorage.setItem("cakeDesc", descs);
                                     localStorage.setItem("cakeSize", size);
-                                    console.log(index);
+                                    console.log(desc[5]);
                                     let val = 24;
                                     localStorage.setItem("val",val);
-                                    window.location.href = "./cart.html"; 
+                                    window.location.href = "cart.html"; 
                                 });
                                 break;
                            
@@ -2001,15 +2001,15 @@ function cupCk(){
                                     icon: "success"
                                 }).then(function(){
                                     var size = document.getElementsByTagName("P").innerHtml = "Cupcake type and pieces: Casual - 24pcs";
-    
+                                    var descs = document.getElementById("dscs3");
                                     localStorage.setItem("cake1", cup.src);
                                     localStorage.setItem("cakeNm", nm[5].textContent);
-                                    localStorage.setItem("cakeDesc", desc[5].textContent);
+                                    localStorage.setItem("cakeDesc", descs);
                                     localStorage.setItem("cakeSize", size);
                                     console.log(index);
                                     let val = 48;
                                     localStorage.setItem("val",val);
-                                    window.location.href = "./cart.html"; 
+                                    window.location.href = "cart.html"; 
                                 });
                                 break;
                            
@@ -2045,10 +2045,10 @@ function cupCk(){
                                     icon: "success"
                                 }).then(function(){
                                     var size = document.getElementsByTagName("P").innerHtml = "Cupcake type and pieces: Customized - 12pcs";
-    
+                                    var descs = document.getElementById("dscs3");
                                     localStorage.setItem("cake1", cup.src);
                                     localStorage.setItem("cakeNm", nm[5].textContent);
-                                    localStorage.setItem("cakeDesc", desc[5].textContent);
+                                    localStorage.setItem("cakeDesc", descs);
                                     localStorage.setItem("cakeSize", size);
                                     console.log(index);
                                     let val = 30;
@@ -2064,10 +2064,10 @@ function cupCk(){
                                     icon: "success"
                                 }).then(function(){
                                     var size = document.getElementsByTagName("P").innerHtml = "Cupcake type and pieces: Customized - 24pcs";
-    
+                                    var descs = document.getElementById("dscs3");
                                     localStorage.setItem("cake1", cup.src);
                                     localStorage.setItem("cakeNm", nm[5].textContent);
-                                    localStorage.setItem("cakeDesc", desc[5].textContent);
+                                    localStorage.setItem("cakeDesc", descs);
                                     localStorage.setItem("cakeSize", size);
                                     console.log(index);
                                     let val = 60;

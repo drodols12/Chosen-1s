@@ -289,6 +289,7 @@ input{
     height: 200px;
     transition: .5s;
     transition: all .5s ease-in;
+    cursor: pointer;
 }
 .cakes img{
     width: 100%;
@@ -325,17 +326,18 @@ input{
 .cake1{
     position: fixed;
     bottom: 20px;
-    left: 15%;
+    left: 250px;
     display: none;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
     height: 500px;
-    width: 70%;
+    width: 900px;
     background-color: rgba(221, 160, 221, 0.91);
     transition: all .6s ease-in;
     border-radius: 10px;
     z-index: 1;
+    cursor: pointer;
 }
 .cake1 img{
     margin-left: 40px;
@@ -505,7 +507,9 @@ button:active{
 @media screen and (max-width: 768px){
     html, body{ 
         overflow-x: hidden;
+        overflow-y: auto;
     } 
+
     body{
         position: relative;
         overflow-y: auto;
@@ -595,8 +599,6 @@ button:active{
         margin: 20px auto;
         grid-template-columns: repeat(2, 2fr);
         grid-gap: 20px;
-        
-       
     }
     
     .cakes{
@@ -642,7 +644,7 @@ button:active{
     .cake1{
         position: fixed;
         bottom:10%;
-        left: 15px;
+        left: 30px;
         display: none;
         align-items: center;
         justify-content: center;
@@ -656,7 +658,6 @@ button:active{
         z-index: 1;
     }
     .cake1 img{
-        
         position: absolute;
         left: 0;
         margin: 20px;
@@ -715,9 +716,8 @@ button:active{
         outline: 0;
         font: 1rem "Poppins";
     }
-    
-
 }
+
 @-webkit-keyframes fade {
     from {opacity: .4} 
     to {opacity: 1}
