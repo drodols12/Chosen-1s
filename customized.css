@@ -7,11 +7,29 @@
     box-sizing: border-box;
     user-select: none;
 }
-
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
 
 body{
     font-family: "Poppins";
-    overflow-y: auto;
+    overflow-y: scroll;
     overflow-x: hidden;
 }
 .body{
@@ -266,16 +284,14 @@ input{
 } */
 /* Order Form */
 .cakes1{
-    width: 100%;
+    width: 90%;
     height: 100vh;
-    margin: 10px;
+    margin: 10px auto;
     display: block;
     position: relative;
     overflow-y: auto;
 }
-.cakes1::-webkit-scrollbar{
-    display: none;
-}
+
 .cakecont{
     width: 90%;
     display: grid;
@@ -290,6 +306,7 @@ input{
     transition: .5s;
     transition: all .5s ease-in;
     cursor: pointer;
+
 }
 .cakes img{
     width: 100%;
