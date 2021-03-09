@@ -612,7 +612,7 @@ textarea{
 }
 .contactactive1{
     position: fixed;
-    transform: translateY(-100%);
+    transform: translateY(-150%);
     transition: all .5s ease;
 }
 
@@ -674,7 +674,7 @@ transform: rotate(45deg) translate(-7px, -6px);
 }
 
 
-@media screen and (max-width: 768px)
+@media only screen and (max-width: 768px) and (min-width: 360px)
 {
     html, body{ 
         overflow-x: hidden;
@@ -925,6 +925,225 @@ transform: rotate(45deg) translate(-7px, -6px);
         color: black;
         font-weight: 400;
         font-size: 16px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+}
+@media only screen and (max-width: 940px) and (min-width: 768px) {
+    html, body{ 
+        overflow-x: hidden;
+    } 
+    body{
+        position: relative;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    ::-webkit-scrollbar{
+      display: none;
+    }
+    .logo{
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .logo img{
+        width: 6vh;
+        height: 5vh;
+        margin-left: 5px;
+    }
+
+    .logo h1{
+        
+        font-size: 50px;
+        width: 100%;
+    }
+    p.small{
+        font-size: 12px;
+    }
+
+    nav{
+        position: relative;
+    }
+    .burger{
+        display: block;
+    }
+    .nav-link{
+        display: flex;
+        position: absolute;
+        top: 7vh;
+        align-items: center;
+        width: 100%;
+        flex-direction: column;
+        height: 40vh;
+        background: plum;
+        z-index: 99999999;
+        transform: translateX(100%);
+    }
+    .nav-link li{
+        height: 5vh;
+    }
+
+    .active{
+        transition: all 0.5s ease-in;
+        transform: translateX(0);
+    }
+    .active1{
+        transition: all 0.5s ease-in;
+        transform: translateX(150%);
+    }
+    .container2{
+        width: 100%;
+        display: block;
+    }
+    .container2 h1{
+        font-family: "Dancing Script";
+        font-size: 2rem;
+        padding: 0;
+        margin: 30px auto;
+        text-align: center;
+    }
+
+    .products{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+
+    .new{
+        position: relative;
+        display: inline-block;
+        width: 40%;
+        height: 40vh;
+        margin: 0 40px;
+        cursor: pointer;
+    }
+
+    .new img, a img{
+        display: flex;
+        width: 100%;
+        height: 20vh;
+    }
+
+    .new p{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color:#ff9b9b ;
+        font-size: 17px;
+    }
+    .header{
+        text-align: center;
+        font-size: .7rem;
+    }
+
+    a .cheesecake{
+        display: none;
+        position: absolute;
+        top: 40px;
+        left: 0px;
+        
+        animation: showMe 2s ease infinite 0.2s forwards;
+        animation-play-state: paused;
+        z-index: 99;
+    }
+    .container3{
+        height: 200px;
+    }
+    footer{
+        background-color: plum;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 200px;
+        display: block;
+        text-align: center;
+    }
+    
+    footer h1{
+        font: 3rem "Dancing Script";
+        color: white;
+        margin: 20px auto;
+    }
+    
+    footer button{
+        width: 110px;
+        height: 40px;
+        border-radius: 10px;
+        border-style: none;
+        margin-bottom: 12px;
+        margin-left: 12px;
+        font: 11px "Poppins";
+        color: white;
+        background-color: rgb(255, 66, 170);
+        cursor: pointer;
+    }
+    
+    footer p{
+        font-size: .5rem;
+        color: white;
+        margin-top: 30px;
+    }
+    
+    
+    footer p a{
+        color: white;
+        text-decoration: none;
+    }
+    .one{
+        display: none;
+    }
+    .two{
+        display: none;
+    }
+    .contactus button{
+      width: 80px;
+      height: 40px;
+      margin-right: 40px;
+  }
+  .contactus .form input{
+      width: 100%;
+      height: 30px;
+      margin-bottom: 5px;
+      border-style: none;
+      border-radius: 5px;
+      outline: 0;
+      font: 1rem "Poppins";
+  }
+  .contactactive{
+      height: 600px;
+  }
+  
+    .mySlides {
+        margin:0 auto;
+        display: none;
+        
+    }
+    .mySlides img {
+        width: 100%;
+        height: 370px;
+        object-fit: fill;
+    }
+
+    /* Slideshow container */
+    .slideshow-container {
+        max-width: 100%;
+        height: 370px;
+        position: relative;
+        margin: 0 auto;
+    }
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 180px;
+        width: 20px;
+        padding: 5px;
+        margin-top: -22px;
+        color: black;
+        font-weight: 400;
+        font-size: 30px;
         transition: 0.6s ease;
         border-radius: 0 3px 3px 0;
         user-select: none;

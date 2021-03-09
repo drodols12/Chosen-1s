@@ -216,7 +216,7 @@ nav h1{
 }
 
 /* MOBILEEEEEEEE */
-@media screen and (max-width: 768px){
+@media only screen and (max-width: 768px) and (min-width: 360px){
     html, body{ 
         overflow-x: hidden;
     } 
@@ -328,6 +328,115 @@ nav h1{
     }
 
 }
+@media only screen and (max-width: 940px) and (min-width: 768px){
+    html, body{ 
+        overflow-x: hidden;
+    } 
+    body{
+        position: relative;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    ::-webkit-scrollbar{
+      display: none;
+    }
+    .logo{
+        width: 140%;
+        display: flex;
+        align-items: center;
+    }
+    .logo img{
+        width: 6vh;
+        height: 5vh;
+        margin-left: 5px;
+    }
+    .logo h1{
+        
+        font-size: 50px;
+        width: 100%;
+    }
+    p.small{
+        font-size: 12px;
+    }
+
+    nav{
+        position: relative;
+    }
+    .burger{
+        display: block;
+    }
+    .container3{
+        position: relative;
+        display: block;
+        height: 50vh;
+    }
+    .nav-link{
+        display: flex;
+        position: absolute;
+        top: 7vh;
+        align-items: center;
+        width: 100%;
+        flex-direction: column;
+        height: 40vh;
+        background: plum;
+        z-index: 99999999;
+        transform: translateX(100%);
+    }
+    .nav-link li{
+        height: 5vh;
+    }
+
+    .active{
+        transition: all 0.5s ease-in;
+        transform: translateX(0);
+    }
+    .active1{
+        transition: all 0.5s ease-in;
+        transform: translateX(150%);
+    }
+
+    /* body */
+    .section{
+        width: 100%;
+    }
+    .hd{
+        font-size: 20px;
+        width: 100%;
+    }
+    .sub-section{
+       height: 300px;
+    }
+    .cards img{
+        width: 300px;
+        height: 200px;
+        float: left;
+        margin: 0;
+        margin-left: -200px;
+    }
+    .content{
+        width: 65%;
+        margin-left: -20px;
+    }
+    .content p{
+        font-size: 14px;
+    }
+    .sub-section:nth-last-of-type(3){
+        margin-top: 60px;
+        float: left;
+    }
+    .cards #right{
+        float: right;
+        margin-right: -210px;
+    }
+    #foot{
+        border-radius: 0;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
 @keyframes navLinkFade {
     from {
         opacity: 0;

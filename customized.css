@@ -521,7 +521,7 @@ button:active{
 }
 
 
-@media screen and (max-width: 768px){
+@media only screen and (max-width: 768px) and (min-width: 360px){
     html, body{ 
         overflow-x: hidden;
         overflow-y: auto;
@@ -661,13 +661,226 @@ button:active{
     .cake1{
         position: fixed;
         bottom:10%;
-        left: 30px;
+         left: 30px; 
         display: none;
         align-items: center;
         justify-content: center;
         margin: 0 auto;
         height: 450px;
         width: 320px;
+        background-color: rgba(221, 160, 221, 0.91);
+        transition: all .6s ease-in;
+        border-radius: 10px;
+        overflow-y: hidden;
+        z-index: 1;
+    }
+    .cake1 img{
+        position: absolute;
+        left: 0;
+        margin: 20px;
+        width: 90%;
+        height: 90%;
+        object-fit: contain;
+        transition: all .6s ease-in;
+        opacity: 1;
+    }
+    footer{
+        background-color: plum;
+        width: 100%;
+        height: 30vh;
+        display: block;
+        text-align: center;
+        overflow-y: hidden;
+    }
+    
+    footer button{
+        width: 25vw;
+        height: 5vh;
+        border-radius: 10px;
+        border-style: none;
+        margin: 30px 5px;
+      
+        
+        font: .5rem "Poppins";
+        color: white;
+        background-color: rgb(255, 66, 170);
+        cursor: pointer;
+    }
+    footer h1{
+        font: 2.5rem "Dancing Script";
+        color: white;
+        margin: 2vh auto;
+        margin-top: 5vh;
+        padding: 40px auto;
+    }
+    footer p{
+        color: white;
+        font-size: 10px;
+        margin: 0;
+        width: 100vw;
+    }
+    .contactus button{
+        width: 80px;
+        height: 40px;
+        margin-right: 40px;
+    }
+    .contactus .form input{
+        width: 100%;
+        height: 30px;
+        margin-bottom: 5px;
+        border-style: none;
+        border-radius: 5px;
+        outline: 0;
+        font: 1rem "Poppins";
+    }
+}
+@media only screen and (max-width: 800px) and (min-width: 768px){
+    html, body{ 
+        overflow-x: hidden;
+        overflow-y: auto;
+    } 
+
+    body{
+        position: relative;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    ::-webkit-scrollbar{
+      display: none;
+    }
+    .logo{
+        display: flex;
+        align-items: center;
+    }
+    .logo img{
+        width: 6vh;
+        height: 5vh;
+        margin-left: 5px;
+    }
+
+    .logo h1{
+        font-size: 20px;
+        width: 100%;
+    }
+    p.small{
+        font-size: 12px;
+    }
+    nav{
+        position: relative;
+    }
+
+
+    .burger{
+        display: block;
+    }
+
+
+    .nav-link{
+        display: flex;
+        position: absolute;
+        top: 7vh;
+        align-items: center;
+        width: 100%;
+        flex-direction: column;
+        height: 40vh;
+        background: plum;
+        z-index: 99999999;
+        transform: translateX(100%);
+    }
+    .nav-link li{
+        height: 5vh;
+    }
+
+    .active{
+        transition: all 0.5s ease-in;
+        transform: translateX(0);
+        z-index: 5;
+    }
+    .active1{
+        transition: all 0.5s ease-in;
+        transform: translateX(150%);
+    }
+
+    .header h1{
+        font-size: 25px;
+        text-align: center;
+    }
+    .navi{
+        background-color: rgb(180, 133, 180);
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .navi label{
+        display: inline-block;
+        margin:0 10px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .cakecont{
+        position: absolute;
+        width: 90%;
+        overflow-y: scroll;
+        display: grid;
+        margin: 20px auto;
+        grid-template-columns: repeat(2, 2fr);
+        grid-gap: 20px;
+    }
+    
+    .cakes{
+        position: relative;
+        height: 200px;
+        transition: .5s;
+        transition: all .5s ease-in;
+    }
+    .cakes img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        transition: all .6s ease-in;
+    }
+    .all{
+        opacity: 0;
+        transform: scale(0);
+        position: absolute;
+        transition: .5s;
+    }
+    .adt{
+        opacity: 1;
+        transform: scale(1);
+        position: relative;
+        transition: .5s;
+    }
+    
+    .kd{
+        opacity: 1;
+        transform: scale(1);
+        position: relative;
+        transition: .5s;
+    }
+    .adt2, .kd2{
+        opacity: 0;
+        transform: scale(0);
+        position: absolute;
+        transition: .5s;
+    }
+    .orderhere p{
+        display: none;
+    }
+    .cake1{
+        position: fixed;
+        bottom:10%;
+        left:40px;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        height: 450px;
+        width: 720px;
         background-color: rgba(221, 160, 221, 0.91);
         transition: all .6s ease-in;
         border-radius: 10px;
