@@ -774,7 +774,7 @@ function roundCk(){
             round.onclick = function(){
                 Swal.fire({
                     title: "Please choose 2 flavors you want",
-                    text: "Please choose between: Mango Bravissimo, Chocolate, Mocha, Mango Cake, Ube Macapuno and Ube Yema",
+                    text: "Please choose between: Chocolate, Mocha, Mango Cake, Ube Macapuno and Ube Yema",
                     input: 'text',
                     confirmButtonText: "8' - 40$",
                     showCancelButton: true,
@@ -783,7 +783,7 @@ function roundCk(){
                         if (!value) {
                           return 'You need to write something!'
                         }
-                        if(value.length > 30){
+                        if(value.length > 20){
                           return 'Too many flavors!'
                         }
                       }
