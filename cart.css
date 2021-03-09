@@ -543,6 +543,7 @@ transform: rotate(45deg) translate(-7px, -6px);
     }
     .orderForm #info{
         font-size: 10px;
+        height: 34px;
     }
     .orderForm{
         display: block;
@@ -567,7 +568,7 @@ transform: rotate(45deg) translate(-7px, -6px);
     }
     
     .orderForm #date{
-        height: 5vh;
+        height: 34px;
         text-align: center;
         font-size: 10px;
     }
