@@ -119,22 +119,7 @@ function btnFunc(){
         location.href = "cakepage.html";
     }
     ord.onclick = function(){
-        Swal.fire({
-            title:"Mission",
-            text:"Chosen 1 danish oath to be an industry leader in producing home made pastries with a continued commitment in providing products with the highest quality, value for money and exemplary customer service. A business that will promote practices of trust, accountability, transparency, discipline and respect to mother nature and to our citizens.",
-            confirmButtonText: "Next",
-            background: "#fad7d7",
-            confirmButtonColor: "rgb(255, 66, 170)",
-        }).then(()=>{
-            Swal.fire({
-                title:"Vision",
-                text:"Chosen 1 danish oath to be an industry leader in producing home made pastries with a continued commitment in providing products with the highest quality, value for money and exemplary customer service. A business that will promote practices of trust, accountability, transparency, discipline and respect to mother nature and to our citizens.",
-                background: "#fad7d7",
-                showConfirmButton:false,
-                timer: 5000,
-            })
-        });
-        
+       location.href = "/aboutus.html";
     }
     submit.onclick = function(params){
         var tempParams ={
