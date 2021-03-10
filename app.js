@@ -2451,13 +2451,7 @@ function btn(){
         location.href = "#navbar";
     }
     orders.onclick = function(){
-        swal({
-            title: "Hello there!",
-            text: "Please go to 'Our Cakes' section to see the menu and to order",
-            icon: "info"
-        }).then(function(){
-            location.href = "#navbar";
-        })
+      location.href = "aboutus.html"
     }
     cntact.onclick = function(){
         var form = document.getElementById("cnt");
