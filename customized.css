@@ -519,6 +519,13 @@ button:active{
 #lg{
     cursor:pointer;
 }
+body.swal2-shown > [aria-hidden="true"] {
+    filter: blur(3px);
+  }
+  
+  body > * {
+    transition: 0.1s filter linear;
+ }
 
 
 @media only screen and (max-width: 768px) and (min-width: 360px){

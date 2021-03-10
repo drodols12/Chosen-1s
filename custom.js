@@ -14,7 +14,7 @@ function clkPhoto(){
     }
 
     logo.onclick = function(){
-        document.location.href = "/index.html";
+        document.location.href = "index.html";
     } 
 
 
@@ -52,39 +52,30 @@ function clkPhoto(){
     }
     cake.forEach(function(zoom, index){
         zoom.onclick=function(){
-            var show = document.getElementById("show");
-            var zooms = document.querySelector(".cake1");
-            var blur1 = document.querySelector(".header")
-            var blur2 = document.querySelector(".navi")
 
-            
-             
-            
-           
-            if(zooms.style.display == "none"){
-                localStorage.setItem("cst", zoom.src);
-                zooms.style.display = "block";
-                show.setAttribute("src", localStorage.getItem("cst"))
-                blur1.classList.add("blur")
-                blur2.classList.add("blur")
-                cake1.forEach(function(change){
-                    change.classList.add("blur")
-                })
-                cake2.forEach(function(change){
-                    change.classList.add("blur")
+            if (window.matchMedia("(max-width: 768px)").matches){
+                Swal.fire({
+                    imageUrl: zoom.src,
+                    width: '95%',
+                    imageWidth: '80%',
+                    imageHeight:'20%',
+                    background:'plum',
+                    confirmButtonColor:'rgb(182, 90, 182)',
+                    imageAlt: 'Custom image',
+                    confirmButtonText:'Close'
                 })
             }else{
-                zooms.style.display = "none";
-                blur1.classList.remove("blur")
-                blur2.classList.remove("blur")
-                cake1.forEach(function(change){
-                    change.classList.remove("blur")
+                Swal.fire({
+                    imageUrl: zoom.src,
+                    width: '80%',
+                    imageWidth: '40%',
+                    imageHeight:'20%',
+                    background:'plum',
+                    confirmButtonColor:'rgb(182, 90, 182)',
+                    imageAlt: 'Custom image',
+                    confirmButtonText:'Close'
                 })
-                cake2.forEach(function(change){
-                    change.classList.remove("blur")
-                })
-            }
-            
+            }            
         }
     })
 }
