@@ -68,8 +68,8 @@ function clkPhoto(){
                 Swal.fire({
                     imageUrl: zoom.src,
                     width: '80%',
-                    imageWidth: '40%',
-                    imageHeight:'20%',
+                    imageWidth: 550,
+                    imageHeight:500,
                     background:'plum',
                     confirmButtonColor:'rgb(182, 90, 182)',
                     imageAlt: 'Custom image',
