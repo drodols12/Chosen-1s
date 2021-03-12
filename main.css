@@ -615,7 +615,9 @@ textarea{
     transform: translateY(-150%);
     transition: all .5s ease;
 }
-
+.swal-icon{
+    overflow: hidden;
+}
 
 
 /* Animations, Keyframes and Responsiveness*/
@@ -672,7 +674,9 @@ opacity: 0;
 .toggle .line3 {
 transform: rotate(45deg) translate(-7px, -6px);
 }
-
+.swal-icon{
+    overflow: hidden;
+}
 
 @media only screen and (max-width: 768px) and (min-width: 360px)
 {
@@ -1149,4 +1153,7 @@ transform: rotate(45deg) translate(-7px, -6px);
         user-select: none;
         background-color: rgba(255, 255, 255, 0.1);
       }
+    .swal-icon{
+        overflow: hidden;
+    }
 }

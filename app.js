@@ -2473,11 +2473,12 @@ function btn(){
             swal({
                 title: "Thank you for your feedback!",
                 icon: "success"
-            }).then(function(){
-                emailjs.send("gmail","template_v0omm4h", tempParams).then(function(res){
-                    console.log("success", res.status);
-                })
             })
+            // .then(function(){
+            //     emailjs.send("gmail","template_v0omm4h", tempParams).then(function(res){
+            //         console.log("success", res.status);
+            //     })
+            // })
         }else{
             swal({
                 title: "You forgot Something..",

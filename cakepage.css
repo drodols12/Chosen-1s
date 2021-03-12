@@ -175,7 +175,7 @@ nav h1{
     overflow: hidden;
 }
 .swal-icon{
-    overflow-y: hidden;
+    overflow: hidden;
 }
 .cake img{
     width: 20vw;
@@ -774,6 +774,9 @@ button:active{
     }
     .dreamCake .cake:nth-last-of-type(1){
         margin-right: 175px;
+    }
+    .swal-icon{
+        overflow: hidden;
     }
     
 
