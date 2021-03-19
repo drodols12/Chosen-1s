@@ -27,6 +27,7 @@ function getCake(){
 
 
     window.addEventListener('load', ()=>{
+        
         ckNM.textContent = localStorage.getItem('cakeNm');
         cakeImg.setAttribute("src", localStorage.getItem('cake1'));
         descrip.textContent = localStorage.getItem('cakeDesc');
@@ -84,39 +85,40 @@ function getCake(){
                         text: "Note: Please wait for the confirmation, Thanks", 
                         icon: "success"
                     })
-                    // .then(function(params){
-                    //     if(localStorage.hasOwnProperty("cakeFlavor") === true ){
-                    //         var tempParams = {
-                    //             cake: ckNM.textContent,
-                    //             size: size.textContent,
-                    //             flavor: flavor.textContent,
-                    //             qty: totalval,
-                    //             amount: totalprc,
-                    //             cnt: info.value,
-                    //             tdy: today,
-                    //             dlvr: date
-                    //           }
-                    //           emailjs.send("reservation","template_icqt3na", tempParams).then(function(res){
-                    //               console.log("success", res.status);
-                    //           })
-                    //     }else{
-                    //         console.log("false");
-                    //         var tempParams = {
-                    //             cake: ckNM.textContent,
-                    //             size: size.textContent,
-                    //             qty: totalval,
-                    //             amount: totalprc,
-                    //             cnt: info.value,
-                    //             tdy: today,
-                    //             dlvr: date
-                    //           }
-                    //           emailjs.send("reservation","template_icqt3na", tempParams).then(function(res){
-                    //               console.log("success", res.status);
-                    //           })
-                    //     }
+                     //email
+                    .then(function(params){
+                        if(localStorage.hasOwnProperty("cakeFlavor") === true ){
+                            var tempParams = {
+                                cake: ckNM.textContent,
+                                size: size.textContent,
+                                flavor: flavor.textContent,
+                                qty: totalval,
+                                amount: totalprc,
+                                cnt: info.value,
+                                tdy: today,
+                                dlvr: date,
+                              }
+                              emailjs.send("reservation","template_icqt3na", tempParams).then(function(res){
+                                  console.log("success", res.status);
+                              })
+                        }else{
+                            console.log("false");
+                            var tempParams = {
+                                cake: ckNM.textContent,
+                                size: size.textContent,
+                                qty: totalval,
+                                amount: totalprc,
+                                cnt: info.value,
+                                tdy: today,
+                                dlvr: date
+                              }
+                              emailjs.send("reservation","template_icqt3na", tempParams).then(function(res){
+                                  console.log("success", res.status);
+                              })
+                        }
 
     
-                    // });
+                    });
                 }else{
                     swal("You forgot!", "Please fill all the input fields", "warning");
                 }
@@ -136,7 +138,7 @@ function getCake(){
                 totalval = document.getElementById("price").value = total + "$";
             })
         
-    }  
+}  
 
 getCake();
 function Menu(){

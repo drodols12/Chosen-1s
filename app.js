@@ -769,8 +769,79 @@ function roundCk(){
                         }
                     });
                 }
+                // else if(index == 8){
+                //     swal({
+                //         title:"Choose the size of the cake",
+                //         icon: "info",
+                //         buttons: {
+                //               catch: {
+                //                 text: "6' - 25$",
+                //                 value: "catch1",
+                //               },
+                //               catch2: {
+                //                 text: "8' - 30$",
+                //                 value: "catch2",
+                //               }, 
+                //               cancel: "Cancel",
+                //             },
+                //     })
+                //     .then((value) => {
+                //         localStorage.clear();
+                //         switch (value) {
+                       
+                //           case "catch1":
+                //             swal({
+                //                 title:"Size is confirmed",
+                //                 text: "Press 'OK' to continue",
+                //                 icon: "success"
+                //             }).then(function(){
+                //                 var size = document.getElementsByTagName("P").innerHtml = "Size of the cake: 6'";
+
+                //                 localStorage.setItem("cake1", main.src);
+                //                 //cake name
+                //                 localStorage.setItem("cakeNm", nm[8].textContent);
+                //                 //description
+                //                 localStorage.setItem("cakeDesc", desc[8].textContent);
+                              
+                //                 localStorage.setItem("cakeSize", size);
+                //                 console.log(index);
+                //                 //price
+                //                 let val = 25;
+                //                 localStorage.setItem("val",val);
+                //                 window.location.href = "./cart.html"; 
+                //             });
+                //             break;
+                       
+                //           case "catch2":
+                //             swal({
+                //                 title:"Size is confirmed",
+                //                 text: "Press 'OK' to continue",
+                //                 icon: "success"
+                //             }).then(function(){
+                //                 var size = document.getElementsByTagName("P").innerHtml = "Size of the cake: 8'";
+                               
+
+                //                 localStorage.setItem("cake1", main.src);
+                //                 localStorage.setItem("cakeNm", nm[8].textContent);
+                //                 localStorage.setItem("cakeDesc", desc[8].textContent);
+                //                 localStorage.setItem("cakeSize", size);
+                //                 console.log(index);
+                //                 let val = 30;
+                //                 localStorage.setItem("val",val);
+                //                 window.location.href = "./cart.html"; 
+                //             });
+                //             break;
+                       
+                //         //   default:
+                //         //     swal("Hello!","Choose a size of cake again", "info");
+                //         }
+                //     });
+                // }
             }
         })
+
+
+        // DOUBLE FLAVOR CLICK
             round.onclick = function(){
                 Swal.fire({
                     title: "Please choose 2 flavors you want",
@@ -2390,7 +2461,7 @@ function cakeSlide(){
     //     sweetbites.classList.remove("sActive");
     // })
     roundCakes.addEventListener('click', ()=>{
-       // watsnew.classList.add("wActive2");
+      //  watsnew.classList.add("wActive2");
         roundcake.classList.remove("rActive");
         rollcake.classList.remove("rcActive");
         dreamcake.classList.remove("dcActive");
@@ -2398,7 +2469,7 @@ function cakeSlide(){
         sweetbites.classList.remove("sActive");
     })
     rollCakes.addEventListener('click', ()=>{
-       // watsnew.classList.add("wActive2");
+      //  watsnew.classList.add("wActive2");
         roundcake.classList.add("rActive");
         rollcake.classList.add("rcActive");
         dreamcake.classList.remove("dcActive");
@@ -2414,7 +2485,7 @@ function cakeSlide(){
         sweetbites.classList.remove("sActive");
     })
     cupCakes.addEventListener('click', ()=>{
-       // watsnew.classList.add("wActive2");
+      //  watsnew.classList.add("wActive2");
         rollcake.classList.remove("rcActive");
         roundcake.classList.add("rActive");
         dreamcake.classList.remove("dcActive");
@@ -2423,7 +2494,7 @@ function cakeSlide(){
             
     })
     sweetBites.addEventListener('click', ()=>{
-     //   watsnew.classList.add("wActive2");
+      //  watsnew.classList.add("wActive2");
         rollcake.classList.remove("rcActive");
         roundcake.classList.add("rActive");
         dreamcake.classList.remove("dcActive");

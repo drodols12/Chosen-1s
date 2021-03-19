@@ -168,7 +168,7 @@ nav h1{
     display: block;
     width: 20vw;
     height: 45vh;
-    margin: 2vh 10px;
+    margin: 2vh auto;
     border-radius: 5px;
     background-color: #ff9b9b;
     color: white;
@@ -208,9 +208,7 @@ nav h1{
     position: absolute;
     width: 100%;
 }
-#dbl{
-    margin-right: 66%;
-}
+
 
 /* whats new */
 .whatsNew1{
@@ -220,6 +218,7 @@ nav h1{
     display: block;
     position: relative;
     overflow-y: auto;
+    margin: 0 auto;
 }
 .whatsNew1::-webkit-scrollbar{
     display: none;
@@ -227,41 +226,44 @@ nav h1{
 /* .wActive{
     transform: translateX(0);
     transition: all .5s ease-in;
-} */
+}
 .wActive2{
     transform: scale(0);
     transition: all .3s ease-in;
-}
+} */
 /* Round cakes */
 .roundCakes{
     position: absolute;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    width: 100%;
+    /* flex-wrap: wrap; */
+    /* justify-content: center;
+    align-items: center; */
     margin: 0 auto;
+    grid-template-columns: repeat(4, 7fr);
+    grid-gap: 10px;
     transform: scale(1);
     transition: all .3s ease-in;
     z-index: 1;
-    overflow-y: hidden;
+    overflow-y: scroll;
 }
 
 .rActive{
     transform: scale(0);
     transition: all .3s ease-in;
 }
-/* .rActive2{
-    transform: translateX(-100%);
-    transition: all .5s ease-in;
-} */
+
 /* Roll Cakes */
 .rollCakes{
     position: absolute;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    width: 100%;
+    /* flex-wrap: wrap; */
+    /* justify-content: center;
+    align-items: center; */
     margin: 0 auto;
+    grid-template-columns: repeat(4, 5fr);
+    grid-gap: 10px;
     transform: scale(0);
     transition: all .3s ease-in;
     z-index: 1;
@@ -279,11 +281,14 @@ nav h1{
 /* Dreamcake and Cheesecake */
 .dreamCake{
     position: absolute;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    width: 100%;
+    /* flex-wrap: wrap; */
+    /* justify-content: center;
+    align-items: center; */
     margin: 0 auto;
+    grid-template-columns: repeat(4, 5fr);
+    grid-gap: 10px;
     transform: scale(0);
     transition: all .3s ease-in;
     z-index: 1;
@@ -301,11 +306,14 @@ nav h1{
 .cupCake{
     position: absolute;
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    width: 100%;
+    /* flex-wrap: wrap; */
+    /* justify-content: center;
+    align-items: center; */
     margin: 0 auto;
+    grid-template-columns: repeat(4, 5fr);
+    grid-gap: 10px;
     transform: scale(0);
     transition: all .3s ease-in;
     z-index: 1;
@@ -323,11 +331,14 @@ nav h1{
 /* sweet bites */
 .sweetBites{
     position: absolute;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    width: 100%;
+    /* flex-wrap: wrap; */
+    /* justify-content: center;
+    align-items: center; */
     margin: 0 auto;
+    grid-template-columns: repeat(4, 5fr);
+    grid-gap: 10px;
     transform: scale(0);
     transition: all .3s ease-in;
     z-index: 1;
@@ -626,7 +637,7 @@ button:active{
         margin: 0 auto;
        
     }
-    .roundCake1{
+    .roundCakes{
         display: flex;
         flex-wrap: wrap;
         width: 100%;
