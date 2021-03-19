@@ -443,13 +443,11 @@ nav h1{
         float: left;
     }
 
-
     .cards #right{
-        float: none;
-        display: block;
-       margin: 0 auto;
-       margin-top: -60px;
+        float: right;
+        margin-right: -210px;
     }
+
     #foot{
         border-radius: 0;
         text-align: center;
