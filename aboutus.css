@@ -443,9 +443,12 @@ nav h1{
         float: left;
     }
 
+
     .cards #right{
-        float: right;
-        margin-right: -210px;
+        float: none;
+        display: block;
+       margin: 0 auto;
+       margin-top: -60px;
     }
     #foot{
         border-radius: 0;
