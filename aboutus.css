@@ -61,7 +61,7 @@ a{
     margin: -10px auto;
     width: 100%;
     color: white;
-    font-size: 50px;
+    font-size: 3rem;
     font-family: "Dancing Script";
 }
 p.small{
@@ -93,7 +93,7 @@ nav{
     background-color: plum;
 }
 nav h1{
-    font: 4rem "Dancing Script";
+    font: 3rem "Dancing Script";
     letter-spacing: 2px;
 }
 .nav-link{
