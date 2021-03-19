@@ -2142,7 +2142,7 @@ function sweetBt(){
                     icon: "info",
                     buttons: {
                           catch: {
-                            text: "8pcs - 24$",
+                            text: "24pcs - 8$",
                             value: "catch1",
                           },
                           cancel: "Cancel",
