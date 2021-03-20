@@ -716,16 +716,7 @@ button:active{
         overflow: hidden;
         white-space:nowrap;
     }
-    .whatsNew .cake:nth-last-of-type(1){
-        margin-right: 50%;
-    }
-    .rollCakes .cake:nth-last-of-type(1){
-        margin-right: 50%;
-    }
-    .sweetBites .cake:nth-last-of-type(1){
-        margin-right: 50%;
-    }
-    
+
     
     footer{
         background-color: plum;
@@ -777,15 +768,7 @@ button:active{
     #dbl{
         margin-right: 49%;
     }
-    .sweetBites .cake:nth-last-of-type(1){
-        margin-right: 175px;
-    }
-    .cupCake .cake:nth-last-of-type(1){
-        margin-right: 0;
-    }
-    .dreamCake .cake:nth-last-of-type(1){
-        margin-right: 175px;
-    }
+
     .swal-icon{
         overflow: hidden;
     }
