@@ -269,6 +269,10 @@ nav h1{
     z-index: 1;
     overflow-y: hidden;
 }
+#rollCake:target{
+    transform: scale(1);
+    transition: all .3s ease-in;
+}
 .rcActive{
     transform: scale(1);
     transition: all .3s ease-in;
@@ -299,6 +303,10 @@ nav h1{
     transform: scale(1);
     transition: all .3s ease-in;
 }
+#dcCake:target{
+    transform: scale(1);
+    transition: all .3s ease-in;
+}
 
 /* cupcakes */
 .cupCake{
@@ -322,6 +330,11 @@ nav h1{
     transform: scale(1);
     transition: all .3s ease-in;
 }
+#cupCake:target{
+
+    transform: scale(1);
+    transition: all .3s ease-in;
+}
 
 
 /* sweet bites */
@@ -341,6 +354,11 @@ nav h1{
     overflow-y: hidden;
 }
 .sActive{
+
+    transform: scale(1);
+    transition: all .3s ease-in;
+}
+#sweetBts:target{
 
     transform: scale(1);
     transition: all .3s ease-in;

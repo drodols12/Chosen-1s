@@ -2436,9 +2436,7 @@ function sweetBt(){
 }
 sweetBt();
 
-
-function cakeSlide(){
-    const whatsNews = document.getElementById("whatsNew");
+const whatsNews = document.getElementById("whatsNew");
     const roundCakes = document.getElementById("roundCakes");
     const rollCakes = document.getElementById("rollCakes");
     const dreamCakes = document.getElementById("dreamCakes");
@@ -2450,7 +2448,9 @@ function cakeSlide(){
     const dreamcake = document.getElementById("dcCake");
     const cupcake = document.getElementById("cupCake");
     const sweetbites = document.getElementById("sweetBts");
-
+function cakeSlide(){
+    
+    
 
     // whatsNews.addEventListener('click', ()=>{
     //     watsnew.classList.remove("wActive2");
@@ -2467,6 +2467,7 @@ function cakeSlide(){
         dreamcake.classList.remove("dcActive");
         cupcake.classList.remove("cActive");
         sweetbites.classList.remove("sActive");
+        window.location.href =  "cakepage.html"; 
     })
     rollCakes.addEventListener('click', ()=>{
       //  watsnew.classList.add("wActive2");
@@ -2475,6 +2476,7 @@ function cakeSlide(){
         dreamcake.classList.remove("dcActive");
         cupcake.classList.remove("cActive");
         sweetbites.classList.remove("sActive");
+        window.location.href =  "cakepage.html#rollCake"; 
     })
     dreamCakes.addEventListener('click', ()=>{
     // watsnew.classList.add("wActive2");
@@ -2483,6 +2485,7 @@ function cakeSlide(){
         dreamcake.classList.add("dcActive");
         cupcake.classList.remove("cActive");
         sweetbites.classList.remove("sActive");
+        window.location.href =  "cakepage.html#dcCake"; 
     })
     cupCakes.addEventListener('click', ()=>{
       //  watsnew.classList.add("wActive2");
@@ -2491,6 +2494,7 @@ function cakeSlide(){
         dreamcake.classList.remove("dcActive");
         cupcake.classList.add("cActive");
         sweetbites.classList.remove("sActive");
+        window.location.href =  "cakepage.html#cupCake"; 
             
     })
     sweetBites.addEventListener('click', ()=>{
@@ -2500,7 +2504,14 @@ function cakeSlide(){
         dreamcake.classList.remove("dcActive");
         cupcake.classList.remove("cActive");
         sweetbites.classList.add("sActive");
+        window.location.href =  "cakepage.html#sweetBts"; 
     })
+
+    
+
+
+
+
 }
 
 cakeSlide();
