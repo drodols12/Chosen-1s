@@ -242,15 +242,18 @@ nav h1{
     margin: 0 auto;
     grid-template-columns: repeat(4, 7fr);
     grid-gap: 10px;
-    transform: scale(1);
+    opacity: 1;
     transition: all .3s ease-in;
     z-index: 1;
     overflow-y: scroll;
 }
 
 .rActive{
-    transform: scale(0);
+    opacity: 0;
     transition: all .3s ease-in;
+}
+.unshow{
+    opacity: 0;
 }
 
 /* Roll Cakes */
@@ -264,13 +267,20 @@ nav h1{
     margin: 0 auto;
     grid-template-columns: repeat(4, 5fr);
     grid-gap: 10px;
-    transform: scale(0);
+    opacity: 0;
     transition: all .3s ease-in;
     z-index: 1;
     overflow-y: hidden;
 }
+#rollCake:target,
+#rollCake.show
+{
+    opacity: 1;
+    transition: all .3s ease-in;
+}
+
 .rcActive{
-    transform: scale(1);
+    opacity: 1;
     transition: all .3s ease-in;
 }
 /* .rcActive2{
@@ -289,13 +299,19 @@ nav h1{
     margin: 0 auto;
     grid-template-columns: repeat(4, 5fr);
     grid-gap: 10px;
-    transform: scale(0);
+    opacity: 0;
     transition: all .3s ease-in;
     z-index: 1;
     overflow-y: hidden;
 }
 .dcActive{
-    transform: scale(1);
+    opacity: 1;
+    transition: all .3s ease-in;
+}
+#dcCake:target,
+#dcCake.show
+{
+    opacity: 1;
     transition: all .3s ease-in;
 }
 
@@ -312,16 +328,21 @@ nav h1{
     margin: 0 auto;
     grid-template-columns: repeat(4, 5fr);
     grid-gap: 10px;
-    transform: scale(0);
+    opacity: 0;
     transition: all .3s ease-in;
     z-index: 1;
     overflow-y: hidden;
 }
 .cActive{
-    transform: scale(1);
+    opacity: 1;
     transition: all .3s ease-in;
 }
-
+#cupCake:target,
+#cupCake.show
+{
+    opacity: 1;
+    transition: all .3s ease-in;
+}
 
 /* sweet bites */
 .sweetBites{
@@ -334,16 +355,21 @@ nav h1{
     margin: 0 auto;
     grid-template-columns: repeat(4, 5fr);
     grid-gap: 10px;
-    transform: scale(0);
+    opacity: 0;
     transition: all .3s ease-in;
     z-index: 1;
     overflow-y: hidden;
 }
 .sActive{
-    transform: scale(1);
+    opacity: 1;
     transition: all .3s ease-in;
 }
-
+#sweetBts:target,
+#sweetBts.show
+{
+    opacity: 1;
+    
+}
 
 
 

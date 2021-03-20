@@ -270,7 +270,7 @@ nav h1{
 }
 
 
-a .cheesecake{
+div .cheesecake{
     display: none;
     position: absolute;
     top: 10vh;
@@ -508,7 +508,7 @@ fill:  #d45151;
     transition: all .6s ease;
 }
 
-a:hover .cheesecake{
+div:hover .cheesecake{
     opacity: 1;
     display: block;
     animation-play-state: running;

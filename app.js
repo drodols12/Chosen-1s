@@ -2436,8 +2436,6 @@ function sweetBt(){
 }
 sweetBt();
 
-
-function cakeSlide(){
     const whatsNews = document.getElementById("whatsNew");
     const roundCakes = document.getElementById("roundCakes");
     const rollCakes = document.getElementById("rollCakes");
@@ -2450,6 +2448,9 @@ function cakeSlide(){
     const dreamcake = document.getElementById("dcCake");
     const cupcake = document.getElementById("cupCake");
     const sweetbites = document.getElementById("sweetBts");
+
+function cakeSlide(){
+    
 
 
     // whatsNews.addEventListener('click', ()=>{
@@ -2467,6 +2468,10 @@ function cakeSlide(){
         dreamcake.classList.remove("dcActive");
         cupcake.classList.remove("cActive");
         sweetbites.classList.remove("sActive");
+        window.location.href="cakepage.html";
+        window.onload =  ()=>{
+          roundcake.classList.remove("unshow");
+        }
     })
     rollCakes.addEventListener('click', ()=>{
       //  watsnew.classList.add("wActive2");
@@ -2475,6 +2480,7 @@ function cakeSlide(){
         dreamcake.classList.remove("dcActive");
         cupcake.classList.remove("cActive");
         sweetbites.classList.remove("sActive");
+        window.location.href="cakepage.html#rollCake";
     })
     dreamCakes.addEventListener('click', ()=>{
     // watsnew.classList.add("wActive2");
@@ -2483,6 +2489,7 @@ function cakeSlide(){
         dreamcake.classList.add("dcActive");
         cupcake.classList.remove("cActive");
         sweetbites.classList.remove("sActive");
+        window.location.href =  "cakepage.html#dcCake"; 
     })
     cupCakes.addEventListener('click', ()=>{
       //  watsnew.classList.add("wActive2");
@@ -2491,15 +2498,17 @@ function cakeSlide(){
         dreamcake.classList.remove("dcActive");
         cupcake.classList.add("cActive");
         sweetbites.classList.remove("sActive");
+        window.location.href =  "cakepage.html#cupCake"; 
             
     })
     sweetBites.addEventListener('click', ()=>{
       //  watsnew.classList.add("wActive2");
         rollcake.classList.remove("rcActive");
-        roundcake.classList.add("rActive");
+        roundcake.classList.add("unshow");
         dreamcake.classList.remove("dcActive");
         cupcake.classList.remove("cActive");
         sweetbites.classList.add("sActive");
+        window.location.href =  "cakepage.html#sweetBts"; 
     })
 }
 
