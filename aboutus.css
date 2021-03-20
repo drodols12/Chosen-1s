@@ -253,9 +253,10 @@ nav h1{
         font-size: 20px;
         width: 100%;
     }
-    .content p{
-        text-align: justify;
-        font-size: 16px;
+    p.small{
+        
+        font-size: 12px;
+        width: 40vw;
     }
 
     nav{
@@ -272,7 +273,10 @@ nav h1{
         height: 50vh;
     }
 
-
+    .content p{
+        text-align: justify;
+        font-size: 1rem;
+    }
     .nav-link{
         display: flex;
         position: absolute;
@@ -313,6 +317,7 @@ nav h1{
         display: block;
         float: none;
         border-radius: 0;
+        background-color: rgba(221, 160, 221, 0.504);
     }
 
     .cards img{
@@ -326,12 +331,21 @@ nav h1{
         width: 90%;
         margin: 40px auto;
     }
-    /* #second{
-        height: 700px;
-    } */
-    .sub-section:nth-last-of-type(3){
+    #second{
+        height: 600px;
+    }
+    #second p{
+        padding-top: 20px;
+    }
+    .sub-section:nth-last-of-type(4){
         margin-top: 60px;
         float: none;
+    }
+    .sub-section:nth-last-of-type(3){
+        height: 730px;
+    }
+    .sub-section:nth-last-of-type(2){
+        height: 530px;
     }
     #pers{
         height: 840px;
@@ -340,7 +354,7 @@ nav h1{
         float: none;
         display: block;
        margin: 0 auto;
-       margin-top: -60px;
+      
     }
     #foot{
         border-radius: 0;
@@ -349,14 +363,12 @@ nav h1{
         justify-content: center;
     }
     #two{
+        margin-top: -30px;
         padding: 20px;
-    }
-    #second{
-        height: 730px;
     }
 
 }
-@media only screen and (max-width: 800px) and (min-width: 768px){
+@media only screen and (max-width: 900px) and (min-width: 768px){
     html, body{ 
         overflow-x: hidden;
     } 
@@ -380,11 +392,12 @@ nav h1{
     }
     .logo h1{
         
-        font-size: 50px;
+        font-size: 30px;
         width: 100%;
     }
     p.small{
         font-size: 12px;
+        
     }
 
     nav{
@@ -453,7 +466,7 @@ nav h1{
     }
     .sub-section:nth-last-of-type(3){
         margin-top: 60px;
-        float: left;
+        float: right;
     }
 
     .cards #right{

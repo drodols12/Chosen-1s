@@ -708,6 +708,7 @@ transform: rotate(45deg) translate(-7px, -6px);
     }
     p.small{
         font-size: 12px;
+        width: 40vw;
     }
 
     nav{
@@ -936,7 +937,7 @@ transform: rotate(45deg) translate(-7px, -6px);
         background-color: rgba(255, 255, 255, 0.1);
       }
 }
-@media only screen and (max-width: 800px) and (min-width: 768px) {
+@media only screen and (max-width: 900px) and (min-width: 768px) {
     html, body{ 
         overflow-x: hidden;
     } 
@@ -961,11 +962,12 @@ transform: rotate(45deg) translate(-7px, -6px);
 
     .logo h1{
         
-        font-size: 50px;
+        font-size: 1.7rem;
         width: 100%;
     }
     p.small{
         font-size: 12px;
+       
     }
 
     nav{
