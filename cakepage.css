@@ -298,9 +298,7 @@ nav h1{
     transform: scale(1);
     transition: all .3s ease-in;
 }
-.dreamCake .cake:nth-last-of-type(1){
-    margin-right: 66%;
-}
+
 
 /* cupcakes */
 .cupCake{
@@ -322,9 +320,6 @@ nav h1{
 .cActive{
     transform: scale(1);
     transition: all .3s ease-in;
-}
-.cupCake .cake:nth-last-of-type(1){
-    margin-right: 44.3%;
 }
 
 
@@ -348,9 +343,7 @@ nav h1{
     transform: scale(1);
     transition: all .3s ease-in;
 }
-.sweetBites .cake:nth-last-of-type(1){
-    margin-right: 22.4%;
-}
+
 
 
 
