@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+   
 }
 /* width */
 ::-webkit-scrollbar {
@@ -57,7 +58,7 @@ body{
     margin: -10px auto;
     width: 100%;
     color: white;
-    font-size: 3rem;
+    font-size: 3rem ;
     font-family: "Dancing Script";
 }
 p.small{

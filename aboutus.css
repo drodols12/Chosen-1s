@@ -25,6 +25,9 @@
   ::-webkit-scrollbar-thumb:hover {
     background: #555; 
   }
+html{
+    scroll-behavior: smooth;
+}
 
 body{
     font-family: "Poppins";
@@ -152,16 +155,22 @@ nav h1{
     font-size: 30px;
     text-transform: uppercase;
 }
+.hd h1{
+    color: white;
+    font-weight: bold;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(139, 65, 139);
+}
 .sub-section{
     width: 70%;
     height: 500px;
-    background-color: rgba(221, 160, 221, 0.864);
+    background-color: rgba(221, 160, 221, 0.7);
     margin: 20px;
     float: right;
     display: flex;
     align-items: center;
     justify-content:space-around ;
-    border-radius: 30px;
+    border-radius: 20px;
 }
 
 .content{
@@ -181,7 +190,7 @@ nav h1{
 .card{
     width: 50%;
 }
-.sub-section:nth-last-of-type(3){
+.sub-section:nth-last-of-type(4),.sub-section:nth-last-of-type(2){
     float: left;
 }
 .cards img{
@@ -244,8 +253,9 @@ nav h1{
         font-size: 20px;
         width: 100%;
     }
-    p.small{
-        font-size: 12px;
+    .content p{
+        text-align: justify;
+        font-size: 16px;
     }
 
     nav{
@@ -341,7 +351,9 @@ nav h1{
     #two{
         padding: 20px;
     }
-
+    #second{
+        height: 730px;
+    }
 
 }
 @media only screen and (max-width: 800px) and (min-width: 768px){
