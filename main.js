@@ -190,6 +190,3 @@ function showSlides(n) {
   timer = setTimeout(showSlides,3300); // Change image every 5 seconds
 }
 
-function showCakes(){
-    
-}

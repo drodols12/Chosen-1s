@@ -242,18 +242,15 @@ nav h1{
     margin: 0 auto;
     grid-template-columns: repeat(4, 7fr);
     grid-gap: 10px;
-    opacity: 1;
+    transform: scale(1);
     transition: all .3s ease-in;
     z-index: 1;
     overflow-y: scroll;
 }
 
 .rActive{
-    opacity: 0;
+    transform: scale(0);
     transition: all .3s ease-in;
-}
-.unshow{
-    opacity: 0;
 }
 
 /* Roll Cakes */
@@ -267,20 +264,13 @@ nav h1{
     margin: 0 auto;
     grid-template-columns: repeat(4, 5fr);
     grid-gap: 10px;
-    opacity: 0;
+    transform: scale(0);
     transition: all .3s ease-in;
     z-index: 1;
     overflow-y: hidden;
 }
-#rollCake:target,
-#rollCake.show
-{
-    opacity: 1;
-    transition: all .3s ease-in;
-}
-
 .rcActive{
-    opacity: 1;
+    transform: scale(1);
     transition: all .3s ease-in;
 }
 /* .rcActive2{
@@ -299,22 +289,16 @@ nav h1{
     margin: 0 auto;
     grid-template-columns: repeat(4, 5fr);
     grid-gap: 10px;
-    opacity: 0;
+    transform: scale(0);
     transition: all .3s ease-in;
     z-index: 1;
     overflow-y: hidden;
 }
 .dcActive{
-    opacity: 1;
+  
+    transform: scale(1);
     transition: all .3s ease-in;
 }
-#dcCake:target,
-#dcCake.show
-{
-    opacity: 1;
-    transition: all .3s ease-in;
-}
-
 
 /* cupcakes */
 .cupCake{
@@ -328,21 +312,17 @@ nav h1{
     margin: 0 auto;
     grid-template-columns: repeat(4, 5fr);
     grid-gap: 10px;
-    opacity: 0;
+    transform: scale(0);
     transition: all .3s ease-in;
     z-index: 1;
     overflow-y: hidden;
 }
 .cActive{
-    opacity: 1;
+
+    transform: scale(1);
     transition: all .3s ease-in;
 }
-#cupCake:target,
-#cupCake.show
-{
-    opacity: 1;
-    transition: all .3s ease-in;
-}
+
 
 /* sweet bites */
 .sweetBites{
@@ -355,20 +335,15 @@ nav h1{
     margin: 0 auto;
     grid-template-columns: repeat(4, 5fr);
     grid-gap: 10px;
-    opacity: 0;
+    transform: scale(0);
     transition: all .3s ease-in;
     z-index: 1;
     overflow-y: hidden;
 }
 .sActive{
-    opacity: 1;
+
+    transform: scale(1);
     transition: all .3s ease-in;
-}
-#sweetBts:target,
-#sweetBts.show
-{
-    opacity: 1;
-    
 }
 
 
@@ -735,7 +710,16 @@ button:active{
         overflow: hidden;
         white-space:nowrap;
     }
-
+    .whatsNew .cake:nth-last-of-type(1){
+        margin-right: 50%;
+    }
+    .rollCakes .cake:nth-last-of-type(1){
+        margin-right: 50%;
+    }
+    .sweetBites .cake:nth-last-of-type(1){
+        margin-right: 50%;
+    }
+    
     
     footer{
         background-color: plum;
@@ -787,7 +771,15 @@ button:active{
     #dbl{
         margin-right: 49%;
     }
-
+    .sweetBites .cake:nth-last-of-type(1){
+        margin-right: 175px;
+    }
+    .cupCake .cake:nth-last-of-type(1){
+        margin-right: 0;
+    }
+    .dreamCake .cake:nth-last-of-type(1){
+        margin-right: 175px;
+    }
     .swal-icon{
         overflow: hidden;
     }
