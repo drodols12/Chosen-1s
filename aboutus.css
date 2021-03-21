@@ -5,7 +5,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-y: auto;
 }
 /* width */
 ::-webkit-scrollbar {
@@ -231,7 +230,6 @@ nav h1{
 @media only screen and (max-width: 768px) and (min-width: 360px){
     html, body{ 
         overflow-x: hidden;
-        overflow-y: auto;
     } 
     body{
         position: relative;
@@ -373,7 +371,6 @@ nav h1{
 @media only screen and (max-width: 900px) and (min-width: 768px){
     html, body{ 
         overflow-x: hidden;
-        overflow-y: auto;
     } 
     body{
         position: relative;

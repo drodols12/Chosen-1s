@@ -8,6 +8,16 @@ function clkPhoto(){
     const cake2 = document.querySelectorAll(".kd");
     const cake = document.querySelectorAll("img");
     const logo = document.getElementById("logo");
+    const cakes = document.getElementById("ocakes");
+    const about = document.getElementById("order");
+
+    cakes.onclick = function(){
+        window.location.href = "cakepage.html";
+    }
+
+    about.onclick = function(){
+        window.location.href = "aboutus.html";
+    }
     
     ord.onclick = function(){
        location.href = "https://m.me/Chosen1cakes/"
@@ -80,6 +90,7 @@ function clkPhoto(){
     })
 }
 clkPhoto();
+
 function navSlide() {
     const burger = document.querySelector('.burger');
     const nav = document.querySelector(".nav-link");
@@ -104,31 +115,16 @@ function navSlide() {
     
 }
 navSlide();
+
 function btn(){
-    const ourcakes = document.getElementById("ocakes");
-    const orders = document.getElementById("order");
+
     const cntact = document.getElementById("contactus");
     const close = document.getElementById("closeBtn");
     const submit = document.getElementById("sub")
-    const logo = document.getElementById("lg");
 
 
-    logo.onclick = function(){
-        location.href = "index.html";
-    }
 
-    ourcakes.onclick = function(){
-        location.href = "#navbar";
-    }
-    orders.onclick = function(){
-        swal({
-            title: "Hello there!",
-            text: "Please go to 'Our Cakes' section to see the menu and to order",
-            icon: "info"
-        }).then(function(){
-            location.href = "cakepage.html";
-        })
-    }
+
     cntact.onclick = function(){
         var form = document.getElementById("cnt");
         location.href = "#navbar";

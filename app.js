@@ -2522,7 +2522,7 @@ function btn(){
     const cntact = document.getElementById("contactus");
     const close = document.getElementById("closeBtn");
     const submit = document.getElementById("sub")
-    const logo = document.getElementById("lg");
+    const logo = document.getElementById("text1");
 
 
     logo.onclick = function(){

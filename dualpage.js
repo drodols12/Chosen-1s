@@ -1,4 +1,3 @@
-
 const clickme = document.querySelectorAll('.news');
 
 function clickMe(){
