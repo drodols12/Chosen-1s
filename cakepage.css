@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 body{
@@ -267,7 +268,7 @@ nav h1{
     transform: scale(0);
     transition: all .3s ease-in;
     z-index: 1;
-    overflow-y: hidden;
+    overflow: hidden;
 }
 #rollCake:target{
     transform: scale(1);
@@ -296,7 +297,7 @@ nav h1{
     transform: scale(0);
     transition: all .3s ease-in;
     z-index: 1;
-    overflow-y: hidden;
+    overflow: hidden;
 }
 .dcActive{
   
@@ -323,7 +324,7 @@ nav h1{
     transform: scale(0);
     transition: all .3s ease-in;
     z-index: 1;
-    overflow-y: hidden;
+    overflow: hidden;
 }
 .cActive{
 
@@ -351,7 +352,7 @@ nav h1{
     transform: scale(0);
     transition: all .3s ease-in;
     z-index: 1;
-    overflow-y: hidden;
+    overflow: hidden;
 }
 .sActive{
 
@@ -359,7 +360,7 @@ nav h1{
     transition: all .3s ease-in;
 }
 #sweetBts:target{
-
+    
     transform: scale(1);
     transition: all .3s ease-in;
 }
@@ -538,7 +539,7 @@ button:active{
         padding: 0;
         box-sizing: border-box;
         overflow-x: hidden;
-        
+       
     }
     
     body{
