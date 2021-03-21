@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-y: auto;
 }
 /* width */
 ::-webkit-scrollbar {
@@ -255,7 +256,7 @@ button:focus{
     display: block;
     width: 50%;
     height: 60vh;
-    margin: 20px;+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    margin: 20px;
     
 }
 .order h3{
@@ -414,6 +415,7 @@ transform: rotate(45deg) translate(-7px, -6px);
         padding: 0;
         box-sizing: border-box;
         overflow-x: hidden;
+        overflow-y: auto;
        
     }
     body{
@@ -619,7 +621,7 @@ transform: rotate(45deg) translate(-7px, -6px);
         padding: 0;
         box-sizing: border-box;
         overflow-x: hidden;
-       
+        overflow-y: auto;
     }
     body{
         position: relative;
